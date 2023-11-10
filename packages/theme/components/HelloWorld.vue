@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { myLayer } = useAppConfig()
+const { theme } = useAppConfig()
 </script>
 
 <template>
   <div>
     <h1>Hello World!</h1>
-    <pre>{{ myLayer }}</pre>
+    <pre>{{ theme }}</pre>
   </div>
 </template>
