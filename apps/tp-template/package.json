@@ -1,0 +1,22 @@
+{
+  "name": "tp-template",
+  "version": "0.0.0",
+  "author": "hans.doenitz@dasei.eu",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.8.1",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "@crearis/theme-main": "^0.0.3"
+  }
+}
