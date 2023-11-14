@@ -3,8 +3,9 @@ const { theme } = useAppConfig()
 </script>
 
 <template>
-  <div>
-    <h1>Hello World!</h1>
-    <pre>{{ theme }}</pre>
+  <div class="bg-primary-100">
+    <h1 class="text-3xl font-bold p-4 text-primary-500"> 
+      {{ theme.name }} 
+    </h1>
   </div>
 </template>

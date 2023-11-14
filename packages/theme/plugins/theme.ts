@@ -4,7 +4,7 @@ const paletteToStyle = (level: Level, palette: ColorPalette) => {
     if (palette) {
         return Object.keys(palette)
             .map((key) => {
-                return `--${level}-${key}: ${palette[key as Key]}`
+                return `--${level}-${key}: rgb(${palette[key as Key]})`
             })
             .join(`;\r\n`)
     }
@@ -15,6 +15,7 @@ const individualPalette = (themePalette: ThemePalette) => {
         return Object.entries(themePalette).map(([key, value]) => {
             return paletteToStyle(key as Level, value)
         })
+        .join(`;\r\n`)
     }
 }
 
