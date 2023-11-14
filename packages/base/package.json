@@ -1,5 +1,5 @@
 {
-  "name": "@crearis/content",
+  "name": "@crearis/base",
   "type": "module",
   "private": false,
   "version": "0.0.4",
