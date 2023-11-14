@@ -1,0 +1,19 @@
+{
+  "name": "@crearis/data-main",
+  "type": "module",
+  "version": "0.0.3",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "nuxi dev .playground -p 3002",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "eslint": "^8.28.0",
+    "nuxt": "^3.8.0",
+    "typescript": "5.2.2"
+  }
+}

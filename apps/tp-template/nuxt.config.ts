@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: [
-    "@crearis/theme-main"
+    "@crearis/theme-main",
+    "@crearis/data-main",
   ]
 })
