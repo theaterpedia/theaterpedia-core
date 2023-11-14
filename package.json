@@ -11,10 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "build": "cd docus && nuxi build",
-    "dev": "concurrently --names \"Frontend\" \"yarn dev:app\"",
+    "dev": "concurrently --names \"Frontend\" \"yarn dev:template\"",
     "dev:theme": "cd packages/theme && yarn dev",
     "dev:template": "cd apps/tp-template && yarn dev",
-    "dev:data": "cd packages/theme && yarn dev",
+    "dev:data": "cd packages/data && yarn dev",
     "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install && yarn prepare:docs",
     "changesets:publish": "yarn build && yarn changeset publish" 
   },
