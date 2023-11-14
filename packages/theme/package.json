@@ -1,8 +1,11 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
+  "private": false,
   "version": "0.0.4",
   "main": "./nuxt.config.ts",
+  "license": "MIT",
+  "author": "hans.doenitz@theaterpedia.org",
   "scripts": {
     "dev": "nuxi dev .playground -p 3001",
     "build": "nuxt build .playground",
@@ -11,12 +14,23 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "eslint": "^8.28.0",
+    "@nuxt/eslint-config": "^0.2.0",
+    "@types/node": "^20.8.3",
+    "eslint": "^8.51.0",
     "nuxt": "^3.8.0",
+    "release-it": "^16.2.1",
     "typescript": "5.2.2"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.9.4"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): release v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}"
+    }
   }
 }
