@@ -17,6 +17,7 @@
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
-    "@crearis/theme-main": "^0.0.3"
+    "@crearis/theme-main": "^0.0.4",
+    "@crearis/data-main": "^0.0.4"
   }
 }
