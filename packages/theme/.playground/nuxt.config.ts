@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
-  extends: ['..'],
+  extends: [
+    '..',
+    "@crearis/base"
+  ],
   devtools: { enabled: true },
 })

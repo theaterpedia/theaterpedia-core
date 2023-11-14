@@ -19,10 +19,12 @@
     "eslint": "^8.51.0",
     "nuxt": "^3.8.0",
     "release-it": "^16.2.1",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "daisyui": "^4.0.4"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.9.4"
+    "@nuxtjs/tailwindcss": "^6.9.4",
+    "nuxt-icon": "^0.6.5"
   },
   "release-it": {
     "git": {
