@@ -26,9 +26,9 @@
   "author": "hans.doenitz@dasei.eu",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
-  "dependencies": {},
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "lerna": "^7.4.2",
-    "concurrently": "^8.2.0"
+    "vue-tsc": "^1.8.22"
   }
 }

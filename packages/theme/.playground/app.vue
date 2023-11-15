@@ -1,6 +1,18 @@
 <template>
-  <div class="p-4">
-    <HelloWorld />
+  <Body class="font-body" :class="bodyClass" />
+  <VitePwaManifest />
+  <NuxtLayout>
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
+
+<script setup lang="ts">
+usePageTitle();
+
+const bodyClass = ref('');
+
+onMounted(() => {
+  // Need this class for cypress testing
+  bodyClass.value = 'hydrated';
+});
+</script>
