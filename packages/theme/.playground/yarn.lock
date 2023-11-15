@@ -1247,6 +1247,18 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
+"@crearis/vue@latest":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@crearis/vue/-/vue-0.0.6.tgz#dbfa3ba83fc7be85001980080be10995e7c83c06"
+  integrity sha512-gAH/PvltdtB3h2OL6KSk7R5w60cjR2D3avX8QcHfzY/ED201ultNwmuTAyyJoPxUas0x0nS5lTsJ2Ff6+u1sPQ==
+  dependencies:
+    "@floating-ui/vue" "^0.2.1"
+    "@storefront-ui/shared" "^2.5.0"
+    "@storefront-ui/tailwind-config" "^2.3.1"
+    "@vueuse/core" "^9.12.0"
+    jw-paginate "^1.0.4"
+    tabbable "^6.1.1"
+
 "@csstools/cascade-layer-name-parser@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@csstools/cascade-layer-name-parser/-/cascade-layer-name-parser-1.0.5.tgz#c4d276e32787651df0007af22c9fa70d9c9ca3c2"
@@ -2523,12 +2535,12 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
-"@storefront-ui/shared@2.5.0":
+"@storefront-ui/shared@2.5.0", "@storefront-ui/shared@^2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-2.5.0.tgz#8769100f4082fe58e04242ffa736274695d9731e"
   integrity sha512-9o/YZ9O8dY7YMNbxgklGgPqGkXrjpDf5O1nwy6jF1jCOO8iog7LiJzLeMZTGcFGk8s538KyLwkNi9y4xHdyk0Q==
 
-"@storefront-ui/tailwind-config@2.3.1":
+"@storefront-ui/tailwind-config@2.3.1", "@storefront-ui/tailwind-config@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@storefront-ui/tailwind-config/-/tailwind-config-2.3.1.tgz#ddb6fa95687e71e25a86cec3d58fe8feb7ec31e9"
   integrity sha512-WeoHZXeaxRiUnhB7/QLdGhDxFodgKGdRVyTSX0ebuGFaFdFQ0DylEPLLQtWLNsoRgIdXyheBfWIYzznj0HRkiQ==
