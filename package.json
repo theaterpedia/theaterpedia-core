@@ -16,8 +16,9 @@
     "dev:theme": "cd packages/theme && yarn dev",
     "dev:app": "cd apps/tp-template && yarn dev",
     "dev:data": "cd packages/data && yarn dev",
-    "prepare": "concurrently --names \"Base\" \"yarn prepare:base\"",
+    "prepare": "concurrently \"yarn prepare:base\" \"yarn prepare:theme\"",
     "prepare:base": "cd packages/base/.playground && yarn",
+    "prepare:theme": "cd packages/theme/.playground && yarn",
     "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install && yarn prepare:docs",
     "changesets:publish": "yarn build && yarn changeset publish"
   },

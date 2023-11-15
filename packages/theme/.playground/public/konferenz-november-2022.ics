@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+LAST-MODIFIED:20201011T015911Z
+TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZNAME:CEST
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:CET
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20221027T124912Z
+UID:1666870236080-37052@theaterpedia.org
+DTSTART;TZID=Europe/Berlin:20221118T150000
+DTEND;TZID=Europe/Berlin:20221120T150000
+SUMMARY:Initialkonferenz des Theaterpedia e.V.
+URL:https://theaterpedia.org/
+DESCRIPTION:Initialkonferenz des Theaterpedia e.V.\n\nWebdesign - Theaterpädagogik - Vernetzung\n\nAnreise mit Zug bis Neustadt/Aisch (Bhf)\, von dort Abhol-Service 18.11 14:00 Uhr\n\nCVJM Freizeitzentrum Münchsteinach\nNeuebersbacher Str. 30\n91481 Münchsteinach\nTel.: (09166) 280
+LOCATION:CVJM Freizeitzentrum Münchsteinach\, Neuebersbacher Str. 30\, 91481 Münchsteinach
+END:VEVENT
+END:VCALENDAR

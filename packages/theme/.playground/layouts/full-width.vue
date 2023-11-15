@@ -1,11 +1,32 @@
+<script setup lang="ts">
+import { useWindowScroll } from '@vueuse/core'
+const y = useWindowScroll().y
+</script>
+
 <template>
-  <div class="py-10 m-auto bg-white sm:px-8 ring-1 ring-gray-200 dark:ring-gray-700 dark:bg-gray-800 sm:rounded">
-    <main class="max-w-2xl px-4 mx-auto prose dark:prose-invert prose-pre:bg-gray-100 dark:prose-pre:bg-gray-900 hover:prose-a:text-primary-400 prose-a:font-normal prose-a:no-underline prose-a:border-dashed prose-a:border-b hover:prose-a:border-solid hover:prose-a:border-primary-400">
+  <div class="bg-base-100 sm:rounded">
+    <!-- stop layout-shift when shrinking/unshrinking Navbar-->
+    <div :class="y < 160 ? '' : ' pb-36'" />
+
+    <AppNavbar config-style="reactive" />
+    <main class=" md:px-3 lg:px-6 max-w-none 2xl:mx-auto 2xl:max-w-screen-2xl">
       <slot>
         <h1 class="text-2xl">
           Page not found
         </h1>
       </slot>
     </main>
+    <AppFooter />
   </div>
 </template>
+
+<style lang="postcss">
+/* Customize headers to remove default underline */
+.prose h2 a,
+.prose h3 a {
+  @apply no-underline;
+  &:hover {
+    @apply border-b;
+  }
+}
+</style>
