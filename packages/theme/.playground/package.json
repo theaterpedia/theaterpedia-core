@@ -14,7 +14,5 @@
   },
 
   "dependencies": {
-    "@nuxtjs/color-mode": "^3.3.0",
-    "nuxt-icon": "^0.6.5"
   }
 }

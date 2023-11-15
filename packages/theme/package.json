@@ -20,9 +20,7 @@
     "eslint": "^8.51.0",
     "nuxt": "^3.8.0",
     "release-it": "^16.2.1",
-    "typescript": "5.2.2",
-    "daisyui": "^4.0.4",
-    "vue3-carousel": "0.3.1"
+    "typescript": "5.2.2"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.9.4"

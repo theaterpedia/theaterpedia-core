@@ -47,10 +47,6 @@ const isHome = ref(route.fullPath === '/')
       </div>
     </div>
 
-    <div v-show="false" class="mx-10 pt-2">
-      <logo-bar />
-    </div>
-
     <!-- Copyright Bar -->
     <div class="pt-2">
       <div
@@ -59,25 +55,6 @@ const isHome = ref(route.fullPath === '/')
         <div class="mt-2">
           © 2022 Theaterpedia e.V.<br>
           wir setzen auf Open-Source: VueJS | NuxtJS | TailwindCSS | DaisyUI | PostgreSQL | Supabase | Github
-        </div>
-
-        <!-- Required Unicons (if you want) -->
-        <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-          <a href="#" class="w-6 mx-1">
-            <i class="uil uil-facebook-f" />
-          </a>
-          <a href="#" class="w-6 mx-1">
-            <i class="uil uil-twitter-alt" />
-          </a>
-          <a href="#" class="w-6 mx-1">
-            <i class="uil uil-youtube" />
-          </a>
-          <a href="#" class="w-6 mx-1">
-            <i class="uil uil-linkedin" />
-          </a>
-          <a href="#" class="w-6 mx-1">
-            <i class="uil uil-instagram" />
-          </a>
         </div>
       </div>
     </div>
