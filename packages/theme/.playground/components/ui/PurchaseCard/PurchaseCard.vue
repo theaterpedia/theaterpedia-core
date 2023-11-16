@@ -100,7 +100,7 @@ import {
   SfIconSell,
   SfIconShoppingCartCheckout,
   SfIconShoppingCart,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import type { PurchaseCardProps } from '~/components/ui/PurchaseCard/types';
 
 defineProps<PurchaseCardProps>();

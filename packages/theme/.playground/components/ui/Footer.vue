@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfLink, SfListItem } from '@storefront-ui/vue';
+import { SfButton, SfLink, SfListItem } from '@crearis/vue';
 import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '~/mocks';
 
 const NuxtLink = resolveComponent('NuxtLink');

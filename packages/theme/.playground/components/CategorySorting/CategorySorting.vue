@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfSelect } from '@storefront-ui/vue';
+import { SfSelect } from '@crearis/vue';
 
 const options = ref([
   {

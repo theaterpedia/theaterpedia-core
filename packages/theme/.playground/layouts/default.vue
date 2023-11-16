@@ -132,7 +132,7 @@ import {
   SfListItem,
   SfModal,
   useDisclosure,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import type { DefaultLayoutProps } from '~/layouts/types';
 
 defineProps<DefaultLayoutProps>();

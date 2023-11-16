@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfAccordionItem, SfChip, SfCounter, SfIconChevronLeft, SfListItem, SfThumbnail } from '@storefront-ui/vue';
+import { SfAccordionItem, SfChip, SfCounter, SfIconChevronLeft, SfListItem, SfThumbnail } from '@crearis/vue';
 import type { FilterEmits, FilterProps } from '~/components/CategoryFilters/types';
 
 const props = defineProps<FilterProps>();

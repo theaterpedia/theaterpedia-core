@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@storefront-ui/vue';
+import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@crearis/vue';
 import type { ReviewProps } from '~/components/ui/Review/types';
 
 const props = defineProps<ReviewProps>();

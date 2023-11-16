@@ -93,7 +93,7 @@ import {
   SfButton,
   SfIconArrowBack,
   SfIconChevronRight,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const { isTablet } = useBreakpoints();
 const { t } = useI18n();

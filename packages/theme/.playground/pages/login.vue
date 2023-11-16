@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfLink, SfCheckbox, SfInput, SfLoaderCircular } from '@storefront-ui/vue';
+import { SfButton, SfLink, SfCheckbox, SfInput, SfLoaderCircular } from '@crearis/vue';
 
 definePageMeta({
   layout: false,

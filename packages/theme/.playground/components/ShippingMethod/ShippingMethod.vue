@@ -31,7 +31,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { SfIconBlock, SfListItem, SfRadio } from '@storefront-ui/vue';
+import { SfIconBlock, SfListItem, SfRadio } from '@crearis/vue';
 import type { ShippingMethodProps } from '~/components/ShippingMethod/types';
 
 defineProps<ShippingMethodProps>();

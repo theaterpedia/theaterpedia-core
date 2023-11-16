@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@storefront-ui/vue';
+import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@crearis/vue';
 import { unrefElement } from '@vueuse/core';
 
 const props = defineProps<{

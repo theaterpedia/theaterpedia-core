@@ -40,7 +40,7 @@
   </form>
 </template>
 <script setup lang="ts">
-import { SfButton } from '@storefront-ui/vue';
+import { SfButton } from '@crearis/vue';
 import type { AccountFormsPasswordProps } from '~/components/AccountForms/types';
 
 const props = defineProps<AccountFormsPasswordProps>();

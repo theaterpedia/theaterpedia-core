@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfCounter, SfIconCheck, SfListItem } from '@storefront-ui/vue';
+import { SfCounter, SfIconCheck, SfListItem } from '@crearis/vue';
 import type { CategoryTreeItemType } from '~/components/CategoryTree/types';
 
 defineProps<CategoryTreeItemType>();

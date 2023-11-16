@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfLink, SfRating, SfCounter, SfButton, SfIconShoppingCart } from '@storefront-ui/vue';
+import { SfLink, SfRating, SfCounter, SfButton, SfIconShoppingCart } from '@crearis/vue';
 import type { ProductCardProps } from '~/components/ui/ProductCard/types';
 
 withDefaults(defineProps<ProductCardProps>(), {

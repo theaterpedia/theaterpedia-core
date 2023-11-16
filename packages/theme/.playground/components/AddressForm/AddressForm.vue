@@ -78,7 +78,7 @@
   </form>
 </template>
 <script setup lang="ts">
-import { SfButton, SfCheckbox, SfInput, SfLoaderCircular, SfSelect } from '@storefront-ui/vue';
+import { SfButton, SfCheckbox, SfInput, SfLoaderCircular, SfSelect } from '@crearis/vue';
 import type { AddressFormProps } from '~/components/AddressForm/types';
 
 const props = defineProps<AddressFormProps>();

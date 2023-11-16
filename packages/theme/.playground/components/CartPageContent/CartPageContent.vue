@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton } from '@storefront-ui/vue';
+import { SfButton } from '@crearis/vue';
 
 const { data: cart } = useCart();
 

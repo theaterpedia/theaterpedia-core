@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconTune, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconTune, useDisclosure } from '@crearis/vue';
 import { whenever } from '@vueuse/core';
 import type { CategoryPageContentProps } from '~/components/CategoryPageContent/types';
 

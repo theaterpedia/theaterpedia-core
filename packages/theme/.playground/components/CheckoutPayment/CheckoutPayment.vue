@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfIconCreditCard } from '@storefront-ui/vue';
+import { SfIconCreditCard } from '@crearis/vue';
 import {
   type CheckoutPaymentEmits,
   type CheckoutPaymentProps,

@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconArrowBack } from '@storefront-ui/vue';
+import { SfButton, SfIconArrowBack } from '@crearis/vue';
 
 definePageMeta({
   layout: 'order',

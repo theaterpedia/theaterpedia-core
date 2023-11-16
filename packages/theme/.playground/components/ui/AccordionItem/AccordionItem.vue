@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfAccordionItem, SfIconChevronLeft } from '@storefront-ui/vue';
+import { SfAccordionItem, SfIconChevronLeft } from '@crearis/vue';
 import { useVModel } from '@vueuse/core';
 import type { AccordionItemProps } from '~/components/ui/AccordionItem/types';
 

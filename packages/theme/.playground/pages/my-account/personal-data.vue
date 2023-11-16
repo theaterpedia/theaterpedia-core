@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconClose, useDisclosure } from '@crearis/vue';
 import { unrefElement } from '@vueuse/core';
 
 definePageMeta({

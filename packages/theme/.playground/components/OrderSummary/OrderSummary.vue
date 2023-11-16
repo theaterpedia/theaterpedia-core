@@ -50,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfInput } from '@storefront-ui/vue';
+import { SfButton, SfInput } from '@crearis/vue';
 import type { OrderSummaryPropsType } from '~/components/OrderSummary/types';
 
 defineProps<OrderSummaryPropsType>();

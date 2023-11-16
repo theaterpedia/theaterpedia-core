@@ -36,7 +36,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconClose, useDisclosure } from '@crearis/vue';
 
 const { isOpen, open, close } = useDisclosure();
 const cart = ref({

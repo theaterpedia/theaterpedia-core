@@ -7,7 +7,7 @@ import {
   SfIconPinterest,
   SfIconTwitter,
   SfIconYoutube,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 export const categories = [
   {

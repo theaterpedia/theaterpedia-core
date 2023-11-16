@@ -132,7 +132,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconChevronLeft, SfIconChevronRight, usePagination } from '@storefront-ui/vue';
+import { SfButton, SfIconChevronLeft, SfIconChevronRight, usePagination } from '@crearis/vue';
 import type { PaginationProps } from '~/components/ui/Pagination/types';
 
 const props = defineProps<PaginationProps>();

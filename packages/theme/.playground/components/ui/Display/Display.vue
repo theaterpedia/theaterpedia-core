@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton } from '@storefront-ui/vue';
+import { SfButton } from '@crearis/vue';
 import type { DisplayProps } from '~/components/ui/Display/types';
 
 defineProps<DisplayProps>();

@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfScrollable } from '@storefront-ui/vue';
+import { SfScrollable } from '@crearis/vue';
 import type { ProductSliderProps } from '~/components/ProductSlider/types';
 
 defineProps<ProductSliderProps>();

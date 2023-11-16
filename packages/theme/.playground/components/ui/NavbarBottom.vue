@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfBadge, SfIconShoppingCart, SfIconHome, SfIconMenu, SfIconPerson } from '@storefront-ui/vue';
+import { SfButton, SfBadge, SfIconShoppingCart, SfIconHome, SfIconMenu, SfIconPerson } from '@crearis/vue';
 
 const { t } = useI18n();
 const { data: cart } = useCart();

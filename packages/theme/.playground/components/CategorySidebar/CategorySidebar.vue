@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfDrawer, SfButton, SfIconClose } from '@storefront-ui/vue';
+import { SfDrawer, SfButton, SfIconClose } from '@crearis/vue';
 import type { CategorySidebarEmits, CategorySidebarProps } from '~/components/CategorySidebar/types';
 
 defineProps<CategorySidebarProps>();

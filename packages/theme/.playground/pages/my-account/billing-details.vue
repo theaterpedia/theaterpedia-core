@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconClose, useDisclosure } from '@crearis/vue';
 import type { SfAddress } from '@vue-storefront/unified-data-model';
 
 definePageMeta({

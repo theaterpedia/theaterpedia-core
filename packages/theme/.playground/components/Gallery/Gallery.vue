@@ -121,7 +121,7 @@
 <script setup lang="ts">
 import type { ComponentPublicInstance } from 'vue';
 import { clamp, type SfScrollableOnScrollData } from '@storefront-ui/shared';
-import { SfScrollable, SfButton, SfIconChevronLeft, SfIconChevronRight } from '@storefront-ui/vue';
+import { SfScrollable, SfButton, SfIconChevronLeft, SfIconChevronRight } from '@crearis/vue';
 import type { SfImage } from '@vue-storefront/unified-data-model';
 import { unrefElement, useIntersectionObserver, useTimeoutFn } from '@vueuse/core';
 

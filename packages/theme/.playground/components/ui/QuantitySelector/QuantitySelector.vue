@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { clamp } from '@storefront-ui/shared';
-import { SfButton, SfIconAdd, SfIconRemove, useId } from '@storefront-ui/vue';
+import { SfButton, SfIconAdd, SfIconRemove, useId } from '@crearis/vue';
 import { useCounter } from '@vueuse/core';
 import type { QuantitySelectorProps } from '~/components/ui/QuantitySelector/types';
 

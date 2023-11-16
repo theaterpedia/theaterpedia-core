@@ -122,7 +122,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfInput, SfCheckbox, SfLink, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfInput, SfCheckbox, SfLink, useDisclosure } from '@crearis/vue';
 
 definePageMeta({
   layout: false,

@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfLink, SfIconSell } from '@storefront-ui/vue';
+import { SfLink, SfIconSell } from '@crearis/vue';
 import type { CartProductCardProps } from '~/components/ui/CartProductCard/types';
 
 defineProps<CartProductCardProps>();

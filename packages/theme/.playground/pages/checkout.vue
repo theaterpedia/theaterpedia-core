@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfLink } from '@storefront-ui/vue';
+import { SfButton, SfLink } from '@crearis/vue';
 import { PaymentMethod } from '~/components/CheckoutPayment/types';
 
 definePageMeta({
