@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
-    './packages/data',
-    './packages/base'
+    'github:theaterpedia/theaterpedia-core/packages/data#courses/tryGitLogic',
+    'github:theaterpedia/theaterpedia-core/packages/base#courses/tryGitLogic'
   ],
   app: {
     head: {
