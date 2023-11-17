@@ -1255,10 +1255,10 @@
     "@mertasan/tailwindcss-variables" "^2.5.2"
     "@storefront-ui/tw-plugin-peer-next" "2.3.1"
 
-"@crearis/typography@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@crearis/typography/-/typography-0.0.7.tgz#d09437968a836e8cc244b923a5b19269fcb0a64e"
-  integrity sha512-LL/cQbN7aisS9wUjc93F0KlXhAof6I92pyJbuznpld8hxmArmWnKCAwzeS664Es81/t+kELrXsE3QeuWtCoqWA==
+"@crearis/typography@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@crearis/typography/-/typography-0.0.8.tgz#22addae28695f331ca862a609448adbf25ec8a03"
+  integrity sha512-daqTevraxSwT9yWPkOy9Fw+uDJDnDbIv41+9J/XUzwL5nkEGtgqgYcpyZL17HfFxAZT+J3/vTPKVKhhuYFglRA==
 
 "@crearis/vue@^0.0.7":
   version "0.0.7"
