@@ -1,5 +1,4 @@
 // import sfTypography from '@crearis/typography';
-import type { Config } from 'tailwindcss';
 
 export default {
   theme: {
@@ -26,4 +25,4 @@ export default {
       },
     },
   },
-} as Config;
+}
