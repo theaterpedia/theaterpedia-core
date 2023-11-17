@@ -1,10 +1,10 @@
-import sfTypography from '@crearis/typography';
+// import sfTypography from '@crearis/typography';
 import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 
 export default {
   presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
+  content: ['./**/*.vue', '../../node_modules/@crearis/vue/**/*.{js,mjs}'],
   theme: {
     extend: {
       gridTemplateAreas: {
@@ -29,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas')],
+  plugins: [require('@savvywombat/tailwindcss-grid-areas')],
 } as Config;

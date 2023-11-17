@@ -28,5 +28,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@savvywombat/tailwindcss-grid-areas')],
+  plugins: [require('@crearis/typography'), require('@savvywombat/tailwindcss-grid-areas')],
 } as Config;
