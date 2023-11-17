@@ -1,4 +1,3 @@
-// import sfTypography from '@crearis/typography';
 import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 
