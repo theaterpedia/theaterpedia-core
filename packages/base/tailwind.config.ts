@@ -1,10 +1,8 @@
 // import sfTypography from '@crearis/typography';
-import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 
 export default {
-  presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@crearis/vue/**/*.{js,mjs}'],
+
   theme: {
     extend: {
       gridTemplateAreas: {
