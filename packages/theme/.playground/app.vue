@@ -1,9 +1,8 @@
 <template>
   <Body class="font-body" :class="bodyClass" />
   <VitePwaManifest />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <!-- NuxtLayout -->
+  <NuxtPage />
 </template>
 
 <script setup lang="ts">

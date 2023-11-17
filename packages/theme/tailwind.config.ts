@@ -1,4 +1,4 @@
-import sfTypography from '@crearis/typography';
+// import sfTypography from '@crearis/typography';
 import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 
@@ -29,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas')],
+  plugins: [require('@tailwindcss/typography'), require('@savvywombat/tailwindcss-grid-areas')],
 } as Config;

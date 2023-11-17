@@ -23,7 +23,9 @@
   },
   "files": [
     "app/",
+    "assets/",
     "components/",
+    "composables/",
     "layouts/",
     "app.vue",
     "app.config.ts",

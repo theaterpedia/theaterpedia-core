@@ -19,6 +19,7 @@
     "test:cypress-dev": "cypress open --e2e"
   },
   "dependencies": {
-    "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0"
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0",
+    "@tailwindcss/typography": "^0.5.10"
   }
 }
