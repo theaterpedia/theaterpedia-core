@@ -15,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+import { useProducts } from '@crearis/data-main/composables/useProducts';
 
 definePageMeta({
   layout: false,

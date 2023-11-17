@@ -1,7 +1,7 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "main": "./nuxt.config.ts",
   "scripts": {

@@ -2,7 +2,7 @@
   "name": "@crearis/base",
   "type": "module",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "./nuxt.config.ts",
   "license": "MIT",
   "author": "hans.doenitz@theaterpedia.org",
