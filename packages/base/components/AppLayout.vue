@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { cover } = useAppConfig()
+// const { cover } = useAppConfig()
 </script>
 
 <template>
