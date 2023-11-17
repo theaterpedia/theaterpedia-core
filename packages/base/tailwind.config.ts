@@ -2,7 +2,6 @@
 import type { Config } from 'tailwindcss';
 
 export default {
-
   theme: {
     extend: {
       gridTemplateAreas: {
@@ -27,5 +26,4 @@ export default {
       },
     },
   },
-  plugins: [require('@savvywombat/tailwindcss-grid-areas')],
 } as Config;

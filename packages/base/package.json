@@ -44,7 +44,7 @@
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxtjs/html-validator": "^1.1.0",    
     "@types/node": "^20.8.3",
-    "eslint": "^8.51.0",
+    "eslint": "^8.51.0", 
     "eslint-plugin-prettier": "5.0.1",
     "happy-dom": "^12.10.3",
     "@nuxtjs/i18n": "8.0.0-rc.5",

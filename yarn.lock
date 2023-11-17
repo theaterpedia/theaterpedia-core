@@ -1260,10 +1260,10 @@
   resolved "https://registry.yarnpkg.com/@crearis/typography/-/typography-0.0.8.tgz#22addae28695f331ca862a609448adbf25ec8a03"
   integrity sha512-daqTevraxSwT9yWPkOy9Fw+uDJDnDbIv41+9J/XUzwL5nkEGtgqgYcpyZL17HfFxAZT+J3/vTPKVKhhuYFglRA==
 
-"@crearis/vue@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@crearis/vue/-/vue-0.0.7.tgz#a1a3b998bc947c3cbac49a6d337e49b85c7e0b15"
-  integrity sha512-Conrqh57G+p4dvSgedhXGpUoQI5DaluJvbx2c0A+Fmg8uYLe5tZjX7YXcewClY2x0L5NSkWzMzuD9prcZ39Lag==
+"@crearis/vue@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@crearis/vue/-/vue-0.0.8.tgz#9ff9242b33c31587aa85b2127b4f874ba4c52ee4"
+  integrity sha512-sWaoBf2gdvQ0ujSQHn8gVC40nHS3csKcbSTXIc0IykDn2iP4+pB6wRsJ7IVe9h9uLdBGPgo4To/xssCZNIZfRQ==
   dependencies:
     "@crearis/tailwind-config" latest
     "@floating-ui/vue" "^0.2.1"
