@@ -13,19 +13,17 @@
     "preview": "nuxt preview .playground",
     "lint": "eslint ."
   },
-  "devDependencies": {
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxtjs/html-validator": "^1.1.0",
-    "@types/node": "^20.8.3",
-    "eslint": "^8.51.0",
-    "nuxt": "^3.8.0",
-    "release-it": "^16.2.1",
-    "typescript": "5.2.2"
-  },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.9.4",
-    "@crearis/vue": "^0.0.5"
+    "nuxt-lazy-hydrate": "^1.0.0",
+    "@crearis/vue": "^0.0.7"
   },
+  "devDependencies": {
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
+    "@crearis/typography": "^0.0.7",
+    "@vue-storefront/unified-data-model": "^0.10.0"
+  },  
   "release-it": {
     "git": {
       "commitMessage": "chore(release): release v${version}"

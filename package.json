@@ -1,9 +1,8 @@
 {
   "name": "theaterpedia-core",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "private": true,
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "description": "",
@@ -11,12 +10,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "build": "cd apps/tp-template && nuxi build",
+    "build:data": "cd packages/data && nuxi build",
     "dev": "concurrently --names \"Base,Data,Theme,App\" \"yarn dev:base\" \"yarn dev:data\" \"yarn dev:theme\" \"yarn dev:app\"",
     "dev:base": "cd packages/base && yarn dev",
     "dev:theme": "cd packages/theme && yarn dev",
     "dev:app": "cd apps/tp-template && yarn dev",
     "dev:data": "cd packages/data && yarn dev",
-    "prepare": "concurrently \"yarn prepare:base\" \"yarn prepare:theme\"",
+    "prepare": "concurrently \"yarn prepare:base\" \"yarn prepare:data\" \"yarn prepare:theme\"",
+    "prepare:data": "cd packages/data/.playground && yarn",
     "prepare:base": "cd packages/base/.playground && yarn",
     "prepare:theme": "cd packages/theme/.playground && yarn",
     "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install && yarn prepare:docs",

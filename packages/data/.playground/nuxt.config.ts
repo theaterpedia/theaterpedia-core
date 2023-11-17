@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
-  extends: ['..'],
+  extends: [
+    '..',
+    './packages/data'
+  ],
   devtools: { enabled: true },
 })

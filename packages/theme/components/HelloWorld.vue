@@ -5,7 +5,7 @@ const { theme } = useAppConfig()
 <template>
   <div class="bg-primary-100">
     <h1 class="text-3xl font-bold p-4 text-primary-500"> 
-      {{ theme.name }} 
+      Here was theme.name
     </h1>
   </div>
 </template>

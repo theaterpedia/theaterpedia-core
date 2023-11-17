@@ -2,7 +2,7 @@
   "name": "@crearis/base-playground",
   "type": "module",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.7",
   "main": "./nuxt.config.ts",
   "license": "MIT",
   "author": "hans.doenitz@theaterpedia.org",
@@ -12,9 +12,5 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
-
-  "dependencies": {
-    "@nuxtjs/color-mode": "^3.3.0",
-    "nuxt-icon": "^0.6.5"
-  }
+  "dependencies": {"@vue-storefront/storefront-boilerplate-sdk": "^0.2.0"}
 }

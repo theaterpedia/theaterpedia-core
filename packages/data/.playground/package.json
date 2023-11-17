@@ -1,0 +1,24 @@
+{
+  "name": "@crearis/data-playground",
+  "type": "module",
+  "version": "0.0.7",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
+    "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:cypress": "cypress run",
+    "test:cypress-dev": "cypress open --e2e"
+  },
+  "dependencies": {
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0"
+  }
+}

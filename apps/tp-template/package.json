@@ -12,12 +12,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
-    "@crearis/theme-main": "^0.0.4",
-    "@crearis/data-main": "^0.0.4",
-    "@crearis/base": "^0.0.4"
+    "@crearis/theme-main": "workspace:*",
+    "@crearis/data-main": "workspace:*",
+    "@crearis/base": "workspace:*"
   }
 }

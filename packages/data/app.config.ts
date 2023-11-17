@@ -1,5 +1,3 @@
-import type { ColorPalette } from './types'
-
 export default defineAppConfig({
   data: {
     name: 'Hello from Crearis-Data layer',

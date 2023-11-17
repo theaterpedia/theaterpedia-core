@@ -1,7 +1,8 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.7",
+  "private": false,
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev .playground -p 3002",
@@ -11,9 +12,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "eslint": "^8.28.0",
-    "nuxt": "^3.8.0",
-    "typescript": "5.2.2"
+    "@vue-storefront/unified-data-model": "^0.10.0",
+    "@vue-storefront/storefront-boilerplate-sdk": "^0.2.0"
   }
 }

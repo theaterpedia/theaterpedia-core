@@ -12,9 +12,9 @@ const isHome = ref(route.fullPath === '/')
           to="/"
           class="text-xl text-gray-300 hover:text-gray-100 "
         >
-          {{ appConfig.domain.textlogo }}
+          appConfig.domain.textlogo
         </NuxtLink>
-        <p>{{ appConfig.domain.claim }}</p>
+        <p>appConfig.domain.claim</p>
       </div>
       <!-- Col-1 -->
       <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
