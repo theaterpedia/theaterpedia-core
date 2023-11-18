@@ -1,0 +1,15 @@
+import { mount } from '@vue/test-utils';
+import ProductProperties from '@crearis/theme-main/components/ProductProperties/ProductProperties.vue';
+import { mockProduct } from '@crearis/theme-main/composables/useProductAttribute/__tests__/useProduct.mock';
+
+describe('<ProductProperties />', () => {
+  it('should render component', () => {
+    const { getByTestId } = mount(ProductProperties, {
+      props: {
+        product: mockProduct
+      }
+    });
+
+    expect(getByTestId('product-properties'));
+  });
+});
