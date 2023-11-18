@@ -1,4 +1,5 @@
 export * from './useCart';
-export * from './useContent';
+export * from './useContentSf';
 export * from './useHandleError';
 export * from './useProduct';
+export * from './useProducts';

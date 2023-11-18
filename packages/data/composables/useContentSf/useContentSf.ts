@@ -1,4 +1,4 @@
-import type { UseContentReturn, UseContentState, GetContent } from '@crearis/data-main/composables/useContent/types';
+import type { UseContentReturn, UseContentState, GetContent } from '@crearis/data-main/composables/useContentSf/types';
 import { useSdk } from '~/sdk';
 
 /**
@@ -8,7 +8,7 @@ import { useSdk } from '~/sdk';
  * @example
  * const { data, loading, getContent } = useContent<ContentFieldsType>('url');
  */
-export const useContent: UseContentReturn = (url) => {
+export const useContentSf: UseContentReturn = (url) => {
   const state = useState<UseContentState>(`content-${url}`, () => ({
     data: null,
     loading: false,
