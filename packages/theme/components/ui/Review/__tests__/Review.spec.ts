@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import Review from '@crearis/theme-main/components/ui/Review/Review.vue';
-import { mockProductReviews } from '@crearis/theme-main/composables/useProductReviews/__tests__/productReviews.mock';
+import { mockProductReviews } from '@crearis/data-main/composables/useProductReviews/__tests__/productReviews.mock';
 
 describe('<Review />', () => {
   it('should render component', () => {

@@ -2,18 +2,56 @@
   "name": "@crearis/data-main",
   "type": "module",
   "version": "0.0.4",
-  "main": "./nuxt.config.ts",
+  "private": true,
+  "main": "./nuxt.config.ts",  
+  "files": [
+    "composables/",
+    "app.vue",
+    "app.config.ts",
+    "nuxt.config.ts"
+  ],
   "scripts": {
+    "build": "nuxi build .playground",
     "dev": "nuxi dev .playground -p 3002",
-    "build": "nuxt build .playground",
-    "generate": "nuxt generate .playground",
-    "preview": "nuxt preview .playground",
-    "lint": "eslint ."
+    "generate": "nuxi generate .playground",
+    "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
+    "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
+    "preview": "nuxi preview .playground",
+    "postinstall": "nuxi prepare .playground",
+    "test": "cd .playground && vitest run",
+    "test:coverage": "cd .playground && vitest run --coverage",
+    "test:watch": "cd .playground && vitest",
+    "test:cypress": "cd .playground && cypress run",
+    "test:cypress-dev": "cd .playground && cypress open --e2e",
+    "prepublishOnly": "yarn lint",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@vue-storefront/sdk": "^1.0.1",
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0",
+    "@vueuse/core": "^10.3.0",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "eslint": "^8.28.0",
-    "nuxt": "^3.8.0",
-    "typescript": "5.2.2"
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^18",
+    "@vite-pwa/nuxt": "^0.1.0",
+    "@vitest/coverage-v8": "^0.33.0",
+    "@vitest/expect": "^1.0.4",
+    "@vue-storefront/unified-data-model": "^0.6.0",
+    "@vue/test-utils": "^2.4.0",
+    "cypress": "12.12.0",
+    "cypress-real-events": "^1.10.0",
+    "cypress-wait-until": "^2.0.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "happy-dom": "^12.0.0",
+    "nuxt": "^3.6.5",
+    "nuxt-vitest": "^0.10.1",
+    "sass": "^1.64.1",
+    "vitest": "^0.33.0",
+    "vue-tsc": "^1.8.6"
   }
 }

@@ -5,13 +5,13 @@
   "private": true,
   "main": "./nuxt.config.ts",  
   "files": [
-    "app/",
     "components/",
+    "pages/",
     "layouts/",
     "app.vue",
+    "i18n.config.ts",
     "app.config.ts",
     "nuxt.config.ts",
-    "nuxt.schema.ts",
     "tailwind.config.ts"
   ],
   "scripts": {
