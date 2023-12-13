@@ -1,8 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   extends: [
-    "@crearis/theme-main",
-    "@crearis/data-main",
-  ]
+          '@crearis/theme-main',
+          '@crearis/data-main'
+        ],
+  devtools: { enabled: true },
 })
+
