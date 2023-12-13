@@ -1,20 +1,25 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.0.4",
-  "private": true,
-  "main": "./nuxt.config.ts",  
+  "version": "0.0.5",
+  "license": "MIT",
+  "main": "./nuxt.config.ts",
   "files": [
     "composables/",
     "app.vue",
     "app.config.ts",
     "nuxt.config.ts"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "build": "nuxi build .playground",
     "dev": "nuxi dev .playground -p 3002",
     "generate": "nuxi generate .playground",
-    "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
+    "lint": "nuxt typecheck",
+    "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxi preview .playground",
     "postinstall": "nuxi prepare .playground",
@@ -41,6 +46,7 @@
     "@vitest/coverage-v8": "^0.33.0",
     "@vitest/expect": "^1.0.4",
     "@vue-storefront/unified-data-model": "^0.6.0",
+    "@vue-storefront/eslint-config": "2.0.0-rc.7",
     "@vue/test-utils": "^2.4.0",
     "cypress": "12.12.0",
     "cypress-real-events": "^1.10.0",

@@ -1,5 +1,5 @@
 import type { UseContentReturn, UseContentState, GetContent } from '@crearis/data-main/composables/useContent/types';
-import { useSdk } from '~/sdk';
+import { useSdk } from '../../sdk';
 
 /**
  * @description Composable for managing content from CMS.

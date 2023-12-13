@@ -1,6 +1,6 @@
 import { toRefs } from '@vueuse/shared';
 import type { UseCustomerReturn, UseCustomerState, FetchCustomer } from '@crearis/data-main/composables/useCustomer/types';
-import { useSdk } from '~/sdk';
+import { useSdk } from '../../sdk';
 
 /**
  * @description Composable managing customer data

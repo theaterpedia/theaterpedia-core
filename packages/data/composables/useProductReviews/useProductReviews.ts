@@ -4,7 +4,7 @@ import type {
   UseProductReviewsState,
   FetchProductReviews,
 } from '@crearis/data-main/composables/useProductReviews/types';
-import { useSdk } from '~/sdk';
+import { useSdk } from '../../sdk';
 
 /**
  * @description Composable managing product reviews data

@@ -1,7 +1,7 @@
 import type { SfCart } from '@vue-storefront/unified-data-model';
 import { toRefs } from '@vueuse/shared';
 import type { UseCartReturn, UseCartState, FetchCart } from '@crearis/data-main/composables/useCart/types';
-import { useSdk } from '~/sdk';
+import { useSdk } from '../../sdk';
 
 /**
  * @description Composable for managing cart.

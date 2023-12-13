@@ -4,7 +4,7 @@ import type {
   UseProductRecommendedState,
   FetchProductRecommended,
 } from '@crearis/data-main/composables/useProductRecommended/types';
-import { useSdk } from '~/sdk';
+import { useSdk } from '../../sdk';
 
 /**
  * Composable for getting recommended products data
