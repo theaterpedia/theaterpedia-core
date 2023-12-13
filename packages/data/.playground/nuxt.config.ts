@@ -1,4 +1,4 @@
 export default defineNuxtConfig({
-  extends: ['..'],
+  extends: ['@crearis/theme-main', '..'],
   devtools: { enabled: true },
 })

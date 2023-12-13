@@ -1256,10 +1256,10 @@
     "@nuxtjs/tailwindcss" "^6.9.4"
     "@tailwindcss/typography" "^0.5.10"
 
-"@crearis/data-main@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@crearis/data-main/-/data-main-0.0.4.tgz"
-  integrity sha512-TjwnEBBhG4X40NhMpBRN+lnnMGhdKcdBsIL6qZVbtKTlGXEAhba/f1m7fYwZQtRNxcJKk3wFC8W1n8npE6P01A==
+"@crearis/data-main@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@crearis/data-main/-/data-main-0.0.5.tgz"
+  integrity sha512-d2AD50qggoFT7ZTKh7525Qi9qVa/RJdA0ujAjpUhu5IChnksmm9k8BQ9LLWdGnI+3KNkRl3E8wjDR/zuSD1Ijw==
   dependencies:
     "@vue-storefront/sdk" "^1.0.1"
     "@vue-storefront/storefront-boilerplate-sdk" "~0.2.0"
@@ -1267,7 +1267,7 @@
     lodash-es "^4.17.21"
 
 "@crearis/data-main@file:/home/persona/crearis/theaterpedia-core/packages/data":
-  version "0.0.5"
+  version "0.0.6"
   resolved "file:packages/data"
   dependencies:
     "@vue-storefront/sdk" "^1.0.1"
@@ -1283,10 +1283,10 @@
     "@mertasan/tailwindcss-variables" "^2.5.2"
     "@storefront-ui/tw-plugin-peer-next" "2.3.1"
 
-"@crearis/theme-main@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@crearis/theme-main/-/theme-main-0.0.4.tgz"
-  integrity sha512-n+ejOA439hq/zB3Onz0YmBiqDgT7T403IGfCIRU8WEkbBQoojzc/o4dQfpScn5OXONDRbog+9XSEDWfYAulcEQ==
+"@crearis/theme-main@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@crearis/theme-main/-/theme-main-0.0.5.tgz"
+  integrity sha512-vFZEk3W2MakuVozTIr+lJUqONtv6BRTiI8edA6irW/7EzszRARLHrIW0j3JMR2AdkWjI+uVE5t1XzAH7hBPwBQ==
   dependencies:
     "@vue-storefront/sdk" "^1.0.1"
     "@vue-storefront/storefront-boilerplate-sdk" "~0.2.0"
@@ -1295,7 +1295,7 @@
     nuxt-lazy-hydrate "^1.0.0"
 
 "@crearis/theme-main@file:/home/persona/crearis/theaterpedia-core/packages/theme":
-  version "0.0.5"
+  version "0.0.6"
   resolved "file:packages/theme"
   dependencies:
     "@vue-storefront/sdk" "^1.0.1"
