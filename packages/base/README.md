@@ -1,0 +1,2 @@
+This is a stripped-down-version of Atinux' content-wind theme, optimized to be used as a data-layer with deployment-functionality in combination with other tailwindcss-based ui-libraries
+https://github.com/Atinux/content-wind

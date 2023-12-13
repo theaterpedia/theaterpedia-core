@@ -1,6 +1,6 @@
 {
   "name": "theaterpedia-core",
-  "version": "1.0.0",
+  "version": "0.0.5",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -10,20 +10,28 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
-    "build": "cd docus && nuxi build",
-    "dev": "concurrently --names \"Frontend\" \"yarn dev:app\"",
+    "build": "cd apps/tp-template && nuxi build",
+    "dev": "concurrently --names \"Base,Data,Theme,App\" \"yarn dev:base\" \"yarn dev:data\" \"yarn dev:theme\" \"yarn dev:app\"",
+    "dev:base": "cd packages/base && yarn dev",
     "dev:theme": "cd packages/theme && yarn dev",
-    "dev:template": "cd apps/tp-template && yarn dev",
-    "dev:data": "cd packages/theme && yarn dev",
+    "dev:app": "cd apps/tp-template && yarn dev",
+    "dev:data": "cd packages/data && yarn dev",
+    "prepare": "concurrently \"yarn prepare:base\" \"yarn prepare:theme\" \"yarn prepare:app\"",
+    "prepare:app": "cd apps/tp-template && yarn",
+    "prepare:base": "cd packages/base/.playground && yarn",
+    "prepare:theme": "cd packages/theme/.playground && yarn",
     "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install && yarn prepare:docs",
-    "changesets:publish": "yarn build && yarn changeset publish" 
+    "changesets:publish": "yarn build && yarn changeset publish",
+    "release:theme": "cd packages/theme && yarn release",
+    "release:data": "cd packages/data && yarn release"
   },
   "keywords": [],
   "author": "hans.doenitz@dasei.eu",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
-  "dependencies": {},
   "devDependencies": {
-    "lerna": "^7.4.2"
+    "concurrently": "^8.2.0",
+    "lerna": "^7.4.2",
+    "vue-tsc": "^1.8.22"
   }
 }
