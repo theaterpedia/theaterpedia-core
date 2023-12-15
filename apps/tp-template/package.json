@@ -29,6 +29,8 @@
     "nuxt-lazy-hydrate": "^1.0.0"
   },
   "devDependencies": {
+    "nuxt-hydration":"^0.5.3",
+    "@nuxtjs/html-validator":"^1.6.0",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/google-fonts": "^3.0.1",
