@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { OverlayProps } from '@crearis/theme-main/components/ui/Overlay/types';
+import type { OverlayProps } from '../../ui/Overlay/types';
 
 defineProps<OverlayProps>();
 </script>

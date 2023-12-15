@@ -79,7 +79,7 @@
 </template>
 <script setup lang="ts">
 import { SfButton, SfCheckbox, SfInput, SfLoaderCircular, SfSelect } from '@crearis/vue';
-import type { AddressFormProps } from '@crearis/theme-main/components/AddressForm/types';
+import type { AddressFormProps } from '../AddressForm/types';
 
 const props = defineProps<AddressFormProps>();
 defineEmits(['on-save', 'on-close']);

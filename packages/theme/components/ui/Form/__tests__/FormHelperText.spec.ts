@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import FormHelperText from '@crearis/theme-main/components/ui/Form/FormHelperText.vue';
+import FormHelperText from '../../ui/Form/FormHelperText.vue';
 
 describe('<FormHelperText />', () => {
   it('should render component', () => {

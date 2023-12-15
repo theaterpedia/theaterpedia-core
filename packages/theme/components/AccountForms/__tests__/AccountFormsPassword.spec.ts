@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AccountFormsPassword from '@crearis/theme-main/components/AccountForms/AccountFormsPassword.vue';
+import AccountFormsPassword from '../../AccountForms/AccountFormsPassword.vue';
 
 describe('<AccountFormsPassword />', () => {
   it('should render component', () => {

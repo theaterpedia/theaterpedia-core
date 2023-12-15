@@ -23,9 +23,8 @@ export default defineNuxtConfig({
     titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
   },
   imports: {
-    dirs: ['composables/**', 'utils/**'],
+    dirs: ['composables/**', 'utils/**', 'assets/**'],
   },
-  css: ['~/assets/style.scss'],
   image: {
     screens: {
       '4xl': 1920,
@@ -68,6 +67,10 @@ export default defineNuxtConfig({
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
   ],
+  tailwindcss: {
+    exposeConfig: true,
+    cssPath: '~/assets/style.scss',
+  },
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },

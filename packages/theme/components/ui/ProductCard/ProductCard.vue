@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import { SfLink, SfRating, SfCounter, SfButton, SfIconShoppingCart } from '@crearis/vue';
-import type { ProductCardProps } from '@crearis/theme-main/components/ui/ProductCard/types';
+import type { ProductCardProps } from '../../ui/ProductCard/types';
 
 withDefaults(defineProps<ProductCardProps>(), {
   lazy: true,

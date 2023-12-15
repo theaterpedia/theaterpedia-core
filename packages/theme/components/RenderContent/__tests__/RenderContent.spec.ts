@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import RenderContent from '@crearis/theme-main/components/RenderContent/RenderContent.vue';
+import RenderContent from '../../RenderContent/RenderContent.vue';
 
 describe('<RenderContent />', () => {
   it('should render component', () => {

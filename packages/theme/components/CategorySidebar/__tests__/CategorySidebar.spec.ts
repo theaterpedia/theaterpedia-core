@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import CategorySidebar from '@crearis/theme-main/components/CategorySidebar/CategorySidebar.vue';
+import CategorySidebar from '../CategorySidebar.vue';
 
 describe('<CategorySidebar />', () => {
   it('should render component', () => {

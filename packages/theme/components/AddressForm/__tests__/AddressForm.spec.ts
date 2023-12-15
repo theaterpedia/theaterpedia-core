@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AddressForm from '@crearis/theme-main/components/AddressForm/AddressForm.vue';
+import AddressForm from '../../AddressForm/AddressForm.vue';
 
 describe('<AddressForm />', () => {
   it('should render component', () => {

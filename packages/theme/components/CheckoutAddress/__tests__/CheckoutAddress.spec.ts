@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import CheckoutAddress from '@crearis/theme-main/components/CheckoutAddress/CheckoutAddress.vue';
+import CheckoutAddress from '../CheckoutAddress/CheckoutAddress.vue';
 
 describe('<CheckoutAddress />', () => {
   it('should render component', () => {

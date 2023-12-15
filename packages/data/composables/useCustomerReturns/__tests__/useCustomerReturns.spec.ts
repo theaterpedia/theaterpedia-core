@@ -1,4 +1,4 @@
-import { useCustomerReturns } from '@crearis/data-main/composables/useCustomerReturns/useCustomerReturns';
+import { useCustomerReturns } from '../../composables/useCustomerReturns/useCustomerReturns';
 
 describe('useCustomerReturns', () => {
   it('should return account data', async () => {

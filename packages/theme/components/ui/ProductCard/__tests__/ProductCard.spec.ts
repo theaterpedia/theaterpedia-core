@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import ProductCard from '@crearis/theme-main/components/ui/ProductCard/ProductCard.vue';
+import ProductCard from '../../ui/ProductCard/ProductCard.vue';
 
 describe('<ProductCard />', () => {
   it('should render component', () => {

@@ -1,4 +1,4 @@
-import { useCustomerOrder } from '@crearis/data-main/composables/useCustomerOrder/useCustomerOrder';
+import { useCustomerOrder } from '../../composables/useCustomerOrder/useCustomerOrder';
 
 describe('useCustomerOrder', () => {
   it('should return customer order data', async () => {

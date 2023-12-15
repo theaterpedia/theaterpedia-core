@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { SfButton, SfLink } from '@crearis/vue';
-import { PaymentMethod } from '@crearis/theme-main/components/CheckoutPayment/types';
+import { PaymentMethod } from '../components/CheckoutPayment/types';
 
 definePageMeta({
   layout: false,

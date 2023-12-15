@@ -20,7 +20,7 @@
 </template>
 <script setup lang="ts">
 import { SfButton, SfInput } from '@crearis/vue';
-import type { AccountFormsNameProps } from '@crearis/theme-main/components/AccountForms/types';
+import type { AccountFormsNameProps } from '../AccountForms/types';
 
 const props = defineProps<AccountFormsNameProps>();
 defineEmits(['on-save', 'on-cancel']);

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Filter from '@crearis/theme-main/components/CategoryFilters/Filter.vue';
+import Filter from '../../CategoryFilters/Filter.vue';
 
 describe('<Filter />', () => {
   it('should render component', () => {

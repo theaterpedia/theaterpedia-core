@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import ProductProperties from '@crearis/theme-main/components/ProductProperties/ProductProperties.vue';
+import ProductProperties from '../ProductProperties.vue';
 import { mockProduct } from '@crearis/data-main/composables/useProductAttribute/__tests__/useProduct.mock';
 
 describe('<ProductProperties />', () => {

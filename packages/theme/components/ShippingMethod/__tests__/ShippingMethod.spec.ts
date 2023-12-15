@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import ShippingMethod from '@crearis/theme-main/components/ShippingMethod/ShippingMethod.vue';
+import ShippingMethod from '../../ShippingMethod/ShippingMethod.vue';
 
 describe('<ShippingMethod />', () => {
   it('should render component', () => {

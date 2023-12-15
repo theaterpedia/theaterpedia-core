@@ -1,4 +1,4 @@
-import { useProductRecommended } from '@crearis/data-main/composables/useProductRecommended/useProductRecommended';
+import { useProductRecommended } from '../../composables/useProductRecommended/useProductRecommended';
 
 describe('useProductRecommended', () => {
   it('should return product reviews', async () => {

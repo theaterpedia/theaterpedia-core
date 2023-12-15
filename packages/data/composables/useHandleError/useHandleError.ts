@@ -1,4 +1,4 @@
-import type { UseHandleError, ErrorParams } from '@crearis/data-main/composables/useHandleError/types';
+import type { UseHandleError, ErrorParams } from '../../composables/useHandleError/types';
 
 const defaultError: ErrorParams = {
   status: 500,

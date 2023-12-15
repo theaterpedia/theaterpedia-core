@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import type { GetProducts } from '@vue-storefront/storefront-boilerplate-sdk';
+import type { GetProducts } from '@crearis/crearis-boilerplate-sdk';
 import type { Maybe } from '@vue-storefront/unified-data-model';
 
 export interface UseProductsState {

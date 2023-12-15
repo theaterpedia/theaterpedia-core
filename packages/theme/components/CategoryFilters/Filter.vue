@@ -41,7 +41,7 @@
 
 <script setup lang="ts">
 import { SfAccordionItem, SfChip, SfCounter, SfIconChevronLeft, SfListItem, SfThumbnail } from '@crearis/vue';
-import type { FilterEmits, FilterProps } from '@crearis/theme-main/components/CategoryFilters/types';
+import type { FilterEmits, FilterProps } from '../CategoryFilters/types';
 
 const props = defineProps<FilterProps>();
 const emit = defineEmits<FilterEmits>();

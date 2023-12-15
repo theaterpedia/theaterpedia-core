@@ -101,7 +101,7 @@ import {
   SfIconShoppingCartCheckout,
   SfIconShoppingCart,
 } from '@crearis/vue';
-import type { PurchaseCardProps } from '@crearis/theme-main/components/ui/PurchaseCard/types';
+import type { PurchaseCardProps } from '../../ui/PurchaseCard/types';
 
 defineProps<PurchaseCardProps>();
 

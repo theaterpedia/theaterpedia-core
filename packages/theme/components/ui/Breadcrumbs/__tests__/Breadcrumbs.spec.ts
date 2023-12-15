@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Breadcrumbs from '@crearis/theme-main/components/ui/Breadcrumbs/Breadcrumbs.vue';
+import Breadcrumbs from '../../ui/Breadcrumbs/Breadcrumbs.vue';
 
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {

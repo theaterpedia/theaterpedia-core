@@ -1,5 +1,5 @@
-import type { FetchProducts, UseProductsReturn, UseProductsState } from '@crearis/data-main/composables/useProducts/types';
-import { useSdk } from '../../sdk';
+import type { FetchProducts, UseProductsReturn, UseProductsState } from '../../composables/useProducts/types';
+import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable for managing products.

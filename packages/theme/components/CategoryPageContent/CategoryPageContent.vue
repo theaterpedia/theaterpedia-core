@@ -59,7 +59,7 @@
 <script setup lang="ts">
 import { SfButton, SfIconTune, useDisclosure } from '@crearis/vue';
 import { whenever } from '@vueuse/core';
-import type { CategoryPageContentProps } from '@crearis/theme-main/components/CategoryPageContent/types';
+import type { CategoryPageContentProps } from '../CategoryPageContent/types';
 
 withDefaults(defineProps<CategoryPageContentProps>(), {
   itemsPerPage: 24,

@@ -41,7 +41,7 @@
 
 <script setup lang="ts">
 import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@crearis/vue';
-import type { ReviewProps } from '@crearis/theme-main/components/ui/Review/types';
+import type { ReviewProps } from '../../ui/Review/types';
 
 const props = defineProps<ReviewProps>();
 

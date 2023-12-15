@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-const { getContent, data: content } = useContent('home-page');
+import { useSfContent } from '../composables/useSfContent';
+const { getContent, data: content } = useSfContent('home-page');
 
 getContent();
 </script>

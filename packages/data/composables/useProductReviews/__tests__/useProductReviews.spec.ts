@@ -1,5 +1,5 @@
 import { vi } from 'vitest';
-import { useProductReviews } from '@crearis/data-main/composables/useProductReviews';
+import { useProductReviews } from '../../composables/useProductReviews';
 import { mockProductReviews } from './productReviews.mock';
 
 vi.mock('~/sdk', () => ({

@@ -1,6 +1,6 @@
 import { toRefs } from '@vueuse/shared';
-import type { UseProductReturn, UseProductState, FetchProduct } from '@crearis/data-main/composables/useProduct/types';
-import { useSdk } from '../../sdk';
+import type { UseProductReturn, UseProductState, FetchProduct } from '../../composables/useProduct/types';
+import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable managing product data

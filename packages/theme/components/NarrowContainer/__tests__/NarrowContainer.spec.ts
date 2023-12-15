@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import NarrowContainer from '@crearis/theme-main/components/NarrowContainer/NarrowContainer.vue';
+import NarrowContainer from '../NarrowContainer/NarrowContainer.vue';
 
 describe('<NarrowContainer />', () => {
   it('should render component', () => {

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import PurchaseCard from '@crearis/theme-main/components/ui/PurchaseCard/PurchaseCard.vue';
+import PurchaseCard from '../../ui/PurchaseCard/PurchaseCard.vue';
 import type { SfProduct } from '@vue-storefront/unified-data-model';
 
 describe('<PurchaseCard />', () => {

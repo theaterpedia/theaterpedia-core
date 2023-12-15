@@ -1,0 +1,25 @@
+{
+  "name": "@crearis/ui",
+  "version": "0.0.0",
+  "main": "nuxt.mjs",
+  "private": true,
+  "scripts": {
+    "dev": "histoire dev",
+    "build": "histoire build",
+    "preview": "histoire preview",
+    "test": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@histoire/plugin-vue": "^0.17.6",
+    "@crearis/tsconfig": "*",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vue/test-utils": "^2.4.3",
+    "c8": "^8.0.1",
+    "histoire": "^0.17.6",
+    "jsdom": "^23.0.1",
+    "vitest": "^0.30.0",
+    "vue": "^3.2.47",
+    "vite": "^4.5.1"
+  }
+}

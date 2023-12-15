@@ -60,7 +60,7 @@
 
 <script setup lang="ts">
 import { SfDropdown, SfButton, SfLink, SfIconMoreHoriz } from '@crearis/vue';
-import type { BreadcrumbsProps } from '@crearis/theme-main/components/ui/Breadcrumbs/types';
+import type { BreadcrumbsProps } from '../../ui/Breadcrumbs/types';
 
 defineProps<BreadcrumbsProps>();
 

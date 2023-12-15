@@ -42,7 +42,7 @@
 </template>
 <script setup lang="ts">
 import { SfButton, SfIconClose, useDisclosure } from '@crearis/vue';
-import type { CheckoutAddressProps } from '@crearis/theme-main/components/CheckoutAddress/types';
+import type { CheckoutAddressProps } from '../CheckoutAddress/types';
 
 defineProps<CheckoutAddressProps>();
 

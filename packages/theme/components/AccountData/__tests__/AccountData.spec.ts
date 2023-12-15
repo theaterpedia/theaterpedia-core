@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AccountData from '@crearis/theme-main/components/AccountData/AccountData.vue';
+import AccountData from '../../AccountData/AccountData.vue';
 
 describe('<AccountData />', () => {
   it('should render component', () => {

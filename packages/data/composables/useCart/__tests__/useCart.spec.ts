@@ -1,4 +1,4 @@
-import { useCart } from '@crearis/data-main/composables/useCart/useCart';
+import { useCart } from '../../composables/useCart/useCart';
 
 describe('useCart', () => {
   it('should return account data', async () => {

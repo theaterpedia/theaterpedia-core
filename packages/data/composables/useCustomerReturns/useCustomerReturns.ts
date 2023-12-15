@@ -3,7 +3,7 @@ import type {
   UseCustomerReturnsReturn,
   UseCustomerReturnsState,
   FetchCustomerReturns,
-} from '@crearis/data-main/composables/useCustomerReturns/types';
+} from '../../composables/useCustomerReturns/types';
 
 /**
  * @description Composable managing returns data

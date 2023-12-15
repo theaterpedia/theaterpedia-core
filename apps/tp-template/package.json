@@ -13,22 +13,22 @@
     "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxi preview",
-    "postinstall": "nuxi prepare",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:cypress": "cypress run",
-    "test:cypress-dev": "cypress open --e2e",
-    "prepublishOnly": "yarn lint"
+    "test:cypress-dev": "cypress open --e2e"
   },
   "dependencies": {
     "@vue-storefront/sdk": "^1.0.1",
-    "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0",
+    "@crearis/crearis-boilerplate-sdk": "~0.0.11",
     "@vueuse/core": "^10.3.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0"
   },
   "devDependencies": {
+    "nuxt-hydration":"^0.5.3",
+    "@nuxtjs/html-validator":"1.5.2",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/google-fonts": "^3.0.1",
@@ -49,13 +49,23 @@
     "cypress-wait-until": "^2.0.0",
     "eslint": "^8.50.0",
     "eslint-plugin-prettier": "5.0.1",
-    "happy-dom": "^12.0.0",
-    "nuxt": "^3.6.5",
-    "nuxt-vitest": "^0.10.1",
+    "happy-dom": "^11.0.0",
+    "nuxt": "^3.8.0",
+    "nuxt-vitest": "^0.11.5",
     "sass": "^1.64.1",
     "vitest": "^0.33.0",
     "vue-tsc": "^1.8.6",
-    "@crearis/theme-main": "^0.0.5",
-    "@crearis/data-main": "^0.0.5"    
+    "@crearis/theme-main": "*",
+    "@crearis/data-main":  "*",
+    "vite": "latest",
+    "tailwindcss": "^3.0.1",
+    "postcss": "^8.0.9",
+    "autoprefixer": "^10.0.2",
+    "typescript": "^5.0.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.0.0",
+    "prettier": "^3.0.0",
+    "@vitejs/plugin-vue":"^4.5.2",
+    "@vitejs/plugin-vue-jsx":"^3.1.0"      
   }
 }

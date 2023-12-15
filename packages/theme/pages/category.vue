@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Breadcrumb } from '@crearis/theme-main/components/ui/Breadcrumbs/types';
+import type { Breadcrumb } from '../../ui/Breadcrumbs/types';
 
 definePageMeta({
   layout: false,

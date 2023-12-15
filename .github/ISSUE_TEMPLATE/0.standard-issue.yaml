@@ -1,0 +1,59 @@
+name: "[ ] Standard Issue"
+description: |
+  Standard Issue for Tasks and Bugs
+title: '[Issue]: '
+body:
+  - type: textarea
+    id: currentstatus
+    attributes:
+      label: Describe the current status
+      placeholder: Describe the current status/behavior pointing exactly why it's not working as intended
+    validations:
+      required: true
+  - type: textarea
+    id: targetstatus
+    attributes:
+      label: Expected status or behavior
+      placeholder: Describe what the desired status/behavior should be
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: Please provide the steps to reproduce and if possible a minimal reproducible example of the problem
+  - type: input
+    attributes:
+      label: CrearisUI version
+      placeholder: What package and version of CrearisUI are you using?
+      description: 'For example: @crearis/crearisui@0.0.1'
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: Node version
+      placeholder: What version of Node.js are you using?
+      description: 'For example: 20.8.1'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Browser
+      placeholder: What browser (and version) are you using?
+      description: 'For example: Chrome, Safari'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OS
+      placeholder: What operating system (and version) are you using?
+      description: 'For example: macOS, Windows'
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+

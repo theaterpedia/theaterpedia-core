@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CategoryCardProps } from '@crearis/theme-main/components/ui/CategoryCard/types';
+import type { CategoryCardProps } from '../../ui/CategoryCard/types';
 
 defineProps<CategoryCardProps>();
 </script>
