@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { SfCounter, SfIconCheck, SfListItem } from '@crearis/vue';
-import type { CategoryTreeItemType } from '@crearis/theme-main/components/CategoryTree/types';
+import type { CategoryTreeItemType } from '../CategoryTree/types';
 
 defineProps<CategoryTreeItemType>();
 </script>

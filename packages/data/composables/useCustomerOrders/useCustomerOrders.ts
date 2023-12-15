@@ -1,10 +1,10 @@
 import { toRefs } from '@vueuse/shared';
-import type { OrderData } from '@crearis/data-main/composables/useCustomerOrder/types';
+import type { OrderData } from '../../composables/useCustomerOrder/types';
 import type {
   UseCustomerOrdersReturn,
   UseCustomerOrdersState,
   FetchCustomerOrders,
-} from '@crearis/data-main/composables/useCustomerOrders/types';
+} from '../../composables/useCustomerOrders/types';
 
 const order: Pick<OrderData, 'id' | 'date' | 'paymentAmount'> = {
   id: '0e4fec5a-61e6-48b8-94cc-d5f77687e2b0',

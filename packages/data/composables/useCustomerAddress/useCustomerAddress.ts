@@ -3,7 +3,7 @@ import type {
   UseCustomerAddressReturn,
   UseCustomerAddressState,
   FetchCustomerAddress,
-} from '@crearis/data-main/composables/useCustomerAddress/types';
+} from '../../composables/useCustomerAddress/types';
 
 /**
  * @description Composable managing address data

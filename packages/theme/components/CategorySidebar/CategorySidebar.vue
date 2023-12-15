@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { SfDrawer, SfButton, SfIconClose } from '@crearis/vue';
-import type { CategorySidebarEmits, CategorySidebarProps } from '@crearis/theme-main/components/CategorySidebar/types';
+import type { CategorySidebarEmits, CategorySidebarProps } from '../CategorySidebar/types';
 
 defineProps<CategorySidebarProps>();
 defineEmits<CategorySidebarEmits>();

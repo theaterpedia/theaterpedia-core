@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ProductHorizontalProps } from '@crearis/theme-main/components/ui/ProductCardHorizontal/types';
+import type { ProductHorizontalProps } from '../../ui/ProductCardHorizontal/types';
 
 defineProps<ProductHorizontalProps>();
 </script>

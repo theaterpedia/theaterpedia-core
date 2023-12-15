@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import ProductCardHorizontal from '@crearis/theme-main/components/ui/ProductCardHorizontal/ProductCardHorizontal.vue';
+import ProductCardHorizontal from '../../ui/ProductCardHorizontal/ProductCardHorizontal.vue';
 
 describe('<ProductCardHorizontal />', () => {
   it('should render component', () => {

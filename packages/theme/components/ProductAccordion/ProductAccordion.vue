@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ProductAccordionPropsType } from '@crearis/theme-main/components/ProductAccordion/types';
+import type { ProductAccordionPropsType } from '../ProductAccordion/types';
 
 const props = defineProps<ProductAccordionPropsType>();
 

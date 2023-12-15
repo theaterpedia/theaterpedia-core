@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { SfScrollable } from '@crearis/vue';
-import type { ProductSliderProps } from '@crearis/theme-main/components/ProductSlider/types';
+import type { ProductSliderProps } from '../ProductSlider/types';
 
 defineProps<ProductSliderProps>();
 </script>

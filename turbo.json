@@ -1,0 +1,38 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        ".output/**",
+        ".histoire/**",
+        "**/.vitepress/dist/**"
+      ]
+    },
+    "generate" : {
+      "dependsOn": ["^generate"],
+      "outputs": [
+        "dist/**",
+        ".output/**"
+      ]
+    },
+    "release" : {
+      "dependsOn": ["^release"],
+      "outputMode": "new-only"
+    },    
+    "lint": {
+      "outputs": []
+    },
+    "lint:fix": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "test": {
+      "outputs": []
+    },
+    "type-check": {}
+  }
+}

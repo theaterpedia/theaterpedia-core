@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Pagination from '@crearis/theme-main/components/ui/Pagination/Pagination.vue';
+import Pagination from '../../ui/Pagination/Pagination.vue';
 
 describe('<Pagination />', () => {
   it('should render component', () => {

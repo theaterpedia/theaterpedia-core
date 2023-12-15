@@ -12,7 +12,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { type TagProps, TagSize } from '@crearis/theme-main/components/ui/Tag/types';
+import { type TagProps, TagSize } from '../../ui/Tag/types';
 
 const props = withDefaults(defineProps<TagProps>(), {
   variant: 'primary',

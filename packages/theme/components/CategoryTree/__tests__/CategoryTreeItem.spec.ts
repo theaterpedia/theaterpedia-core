@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import CategoryTreeItem from '@crearis/theme-main/components/CategoryTree/CategoryTreeItem.vue';
+import CategoryTreeItem from '../../CategoryTree/CategoryTreeItem.vue';
 
 describe('<CategoryTreeItem />', () => {
   it('should render component', () => {

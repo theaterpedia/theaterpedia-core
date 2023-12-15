@@ -45,7 +45,7 @@
 import { clamp } from '@storefront-ui/shared';
 import { SfButton, SfIconAdd, SfIconRemove, useId } from '@crearis/vue';
 import { useCounter } from '@vueuse/core';
-import type { QuantitySelectorProps } from '@crearis/theme-main/components/ui/QuantitySelector/types';
+import type { QuantitySelectorProps } from '../../ui/QuantitySelector/types';
 
 const { value, minValue, maxValue } = withDefaults(defineProps<QuantitySelectorProps>(), {
   value: 1,

@@ -35,7 +35,7 @@ import {
   type CheckoutPaymentEmits,
   type CheckoutPaymentProps,
   PaymentMethod,
-} from '@crearis/theme-main/components/CheckoutPayment/types';
+} from '../CheckoutPayment/types';
 
 defineProps<CheckoutPaymentProps>();
 defineEmits<CheckoutPaymentEmits>();

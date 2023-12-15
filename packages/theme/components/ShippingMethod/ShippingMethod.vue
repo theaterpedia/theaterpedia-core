@@ -32,7 +32,7 @@
 </template>
 <script setup lang="ts">
 import { SfIconBlock, SfListItem, SfRadio } from '@crearis/vue';
-import type { ShippingMethodProps } from '@crearis/theme-main/components/ShippingMethod/types';
+import type { ShippingMethodProps } from '../ShippingMethod/types';
 
 defineProps<ShippingMethodProps>();
 

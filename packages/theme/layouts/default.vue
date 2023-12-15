@@ -133,7 +133,7 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue';
-import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
+import type { DefaultLayoutProps } from './types';
 
 defineProps<DefaultLayoutProps>();
 

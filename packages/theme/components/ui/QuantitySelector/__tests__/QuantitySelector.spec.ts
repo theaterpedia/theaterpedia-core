@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import QuantitySelector from '@crearis/theme-main/components/ui/QuantitySelector/QuantitySelector.vue';
+import QuantitySelector from '../../ui/QuantitySelector/QuantitySelector.vue';
 
 const value = 1;
 

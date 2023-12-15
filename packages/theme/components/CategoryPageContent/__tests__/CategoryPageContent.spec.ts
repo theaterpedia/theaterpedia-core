@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import CategoryPageContent from '@crearis/theme-main/components/CategoryPageContent/CategoryPageContent.vue';
+import CategoryPageContent from '../../CategoryPageContent/CategoryPageContent.vue';
 
 describe('<CategoryPageContent />', () => {
   it('should render component', () => {

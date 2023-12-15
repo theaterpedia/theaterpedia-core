@@ -1,6 +1,6 @@
 import type { Ref } from 'vue';
 import type { Maybe } from '@vue-storefront/unified-data-model';
-import type { OrderData } from '@crearis/data-main/composables/useCustomerOrder/types';
+import type { OrderData } from '../../composables/useCustomerOrder/types';
 
 export type OrdersData = Pick<OrderData, 'id' | 'date' | 'paymentAmount' | 'status'>[];
 

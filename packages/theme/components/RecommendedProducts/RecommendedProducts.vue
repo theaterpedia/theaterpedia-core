@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import type { RecommendedProductsProps } from '@crearis/theme-main/components/RecommendedProducts/types';
+import type { RecommendedProductsProps } from '../RecommendedProducts/types';
 
 defineProps<RecommendedProductsProps>();
 </script>

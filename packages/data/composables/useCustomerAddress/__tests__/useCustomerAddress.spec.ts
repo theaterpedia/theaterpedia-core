@@ -1,4 +1,4 @@
-import { useCustomerAddress } from '@crearis/data-main/composables/useCustomerAddress/useCustomerAddress';
+import { useCustomerAddress } from '../../composables/useCustomerAddress/useCustomerAddress';
 
 describe('useCustomerAddress', () => {
   it('should return account data', async () => {

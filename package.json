@@ -1,41 +1,29 @@
 {
-  "name": "theaterpedia-core",
-  "version": "0.0.5",
+  "name": "theaterpedia-core-turbo",
+  "version": "0.0.7",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
-    "build": "cd apps/tp-template && nuxi build",
-    "dev": "concurrently --names \"Base,Data,Theme,App\" \"yarn dev:base\" \"yarn dev:data\" \"yarn dev:theme\" \"yarn dev:app\"",
-    "dev:base": "cd packages/base && yarn dev",
-    "dev:theme": "cd packages/theme && yarn dev",
-    "dev:app": "cd apps/tp-template && yarn dev",
-    "dev:data": "cd packages/data && yarn dev",
-    "postinstall": "concurrently \"yarn postinstall:data\" \"yarn postinstall:theme\" \"yarn postinstall:app\"",
-    "postinstall:theme": "cd packages/theme && nuxi prepare .playground",
-    "postinstall:app": "cd packages/theme && nuxi prepare .playground",
-    "postinstall:data": "cd packages/theme && nuxi prepare .playground",
-    "prepare": "concurrently \"yarn prepare:data\" \"yarn prepare:theme\" \"yarn prepare:app\"",
-    "prepare:app": "cd apps/tp-template && yarn",
-    "prepare:data": "cd packages/data/.playground && yarn",
-    "prepare:theme": "cd packages/theme/.playground && yarn",
-    "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install && yarn prepare:docs",
-    "changesets:publish": "yarn build && yarn changeset publish",
-    "release:theme": "cd packages/theme && yarn release",
-    "release:data": "cd packages/data && yarn release"
+    "build": "turbo run build",
+    "release": "turbo run release --concurrency=1",
+    "generate": "turbo run generate",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "test": "turbo run test",
+    "type-check": "turbo run type-check"
   },
-  "keywords": [],
-  "author": "hans.doenitz@dasei.eu",
-  "license": "MIT",
-  "packageManager": "yarn@1.22.19",
   "devDependencies": {
-    "concurrently": "^8.2.0",
-    "lerna": "^7.4.2",
-    "vue-tsc": "^1.8.22"
+    "@crearis/eslint-config-custom": "*",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "release-it": "^17.0.1",
+    "turbo": "latest"
+  },
+  "workspaces": [
+    "packages/**/*",
+    "apps/**/*"
+  ],
+  "engines": {
+    "node": ">=v20.8.1"
   }
 }

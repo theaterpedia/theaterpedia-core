@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { SfAccordionItem, SfIconChevronLeft } from '@crearis/vue';
 import { useVModel } from '@vueuse/core';
-import type { AccordionItemProps } from '@crearis/theme-main/components/ui/AccordionItem/types';
+import type { AccordionItemProps } from '../../ui/AccordionItem/types';
 
 const props = withDefaults(defineProps<AccordionItemProps>(), { modelValue: false, summary: '', summaryClass: '' });
 const emit = defineEmits(['update:modelValue']);

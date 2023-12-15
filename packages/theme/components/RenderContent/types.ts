@@ -1,4 +1,4 @@
-import type { ContentDynamicPage } from '@crearis/data-main/composables/useContent/types';
+import type { ContentDynamicPage } from '../../composables/useSfContent/types';
 
 export type RenderContentProps = {
   content: ContentDynamicPage['content'];

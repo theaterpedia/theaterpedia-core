@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import type { HeadingProps } from '@crearis/theme-main/components/Heading/types';
+import type { HeadingProps } from '..//Heading/types';
 
 withDefaults(defineProps<HeadingProps>(), {
   tag: 'h1',

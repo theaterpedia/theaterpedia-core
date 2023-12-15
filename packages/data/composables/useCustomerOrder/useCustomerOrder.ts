@@ -1,12 +1,12 @@
 import { toRefs } from '@vueuse/shared';
-import addressData from '@crearis/data-main/composables/useCustomerOrder/adress';
-import productData from '@crearis/data-main/composables/useCustomerOrder/product';
+import addressData from '../../composables/useCustomerOrder/adress';
+import productData from '../../composables/useCustomerOrder/product';
 import type {
   UseCustomerOrderReturn,
   UseCustomerOrderState,
   FetchCustomerOrder,
   OrderData,
-} from '@crearis/data-main/composables/useCustomerOrder/types';
+} from '../../composables/useCustomerOrder/types';
 
 const order: OrderData = {
   id: '0e4fec5a-61e6-48b8-94cc-d5f77687e2b0',

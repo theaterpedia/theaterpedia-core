@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import OrderSummary from '@crearis/theme-main/components/OrderSummary/OrderSummary.vue';
+import OrderSummary from '../../OrderSummary/OrderSummary.vue';
 import type { SfCart } from '@vue-storefront/unified-data-model';
 
 const cart: SfCart = {

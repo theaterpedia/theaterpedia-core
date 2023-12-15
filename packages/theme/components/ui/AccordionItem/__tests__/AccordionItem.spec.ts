@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AccordionItem from '@crearis/theme-main/components/ui/AccordionItem/AccordionItem.vue';
+import AccordionItem from '../../ui/AccordionItem/AccordionItem.vue';
 
 describe('<AccordionItem />', () => {
   it('should render component', () => {

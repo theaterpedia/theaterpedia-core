@@ -1,4 +1,4 @@
-import { useCustomer } from '@crearis/data-main/composables/useCustomer/useCustomer';
+import { useCustomer } from '../../composables/useCustomer/useCustomer';
 
 vi.mock('~/sdk', () => ({
   useSdk: () => ({

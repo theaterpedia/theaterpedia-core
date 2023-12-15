@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 import { SfButton, SfInput } from '@crearis/vue';
-import type { OrderSummaryPropsType } from '@crearis/theme-main/components/OrderSummary/types';
+import type { OrderSummaryPropsType } from '../OrderSummary/types';
 
 defineProps<OrderSummaryPropsType>();
 </script>

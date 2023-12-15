@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CategoryFiltersProps } from '@crearis/theme-main/components/CategoryFilters/types';
+import type { CategoryFiltersProps } from '../CategoryFilters/types';
 
 const props = defineProps<CategoryFiltersProps>();
 

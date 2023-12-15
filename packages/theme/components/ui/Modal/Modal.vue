@@ -13,7 +13,7 @@ export default {
 </script>
 <script setup lang="ts">
 import { SfModal } from '@crearis/vue';
-import type { ModalProps } from '@crearis/theme-main/components/ui/Modal/types';
+import type { ModalProps } from '../../ui/Modal/types';
 
 const props = defineProps<ModalProps>();
 </script>

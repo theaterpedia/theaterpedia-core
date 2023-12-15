@@ -1,5 +1,5 @@
 {
-  "extends": "./.playground/.nuxt/tsconfig.json",
+  "extends": "../../apps/data-dev/.nuxt/tsconfig.json",
   "compilerOptions": {
     "types": ["vitest/globals", "@vite-pwa/nuxt", "@vue-storefront/sdk"]
   },

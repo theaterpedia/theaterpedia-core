@@ -3,8 +3,8 @@ import type {
   UseCartShippingMethodsState,
   UseCartShippingMethodsReturn,
   GetShippingMethods,
-} from '@crearis/data-main/composables/useCartShippingMethods/types';
-import { useSdk } from '../../sdk';
+} from '../../composables/useCartShippingMethods/types';
+import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable for getting shipping methods.

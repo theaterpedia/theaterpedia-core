@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { SfButton } from '@crearis/vue';
-import type { DisplayProps } from '@crearis/theme-main/components/ui/Display/types';
+import type { DisplayProps } from '../../ui/Display/types';
 
 defineProps<DisplayProps>();
 

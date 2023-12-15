@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Gallery from '@crearis/theme-main/components/Gallery/Gallery.vue';
+import Gallery from '../../Gallery/Gallery.vue';
 
 describe('<Gallery />', () => {
   it('should render component', () => {

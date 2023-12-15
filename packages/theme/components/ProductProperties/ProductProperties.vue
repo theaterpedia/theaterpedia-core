@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { SfChip, SfThumbnail } from '@crearis/vue';
-import type { ProductPropertiesProps } from '@crearis/theme-main/components/ProductProperties/types';
+import type { ProductPropertiesProps } from '../ProductProperties/types';
 
 const props = defineProps<ProductPropertiesProps>();
 

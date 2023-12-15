@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { SfIconArrowBack } from '@crearis/vue';
-import type { CategoryTreeProps } from '@crearis/theme-main/components/CategoryTree/types';
+import type { CategoryTreeProps } from '../CategoryTree/types';
 
 defineProps<CategoryTreeProps>();
 </script>

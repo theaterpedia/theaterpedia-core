@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import ContactInformationForm from '@crearis/theme-main/components/ContactInformation/ContactInformationForm.vue';
+import ContactInformationForm from '../ContactInformation/ContactInformationForm.vue';
 
 describe('<ContactInformationForm />', () => {
   it('should render component', () => {

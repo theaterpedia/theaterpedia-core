@@ -10,12 +10,12 @@
 </template>
 
 <script setup lang="ts">
-import Heading from '@crearis/theme-main/components/Heading/Heading.vue';
-import type { RenderContentProps } from '@crearis/theme-main/components/RenderContent/types';
-import RenderContentProductSlider from '@crearis/theme-main/components/RenderContentProductSlider/RenderContentProductSlider.vue';
-import CategoryCard from '@crearis/theme-main/components/ui/CategoryCard/CategoryCard.vue';
-import Display from '@crearis/theme-main/components/ui/Display/Display.vue';
-import Hero from '@crearis/theme-main/components/ui/Hero/Hero.vue';
+import Heading from '../Heading/Heading.vue';
+import type { RenderContentProps } from '../RenderContent/types';
+import RenderContentProductSlider from '../RenderContentProductSlider/RenderContentProductSlider.vue';
+import CategoryCard from '../ui/CategoryCard/CategoryCard.vue';
+import Display from '../ui/Display/Display.vue';
+import Hero from '../ui/Hero/Hero.vue';
 
 defineProps<RenderContentProps>();
 

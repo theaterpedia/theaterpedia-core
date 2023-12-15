@@ -41,7 +41,7 @@
 </template>
 <script setup lang="ts">
 import { SfButton } from '@crearis/vue';
-import type { AccountFormsPasswordProps } from '@crearis/theme-main/components/AccountForms/types';
+import type { AccountFormsPasswordProps } from '../AccountForms/types';
 
 const props = defineProps<AccountFormsPasswordProps>();
 defineEmits(['on-save', 'on-cancel']);

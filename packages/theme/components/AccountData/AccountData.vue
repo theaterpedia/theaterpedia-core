@@ -11,7 +11,7 @@
 </template>
 <script setup lang="ts">
 import { SfButton } from '@crearis/vue';
-import type { AccountDataProps } from '@crearis/theme-main/components/AccountData/types';
+import type { AccountDataProps } from './types';
 
 defineProps<AccountDataProps>();
 defineEmits(['on-click']);
