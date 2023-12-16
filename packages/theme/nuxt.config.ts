@@ -74,7 +74,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     exposeConfig: true,
-    cssPath: [ join(currentDir, './assets/style.scss') ],
+    cssPath: './assets/style.scss',
   },
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
