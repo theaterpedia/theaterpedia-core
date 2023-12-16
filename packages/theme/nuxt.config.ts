@@ -1,3 +1,10 @@
+// https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
+
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
@@ -21,9 +28,6 @@ export default defineNuxtConfig({
   },
   appConfig: {
     titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
-  },
-  imports: {
-    dirs: ['composables/**', 'utils/**', 'assets/**'],
   },
   image: {
     screens: {
@@ -59,7 +63,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: 'lang',
+        langDir: [ join(currentDir, './lang') ],
         defaultLocale: 'en',
       },
     ],
@@ -67,6 +71,7 @@ export default defineNuxtConfig({
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
   ],
+
   tailwindcss: {
     exposeConfig: true,
     cssPath: '~/assets/style.scss',
