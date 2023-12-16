@@ -11,9 +11,7 @@
         <h2 class="font-medium text-base mt-4">{{ $t('orderNumber') }}</h2>
         <p>123456789</p>
       </div>
-      <SfButton :tag="NuxtLink" href="/" class="max-md:w-full" variant="secondary">
-        {{ $t('continueShopping') }}
-      </SfButton>
+
     </div>
   </div>
 </template>
@@ -25,5 +23,4 @@ definePageMeta({
   layout: 'order',
 });
 
-const NuxtLink = resolveComponent('NuxtLink');
 </script>
