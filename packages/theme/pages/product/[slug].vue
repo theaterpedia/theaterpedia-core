@@ -2,11 +2,11 @@
   <NuxtLayout name="default" :breadcrumbs="breadcrumbs">
     <NarrowContainer>
       <div class="md:grid gap-x-6 grid-areas-product-page grid-cols-product-page">
-        <section class="grid-in-left-top md:h-full xl:max-h-[700px]">
+        <!-- #TODO _06 Re-Enable Images  section class="grid-in-left-top md:h-full xl:max-h-[700px]">
           <NuxtLazyHydrate when-idle>
             <Gallery :images="product?.gallery ?? []" />
           </NuxtLazyHydrate>
-        </section>
+        </!-->
         <section class="mb-10 grid-in-right md:mb-0">
           <NuxtLazyHydrate when-idle>
             <UiPurchaseCard v-if="product" :product="product" />
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import type { Breadcrumb } from '../../ui/Breadcrumbs/types';
+import type { Breadcrumb } from '../../components/ui/Breadcrumbs/types';
 
 definePageMeta({
   layout: false,

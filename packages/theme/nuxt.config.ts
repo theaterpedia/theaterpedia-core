@@ -1,3 +1,14 @@
+// #TODO _06 Exportable-Layers-Paths
+// https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
+// make tailwind-config, lang, i18n.config, etc. exportable from theme-main      
+
+/*
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
+*/
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
@@ -10,7 +21,7 @@ export default defineNuxtConfig({
         lang: 'en',
       },
       meta: [
-        { name: 'description', content: 'VSF x Nuxt3 (Boilerplate)' },
+        { name: 'description', content: 'CREARIS courses.main (Boilerplate)' },
         { name: 'theme-color', content: '#018937' },
       ],
       link: [
@@ -20,10 +31,7 @@ export default defineNuxtConfig({
     },
   },
   appConfig: {
-    titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
-  },
-  imports: {
-    dirs: ['composables/**', 'utils/**', 'assets/**'],
+    titleSuffix: 'CREARIS courses.main Boilerplate',
   },
   image: {
     screens: {
@@ -38,6 +46,9 @@ export default defineNuxtConfig({
       '2xs': 360,
     },
   },
+  i18n: {
+    vueI18n: '../../node_modules/@crearis/theme-main/i18n.config.ts' // if you are using custom path, default 
+  },  
   modules: [
     '@nuxtjs/tailwindcss',
     [
@@ -59,7 +70,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: 'lang',
+        langDir: '../../node_modules/@crearis/theme-main/lang',
         defaultLocale: 'en',
       },
     ],
@@ -69,7 +80,7 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     exposeConfig: true,
-    cssPath: '~/assets/style.scss',
+    cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
   },
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
