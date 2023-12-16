@@ -35,8 +35,8 @@
                 :rating-count="rating?.count"
                 :rating="rating?.average"
                 :price="price?.value.amount"
-                :image-url="primaryImage?.url ?? ''"
-                :image-alt="primaryImage?.alt ?? ''"
+                image-url="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display-2.png"
+                image-alt="Pack it up"
                 :slug="slug"
                 :priority="index === 0"
               />
