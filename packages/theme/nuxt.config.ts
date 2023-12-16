@@ -63,7 +63,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: [ join(currentDir, './lang') ],
+        langDir: '../../packages/theme/lang',
         defaultLocale: 'en',
       },
     ],
