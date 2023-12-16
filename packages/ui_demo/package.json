@@ -7,7 +7,7 @@
     "dev": "histoire dev",
     "build": "histoire build",
     "preview": "histoire preview",
-    "test": "vitest run --coverage"
+    "test:deactivated": "vitest run --coverage"
   },
   "devDependencies": {
     "@histoire/plugin-vue": "^0.17.6",

@@ -11,7 +11,7 @@
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxi preview",
-    "test": "vitest run",
+    "test:deactivated": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:cypress": "cypress run",

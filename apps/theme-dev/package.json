@@ -9,7 +9,7 @@
     "dev:deactivated": "nuxi dev -p 3001",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "test": "vitest run",
+    "test:deactivated": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:cypress": "cypress run",

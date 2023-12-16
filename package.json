@@ -25,6 +25,6 @@
   ],
   "packageManager": "yarn@1.22.10",
   "engines": {
-    "node": ">=v20.8.1"
+    "node": ">=v18.18.2"
   }
 }

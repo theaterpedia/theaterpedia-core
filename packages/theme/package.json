@@ -1,7 +1,7 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
@@ -26,7 +26,10 @@
     "lint": "nuxt typecheck",
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
-    "release": "release-it"
+    "release": "release-it",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"    
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
