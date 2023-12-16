@@ -2,8 +2,9 @@
   <div class="relative min-h-[600px] mb-10">
     <div class="md:flex md:flex-row-reverse md:justify-center min-h-[600px] max-w-screen-3xl mx-auto">
       <div class="flex flex-col justify-center md:basis-2/4 md:items-stretch md:overflow-hidden">
+        <!-- #TODO _06 Re-Enable Images -->
         <NuxtImg
-          :src="image"
+          src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display.png"
           alt="Hero"
           class="h-auto w-full object-cover object-left"
           width="764"

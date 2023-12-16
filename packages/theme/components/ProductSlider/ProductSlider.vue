@@ -5,14 +5,15 @@
     :wrapper-class="wrapperClass"
     data-testid="product-slider"
   >
+    <!-- #TODO _06 Re-Enable Images -->
     <UiProductCard
       v-for="product in items"
       :key="product.id"
       class="max-w-[192px]"
       :name="product.name ?? ''"
       :slug="product.slug"
-      :image-url="product.primaryImage?.url ?? ''"
-      :image-alt="product.primaryImage?.alt ?? ''"
+      image-url="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display-2.png"
+      image-alt="Pack it up"
       :price="product.price?.value.amount"
       :rating-count="product.rating?.count"
       :rating="product.rating?.average"
