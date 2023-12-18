@@ -26,6 +26,7 @@
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0"
   },
+  "packageManager": "yarn@1.22.10",  
   "devDependencies": {
     "@nuxthq/studio": "^1.0.6",
     "nuxt-hydration":"^0.5.3",
