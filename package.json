@@ -17,7 +17,8 @@
     "@crearis/eslint-config-custom": "*",
     "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.0.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@nuxthq/studio": "^1.0.6"    
   },
   "workspaces": [
     "packages/**/*",

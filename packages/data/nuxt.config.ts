@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-vitest',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxthq/studio'
   ],
   nitro: {
     prerender: {

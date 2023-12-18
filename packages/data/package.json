@@ -27,6 +27,7 @@
     "@crearis/crearis-boilerplate-sdk": "~0.0.11"
   },
   "devDependencies": {
+    "@nuxthq/studio": "^1.0.6",    
     "@nuxt/content": "^2.8.5",
     "@nuxtjs/i18n": "8.0.0-rc.3",
     "@types/lodash-es": "^4.17.7",
