@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       routes: ['/'],
       ignore: [
       '/product/',
+      '/category',
       '/cart',
       '/checkout',
       '/search',
