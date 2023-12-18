@@ -7,8 +7,7 @@
         ".nuxt/dist/**",
         "dist/**",
         ".output/**",
-        ".histoire/**",
-        "**/.vitepress/dist/**"
+        ".histoire/**"
       ]
     },
     "generate" : {
