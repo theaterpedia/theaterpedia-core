@@ -30,7 +30,7 @@
     "nuxt-hydration":"^0.5.3",
     "@nuxtjs/html-validator":"1.5.2",
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.0.0-rc.1",
+    "@nuxt/image": "^1.1.0",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/i18n": "8.0.0-rc.3",
     "@nuxtjs/tailwindcss": "^6.8.0",
