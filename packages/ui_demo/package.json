@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "histoire dev",
-    "build": "histoire build",
+    "build:deactivated": "histoire build",
     "preview": "histoire preview",
     "test:deactivated": "vitest run --coverage"
   },

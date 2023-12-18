@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "scripts": {
-    "build": "nuxi build",
+    "build:deactivated": "nuxi build",
     "dev:deactivated": "nuxi dev -p 3002",
     "generate": "nuxi generate",
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
