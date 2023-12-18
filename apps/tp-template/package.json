@@ -28,6 +28,7 @@
   },
   "packageManager": "yarn@1.22.10",  
   "devDependencies": {
+    "@nuxthq/studio": "^1.0.6",
     "nuxt-hydration":"^0.5.3",
     "@nuxtjs/html-validator":"1.5.2",
     "@nuxt/devtools": "latest",
