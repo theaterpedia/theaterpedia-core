@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     titleSuffix: 'CREARIS courses.main Boilerplate',
   },
   image: {
+    dir: '../../node_modules/@crearis/theme-main/public',
     screens: {
       '4xl': 1920,
       '3xl': 1536,
@@ -77,7 +78,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
-  ],
+  ], 
   tailwindcss: {
     exposeConfig: true,
     cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
