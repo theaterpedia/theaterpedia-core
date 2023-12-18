@@ -3,9 +3,6 @@ export default defineNuxtConfig({
           '@crearis/theme-main',
           '@crearis/data-main'
         ],
-  modules: [
-    '@nuxthq/studio'
-  ],
   nitro: {
     prerender: {
       routes: ['/'],
