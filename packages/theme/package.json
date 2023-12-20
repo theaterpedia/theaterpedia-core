@@ -36,12 +36,13 @@
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@crearis/vue": "latest"
+    "@crearis/vue": "^0.0.8"
   },
   "devDependencies": {
-    "@crearis/data-main": "latest",
-    "@crearis/typography": "latest",
-    "@nuxt/devtools": "latest",
+    "@crearis/data-main": "^0.0.15",
+    "@crearis/typography": "^0.0.8",
+    "@tailwindcss/typography": "^0.5.10",
+    "@nuxt/devtools": "^1.0.0",
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/i18n": "8.0.0-rc.3",
