@@ -4,7 +4,6 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [
-        ".nuxt/dist/**",
         "dist/**",
         ".output/**",
         ".histoire/**"
