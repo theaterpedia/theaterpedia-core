@@ -1,3 +1,6 @@
+// #TODO _05 Check @crearis-imports (is /dist correct?)
+// hover over @crearis to see the path: import Typography from '@tailwindcss/typography' would import from /src
+
 import sfTypography from '@crearis/typography';
 import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';

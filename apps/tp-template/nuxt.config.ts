@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     }
     }, // #TODO _05 enable-full-nitro-prerender
   // #TODO _05 html-validation modules: ['nuxt-hydration', '@nuxtjs/html-validator'],
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
 })
-
