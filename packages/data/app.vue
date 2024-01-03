@@ -1,9 +1,10 @@
 <template>
   <Body class="font-body" :class="bodyClass" />
-  <VitePwaManifest />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div class="h-screen justify-center align-middle">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

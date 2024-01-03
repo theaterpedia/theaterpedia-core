@@ -35,19 +35,38 @@ export default defineNuxtConfig({
   },
   image: {
     screens: {
-      '4xl': 1920,
-      '3xl': 1536,
-      '2xl': 1366,
+      '2xl': 1536,
+      xxl: 1440,
       xl: 1280,
       lg: 1024,
       md: 768,
       sm: 640,
       xs: 376,
-      '2xs': 360,
     },
   },
   i18n: {
     vueI18n: '../../node_modules/@crearis/theme-main/i18n.config.ts' // if you are using custom path, default 
+  },
+  routeRules: {
+    '/': { swr: true },
+    '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+    '/icons/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+    '/favicon.ico': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+  },
+  build: {
+    transpile: [
+      'tslib',
+      'ts-invariant',
+      'vue-toastification'
+    ]
+  },  
+  vite: {
+    optimizeDeps: {
+      include: ['lodash-es'],
+    },
+  },
+  delayHydration: {
+    mode: 'init'
   },  
   modules: [
     '@nuxtjs/tailwindcss',
@@ -60,6 +79,7 @@ export default defineNuxtConfig({
         },
       },
     ],
+    '@nuxtjs/fontaine',    
     [
       '@nuxtjs/i18n',
       {
@@ -75,16 +95,11 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxt/image',
-    'nuxt-vitest',
-    'nuxt-lazy-hydrate',
+    'nuxt-delay-hydration',
+    'nuxt-lodash'
   ],
   tailwindcss: {
     exposeConfig: true,
     cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
-  },
-  routeRules: {
-    '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
 });

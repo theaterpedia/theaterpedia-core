@@ -8,21 +8,21 @@
         ".output/**",
         ".histoire/**",
         "**/.vitepress/dist/**"
-      ]
+      ],
+      "cache": false
     },
-    "generate" : {
-      "dependsOn": ["^generate"],
-      "outputs": [
-        "dist/**",
-        ".output/**"
-      ]
+    "build:analyze": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": false
     },
     "release" : {
       "dependsOn": ["^release"],
       "outputMode": "new-only"
     },    
     "lint": {
-      "outputs": []
+      "outputs": [],
+      "cache": false
     },
     "lint:fix": {
       "outputs": []
@@ -33,6 +33,15 @@
     "test": {
       "outputs": []
     },
+    "test:coverage": {
+      "outputs": []
+    },
+    "test:watch": {
+      "cache": false
+    },
+    "test:cypress": {
+      "cache": false
+    },      
     "type-check": {}
   }
 }

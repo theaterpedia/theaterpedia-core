@@ -20,7 +20,8 @@
 </template>
 
 <script setup lang="ts">
-import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@crearis/vue';
+import { ref, watch } from 'vue';
+import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@storefront-ui/vue';
 import { unrefElement } from '@vueuse/core';
 
 const props = defineProps<{
@@ -42,7 +43,7 @@ const handleReset = () => {
 };
 const handleSubmit = () => {
   props.close?.();
-  router.push({ path: paths.search, query: { search: inputModel.value } });
+  router.push({ path: '/', query: { search: inputModel.value } });
   handleReset();
 };
 
