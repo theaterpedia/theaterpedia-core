@@ -1,4 +1,4 @@
-import { Product } from '~/graphql';
+import { Product } from '../graphql';
 
 export const mountUrlSlugForProductVariant = (product: Product) : string => {
   const params = product?.variantAttributeValues

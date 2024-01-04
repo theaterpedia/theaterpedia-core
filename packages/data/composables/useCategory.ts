@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { QueryCategoriesArgs, QueryCategoryArgs, CategoryListResponse, Category, CategoryResponse } from '~/graphql';
+import { QueryCategoriesArgs, QueryCategoryArgs, CategoryListResponse, Category, CategoryResponse } from '../graphql';
 import { QueryName } from '~/server/queries';
 
 export const useCategory = (categorySlug?: string) => {

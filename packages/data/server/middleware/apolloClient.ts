@@ -1,6 +1,6 @@
 import { createApiClient, MiddlewareConfig } from '@erpgap/odoo-sdk-api-client/server';
-import { Queries } from '~/server/queries';
-import { Mutations } from '~/server/mutations';
+import { Queries } from '../../server/queries';
+import { Mutations } from '../../server/mutations';
 
 export default defineEventHandler((event) => {
 

@@ -11,7 +11,8 @@ import {
   SfThumbnail,
   SfCheckbox,
 } from '@storefront-ui/vue';
-import { ProductFilterType } from '~/types/product';
+// #DEBUG 0.5.1 ProductFilterType import { ProductFilterType } from '../../types/product';
+// ERR ambiguous indirect export: ProductFilterType
 
 const emit = defineEmits(['close']);
 const props = defineProps({
@@ -114,7 +115,8 @@ const selectedFilter = (
 const applyFilters = () => {
   if (!priceModel.value) {
     selectedFilters.value = selectedFilters.value?.filter(
-      (item: ProductFilterType) => {
+      (item) => {
+      // #DEBUG 0.5.1 (item: ProductFilterType) => {
         return item.filterName !== 'price';
       }
     );
@@ -133,7 +135,8 @@ const clearFilters = () => {
 };
 onMounted(() => {
   selectedFilters.value = facetsFromUrlToFilter();
-  const priceFilter = selectedFilters.value?.find((item: ProductFilterType) => {
+  const priceFilter = selectedFilters.value?.find((item) => {
+  // #DEBUG 0.5.0 const priceFilter = selectedFilters.value?.find((item: ProductFilterType) => {
     return item.filterName === 'price';
   });
   if (priceFilter) {
