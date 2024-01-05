@@ -10,6 +10,6 @@ await loadCategoryList({ filter: { parent: true } });
   <LazyCategoryCard :categories="categories" />
   <LazyDisplay />
   <section class="pb-16">
-    <LazyProductSlider heading="Inspired by your picks" />
+    <!--LazyProductSlider heading="Inspired by your picks" /-->
   </section>
 </template>

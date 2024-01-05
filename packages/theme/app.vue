@@ -1,6 +1,5 @@
 <template>
   <Body class="font-body" :class="bodyClass" />
-  <VitePwaManifest />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -13,6 +12,6 @@ const bodyClass = ref('');
 
 onMounted(() => {
   // Need this class for cypress testing
-  bodyClass.value = 'hydrated';
+  bodyClass.value = 'hydrated'; 
 });
 </script>
