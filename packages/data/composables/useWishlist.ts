@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { WishlistItems, WishlistResponse } from '../graphql';
-import { QueryName } from '~/server/queries';
+import { QueryName } from '../server/queries';
 
 export const useWishlist = () => {
   const { $sdk } = useNuxtApp();
