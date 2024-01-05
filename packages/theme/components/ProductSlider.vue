@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { SfScrollable } from '@storefront-ui/vue';
-import { Product } from '../graphql';
+// #TODO: 0.5.3 fix Product-Typing
+// import { Product } from '../graphql';
 
 defineProps({
   heading: String,
@@ -31,6 +32,13 @@ await loadProductTemplateList({pageSize: numOfProducts});
     data-testid="product-slider"
     v-if="productTemplateList.length > 0"
   >
+
+  <!-- #TODO: 0.5.3 fix Product-Typing
+      :regular-price="getRegularPrice((productTemplate.firstVariant as Product))"
+      :special-price="getSpecialPrice((productTemplate.firstVariant as Product))"
+      :first-variant="(productTemplate.firstVariant as Product)"
+  -->
+
     <LazyUiProductCard
       v-for="productTemplate in productTemplateList"
       class="min-w-[190px]"
@@ -39,12 +47,12 @@ await loadProductTemplateList({pageSize: numOfProducts});
       :name="productTemplate?.name || ''"
       :image-url="$getImage(String(productTemplate.image), 370, 370, String(productTemplate.imageFilename))"
       :image-alt="productTemplate?.name || ''"
-      :regular-price="getRegularPrice((productTemplate.firstVariant as Product))"
-      :special-price="getSpecialPrice((productTemplate.firstVariant as Product))"
+      :regular-price="getRegularPrice((productTemplate.firstVariant))"
+      :special-price="getSpecialPrice((productTemplate.firstVariant))"
       :is-in-wishlist="productTemplate?.isInWishlist || false"
       :rating-count="productTemplate.ratingCount"
       :rating="productTemplate.rating"
-      :first-variant="(productTemplate.firstVariant as Product)"
+      :first-variant="(productTemplate.firstVariant)"
     />
   </SfScrollable>
 </template>

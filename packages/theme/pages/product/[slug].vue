@@ -355,8 +355,8 @@ await loadProduct({ slug: `/product/${route.params.slug}`});
     <UiDivider class="mt-4 mb-2" />
   </div>
   <section class="lg:mx-4 mt-28 mb-20">
-    <!-- #TODO 0.5.2 ProductSlider "ambigous export: Product" error
+    <!-- #TODO 0.5.3 ProductSlider "ambigous export: Product" error
         -->
-    <!--ProductSlider text="Recommended with this product" /-->
+    <ProductSlider text="Recommended with this product" />
   </section>
 </template>
