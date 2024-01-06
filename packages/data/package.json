@@ -20,9 +20,7 @@
     "lint": "nuxt typecheck",
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
-    "release": "release-it",
-    "codegen": "graphql-codegen",
-    "predev": "yarn codegen"    
+    "release": "release-it"
   },
   "dependencies": {
     "@vue-storefront/sdk": "^1.1.2",

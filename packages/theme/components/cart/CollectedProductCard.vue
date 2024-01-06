@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { SfLink, SfIconSell, SfIconRemove, SfIconRemoveShoppingCart } from '@storefront-ui/vue';
-import { OrderLine } from '../graphql';
+// import { OrderLine } from '../graphql';
 const NuxtLink = resolveComponent('NuxtLink');
 
 defineProps({
   orderLine: {
-    type: Object as PropType<OrderLine>,
+    // #TODO: 0.5.4 ambiguous indirect export: OrderLine
+    // type: Object as PropType<OrderLine>,
+    type: Object as PropType<any>,
     required: true,
   },
 });

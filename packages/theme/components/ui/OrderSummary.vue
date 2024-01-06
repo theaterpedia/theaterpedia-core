@@ -5,7 +5,7 @@ const { cart } = useCart();
 
 </script>
 
-template>
+<template>
   <div
     class="shadow-lg md:rounded-md md:border md:border-neutral-100"
     data-testid="order-summary"
@@ -78,10 +78,3 @@ template>
   </div>
 </template>
 
-<script setup lang="ts">
-import { SfButton, SfInput } from '@storefront-ui/vue';
-
-defineProps({
-  cart: Object,
-});
-</script>
