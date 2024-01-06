@@ -1,5 +1,5 @@
 {
-  "name": "@crearis/theme-main",
+  "name": "@crearis/theme-thin",
   "type": "module",
   "version": "0.0.16",
   "license": "MIT",
@@ -41,14 +41,14 @@
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.1.3",
-    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/i18n": "8.0.0",
     "clipboard": "^2.0.11",
-    "nuxt": "^3.9.0",
+    "nuxt": "^3.9.1",
     "lodash": "^4.17.21",    
     "nuxt-lodash": "^2.5.3"    
   },
   "devDependencies": {
-    "@crearis/data-main": "latest",
+    "@crearis/data-thin":  "*",
     "@crearis/typography": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
