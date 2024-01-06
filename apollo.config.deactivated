@@ -1,0 +1,10 @@
+// #TODO: Activate Appollo@VSCODE
+
+module.exports = {
+  client: {
+    service: {
+      name: 'my-graphql-app',
+      url: 'https://vsfdemo15.labs.odoogap.com:8443'
+    }
+  }
+};
