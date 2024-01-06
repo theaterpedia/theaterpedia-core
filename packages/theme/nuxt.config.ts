@@ -90,7 +90,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: '../../node_modules/@crearis/theme-main/lang',
+        langDir: '../../node_modules/@crearis/theme-thin/lang',
         defaultLocale: 'en',
       },
     ],
@@ -100,6 +100,6 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     exposeConfig: true,
-    cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
+    cssPath: '../../node_modules/@crearis/theme-thin/assets/style.scss',
   },
 });
