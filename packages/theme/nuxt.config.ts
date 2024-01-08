@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    vueI18n: '../../node_modules/@crearis/theme-thin/i18n.config.ts' // if you are using custom path, default 
+    vueI18n: '~/node_modules/@crearis/theme-thin/i18n.config.ts' // if you are using custom path, default 
   },
   routeRules: {
     '/': { swr: true },
