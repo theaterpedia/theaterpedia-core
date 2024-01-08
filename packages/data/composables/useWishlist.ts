@@ -28,7 +28,7 @@ export const useWishlist = () => {
   const WishlistAddItem = async (id: number) => {
     try {
       loading.value = true;
-      const { data }: any = await sdk.odoo.wishlistAdd(
+      const { data }: any = await $sdk().odoo.wishlistAdd(
         { productId: id },
         { wishlistAdd: 'customQuery' }
       );
@@ -46,7 +46,7 @@ export const useWishlist = () => {
       const removeItemParams: any = {
         wishId: id,
       };
-      const { data }: any = await $sdk.odoo.wishlistRemove(removeItemParams, {
+      const { data }: any = await $sdk().odoo.wishlistRemove(removeItemParams, {
         wishlistRemove: 'customQuery',
       });
       return data.wishlistRemoveItem;

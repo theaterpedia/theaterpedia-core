@@ -104,7 +104,7 @@
 </template>
 
 <script setup>
-import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack, SfIconChevronRight } from '@storefront-ui/vue';
+import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack, SfIconChevronRight } from '@crearis/vue';
 
 const NuxtLink = resolveComponent('NuxtLink');
 const { t } = useI18n();

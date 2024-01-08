@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SfDrawer, SfButton, SfIconClose } from '@storefront-ui/vue';
+import { SfDrawer, SfButton, SfIconClose } from '@crearis/vue';
 import { onClickOutside } from '@vueuse/core';
 import { useToast } from 'vue-toastification';
 

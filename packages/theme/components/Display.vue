@@ -1,5 +1,5 @@
 <script setup>
-import { SfButton } from '@storefront-ui/vue';
+import { SfButton } from '@crearis/vue';
 
 const NuxtLink = resolveComponent('NuxtLink');
 

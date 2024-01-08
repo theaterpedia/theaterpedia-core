@@ -4,7 +4,7 @@ import {
   SfButton,
   SfLink,
   SfIconMoreHoriz,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 defineProps({
   breadcrumbs: Array,

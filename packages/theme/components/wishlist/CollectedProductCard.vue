@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SfLink, SfButton, SfIconClose } from '@storefront-ui/vue';
+import { SfLink, SfButton, SfIconClose } from '@crearis/vue';
 
 const NuxtLink = resolveComponent('NuxtLink');
 type WishlistProductCardProps = {

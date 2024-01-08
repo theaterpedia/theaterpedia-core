@@ -8,7 +8,7 @@ import {
   SfInput,
   SfLoaderCircular,
   SfSelect,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const props = defineProps({
   heading: String,

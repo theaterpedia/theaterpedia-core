@@ -16,7 +16,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { SfButton } from '@storefront-ui/vue';
+import { SfButton } from '@crearis/vue';
 
 type AccountDataProps = {
   header: string;

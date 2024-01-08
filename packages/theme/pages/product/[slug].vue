@@ -15,7 +15,7 @@ import {
   SfIconShoppingCart,
   SfChip,
   SfThumbnail,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import type { LocationQueryRaw } from 'vue-router';
 import { useToast } from 'vue-toastification';
 

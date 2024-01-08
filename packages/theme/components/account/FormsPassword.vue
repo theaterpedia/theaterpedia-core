@@ -73,7 +73,7 @@
   </form>
 </template>
 <script lang="ts" setup>
-import { SfButton, SfInput, SfIconVisibility } from '@storefront-ui/vue';
+import { SfButton, SfInput, SfIconVisibility } from '@crearis/vue';
 
 type AccountFormsPasswordProps = {
   oldPassword?: string;

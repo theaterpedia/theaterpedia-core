@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SfButton, SfIconArrowBack } from '@storefront-ui/vue';
+import { SfButton, SfIconArrowBack } from '@crearis/vue';
 
 const { cart, loadCart } = useCart();
 

@@ -5,6 +5,5 @@
     "verbatimModuleSyntax": false,    
     "types": ["@vue-storefront/sdk"]
   },
-  "exclude": ["node_modules", "mocks", "__tests__", "cypress.config.ts"],
-  "include": ["../../node_modules/@vitest/expect/index.d.ts"]
+  "exclude": ["node_modules", "mocks", "__tests__", "cypress.config.ts"]
 }

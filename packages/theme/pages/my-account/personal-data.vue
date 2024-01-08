@@ -78,7 +78,7 @@ import {
   SfIconClose,
   SfModal,
   useDisclosure,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import { unrefElement } from '@vueuse/core';
 
 definePageMeta({

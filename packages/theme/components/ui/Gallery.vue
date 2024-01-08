@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SfScrollable } from '@storefront-ui/vue';
+import { SfScrollable } from '@crearis/vue';
 import { ref } from 'vue';
 
 const props = defineProps({

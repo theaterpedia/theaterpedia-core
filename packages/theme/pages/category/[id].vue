@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SfButton, SfIconTune, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconTune, useDisclosure } from '@crearis/vue';
 import { Product } from '../../graphql';
 
 const route = useRoute();

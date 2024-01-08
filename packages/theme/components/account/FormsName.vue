@@ -35,7 +35,7 @@
   </form>
 </template>
 <script lang="ts" setup>
-import { SfButton, SfInput } from '@storefront-ui/vue';
+import { SfButton, SfInput } from '@crearis/vue';
 
 type AccountFormsNameProps = {
   firstName?: SfCustomer['firstName'];

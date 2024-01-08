@@ -107,7 +107,7 @@ import {
   SfButton,
   SfLink,
   SfListItem,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const categories = [
   {

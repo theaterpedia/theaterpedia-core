@@ -76,7 +76,7 @@ import {
   SfLink,
   SfIconCheckCircle,
   SfIconClose,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import { ref, type Ref } from 'vue';
 
 const inputValue = ref('');

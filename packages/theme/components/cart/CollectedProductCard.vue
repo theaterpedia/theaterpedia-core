@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SfLink, SfIconSell, SfIconRemove, SfIconRemoveShoppingCart } from '@storefront-ui/vue';
+import { SfLink, SfIconSell, SfIconRemove, SfIconRemoveShoppingCart } from '@crearis/vue';
 // import { OrderLine } from '../graphql';
 const NuxtLink = resolveComponent('NuxtLink');
 

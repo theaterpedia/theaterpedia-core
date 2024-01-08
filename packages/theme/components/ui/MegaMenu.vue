@@ -96,7 +96,7 @@ import {
   SfListItem,
   useDisclosure,
   useTrapFocus,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import { onClickOutside } from '@vueuse/core';
 import { ref } from 'vue';
 

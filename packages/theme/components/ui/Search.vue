@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@storefront-ui/vue';
+import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@crearis/vue';
 import { unrefElement } from '@vueuse/core';
 
 const props = defineProps<{

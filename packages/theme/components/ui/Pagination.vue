@@ -4,7 +4,7 @@ import {
   SfIconChevronLeft,
   SfIconChevronRight,
   usePagination,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const props = defineProps({
   currentPage: Number,

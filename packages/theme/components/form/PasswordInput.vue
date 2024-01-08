@@ -15,7 +15,7 @@ import {
   SfInput,
   SfIconVisibility,
   SfIconVisibilityOff,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const isPasswordVisible = ref<boolean>();
 </script>

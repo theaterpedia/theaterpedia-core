@@ -10,7 +10,7 @@ import {
   SfSelect,
   SfThumbnail,
   SfCheckbox,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 // #DEBUG 0.5.1 ProductFilterType import { ProductFilterType } from '../../types/product';
 // ERR ambiguous indirect export: ProductFilterType
 

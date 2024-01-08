@@ -14,7 +14,7 @@ import {
   SfIconMenu,
   SfInput,
   SfIconSearch,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 import { onClickOutside } from '@vueuse/core';
 
 defineProps<{ filled?: boolean }>();

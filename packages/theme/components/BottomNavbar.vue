@@ -7,7 +7,7 @@ import {
   SfIconHome,
   SfIconPerson,
   useDisclosure,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 const {
   isOpen: wishlistIsOpen,

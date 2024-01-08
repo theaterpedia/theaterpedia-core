@@ -182,7 +182,7 @@ import {
   SfLink,
   SfModal,
   useDisclosure,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 definePageMeta({
   layout: false,

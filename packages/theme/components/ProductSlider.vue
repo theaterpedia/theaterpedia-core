@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SfScrollable } from '@storefront-ui/vue';
+import { SfScrollable } from '@crearis/vue';
 // #TODO: 0.5.3 fix Product-Typing
 // import { Product } from '../graphql';
 

@@ -10,7 +10,7 @@ import {
   SfListItem,
   SfRadio,
   SfLink,
-} from '@storefront-ui/vue';
+} from '@crearis/vue';
 
 enum PaymentMethod {
   CreditCard = 'credit-card',

@@ -28,7 +28,7 @@
   </form>
 </template>
 <script setup>
-import { SfButton, SfInput } from '@storefront-ui/vue';
+import { SfButton, SfInput } from '@crearis/vue';
 
 defineEmits(['on-save', 'on-cancel']);
 const cart = ref({
