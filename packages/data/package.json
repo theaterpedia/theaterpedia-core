@@ -33,6 +33,9 @@
     "graphql-request": "^6.1.0"    
   },
   "devDependencies": {
+    "@nuxthq/studio": "^1.0.6",    
+    "@nuxt/content": "^2.10.0",
+
     "lodash": "^4.17.21",
     "nuxt": "^3.9.1",
     "nuxt-lodash": "^2.5.3",

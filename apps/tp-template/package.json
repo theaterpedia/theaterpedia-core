@@ -37,6 +37,10 @@
     "graphql-request": "^6.1.0"
   },
   "devDependencies": { 
+    "is-buffer":"2.0.5",
+    "@nuxthq/studio": "^1.0.6",    
+    "@nuxt/content": "^2.10.0",
+
     "@crearis/theme-thin": "*",
     "@crearis/data-thin":  "*", 
     "@storefront-ui/shared":"^2.5.0",       

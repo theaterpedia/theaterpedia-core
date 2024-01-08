@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     dirs: ['composables/**', 'utils/**'],
   },
   modules: [
-    'nuxt-lodash'
+    'nuxt-lodash',
+    '@nuxt/content',
+    '@nuxthq/studio'
   ],
   nitro: {
     compressPublicAssets: true,

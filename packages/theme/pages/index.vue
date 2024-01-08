@@ -6,7 +6,8 @@ await loadCategoryList({ filter: { parent: true } });
 </script>
 
 <template>
-  <LazyMainBanner />
+  <!-- #TODO 0.5.3 MainBanner-Reenable --> 
+  <LazyMainBanner /> -->
   <LazyCategoryCard :categories="categories" />
   <LazyDisplay />
   <section class="pb-16">
