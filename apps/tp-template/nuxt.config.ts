@@ -3,6 +3,7 @@ export default defineNuxtConfig({
           '@crearis/theme-thin',
           '@crearis/data-thin'
         ],
+  modules: ['nuxt-hydration', '@nuxtjs/html-validator'],
   devtools: { enabled: true },
-})
+});
 
