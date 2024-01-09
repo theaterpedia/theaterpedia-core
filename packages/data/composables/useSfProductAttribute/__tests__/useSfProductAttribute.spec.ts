@@ -1,5 +1,5 @@
 import { useSfProductAttribute } from '../useSfProductAttribute';
-import { mockProduct } from './useProduct.mock';
+import { mockProduct } from './useSfProduct.mock';
 
 describe('useSfProductAttribute', () => {
   it('should return product attributes', () => {

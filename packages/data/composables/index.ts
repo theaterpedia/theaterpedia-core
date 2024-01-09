@@ -1,3 +1,3 @@
 export * from './useSfCart';
 export * from './useHandleError';
-export * from './useProduct';
+export * from './useSfProduct';

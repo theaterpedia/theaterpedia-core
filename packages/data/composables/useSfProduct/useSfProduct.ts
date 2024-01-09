@@ -1,15 +1,15 @@
 import { toRefs } from '@vueuse/shared';
-import type { UseProductReturn, UseProductState, FetchProduct } from '../../composables/useProduct/types';
+import type { UseProductReturn, UseProductState, FetchProduct } from './types';
 
 /**
  * @description Composable managing product data
  * @param {string} slug Product slug
  * @returns {@link UseProductReturn}
  * @example
- * const { data, loading, fetchProduct } = useProduct('product-slug');
+ * const { data, loading, fetchProduct } = useSfProduct('product-slug');
  */
-export const useProduct: UseProductReturn = (slug) => {
-  const state = useState<UseProductState>(`useProduct-${slug}`, () => ({
+export const useSfProduct: UseProductReturn = (slug) => {
+  const state = useState<UseProductState>(`useSfProduct-${slug}`, () => ({
     data: null,
     loading: false,
   }));
