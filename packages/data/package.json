@@ -23,6 +23,7 @@
     "release": "release-it"
   },
   "dependencies": {
+    "@vue-storefront/nuxt": "~3.0.0",
     "@vue-storefront/sdk": "^1.0.1",
     "@crearis/crearis-boilerplate-sdk": "~0.0.11"
   },

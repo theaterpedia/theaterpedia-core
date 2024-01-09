@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     'nuxt-vitest',
     '@nuxt/content',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    '@vue-storefront/nuxt',
   ],
   nitro: {
     prerender: {
@@ -18,6 +19,11 @@ export default defineNuxtConfig({
     },
     compressPublicAssets: true,
   },
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:3000',
+    },
+  },  
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },

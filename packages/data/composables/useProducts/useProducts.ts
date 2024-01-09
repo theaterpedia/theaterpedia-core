@@ -1,5 +1,4 @@
 import type { FetchProducts, UseProductsReturn, UseProductsState } from '../../composables/useProducts/types';
-import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable for managing products.

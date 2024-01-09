@@ -78,11 +78,17 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
+    '@vue-storefront/nuxt',
   ], 
   tailwindcss: {
     exposeConfig: true,
     cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
   },
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:3000',
+    },
+  },  
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
