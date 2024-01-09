@@ -1,9 +1,9 @@
-import { useProductAttribute } from '../useProductAttribute';
+import { useSfProductAttribute } from '../useSfProductAttribute';
 import { mockProduct } from './useProduct.mock';
 
-describe('useProductAttribute', () => {
+describe('useSfProductAttribute', () => {
   it('should return product attributes', () => {
-    const { getAttributeList, getAttribute } = useProductAttribute(mockProduct, ['attribute']);
+    const { getAttributeList, getAttribute } = useSfProductAttribute(mockProduct, ['attribute']);
 
     const attributeList = getAttributeList('attribute');
     const attributeValue = getAttribute('attribute');

@@ -31,7 +31,7 @@ import type { ProductAccordionPropsType } from '../ProductAccordion/types';
 const props = defineProps<ProductAccordionPropsType>();
 
 const { product } = toRefs(props);
-const { data: productReviews, fetchProductReviews } = useProductReviews(product.value.slug);
+const { data: productReviews, fetchProductReviews } = useSfProductReviews(product.value.slug);
 
 const productDetailsOpen = ref(true);
 

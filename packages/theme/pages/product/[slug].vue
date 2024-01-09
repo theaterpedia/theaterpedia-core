@@ -44,7 +44,7 @@ definePageMeta({
 const route = useRoute();
 const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);
-const { data: recommendedProducts, fetchProductRecommended } = useProductRecommended(slug);
+const { data: recommendedProducts, fetchProductRecommended } = useSfProductRecommended(slug);
 const { t } = useI18n();
 
 await fetchProduct(slug);

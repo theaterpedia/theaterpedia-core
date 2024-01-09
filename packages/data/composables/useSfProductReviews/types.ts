@@ -13,4 +13,4 @@ export interface UseProductReviewsReturn {
   fetchProductReviews: FetchProductReviews;
 }
 
-export type UseProductReviews = (slug: string) => UseProductReviewsReturn;
+export type UseSfProductReviews = (slug: string) => UseProductReviewsReturn;

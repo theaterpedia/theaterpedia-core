@@ -3,14 +3,14 @@ import type {
   UseProductRecommendedReturn,
   UseProductRecommendedState,
   FetchProductRecommended,
-} from '../../composables/useProductRecommended/types';
+} from './types';
 
 /**
  * Composable for getting recommended products data
  * @param {string} slug Product slug
  */
-export const useProductRecommended: UseProductRecommendedReturn = (slug) => {
-  const state = useState<UseProductRecommendedState>(`useProductRecommended-${slug}`, () => ({
+export const useSfProductRecommended: UseProductRecommendedReturn = (slug) => {
+  const state = useState<UseProductRecommendedState>(`useSfProductRecommended-${slug}`, () => ({
     data: null,
     loading: false,
   }));

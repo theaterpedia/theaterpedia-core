@@ -1,19 +1,19 @@
 import { toRefs } from '@vueuse/shared';
 import type {
-  UseProductReviews,
+  UseSfProductReviews,
   UseProductReviewsState,
   FetchProductReviews,
-} from '../../composables/useProductReviews/types';
+} from './types';
 
 /**
  * @description Composable managing product reviews data
  * @param {string} slug Product slug
  * @returns {@link UseProductReturn}
  * @example
- * const { data, loading, fetchProductReviews } = useProductReviews('product-slug');
+ * const { data, loading, fetchProductReviews } = useSfProductReviews('product-slug');
  */
-export const useProductReviews: UseProductReviews = (slug) => {
-  const state = useState<UseProductReviewsState>(`useProductReviews-${slug}`, () => ({
+export const useSfProductReviews: UseSfProductReviews = (slug) => {
+  const state = useState<UseProductReviewsState>(`useSfProductReviews-${slug}`, () => ({
     data: null,
     loading: false,
   }));
