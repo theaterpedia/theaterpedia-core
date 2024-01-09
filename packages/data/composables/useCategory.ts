@@ -1,0 +1,89 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { QueryCategoriesArgs, QueryCategoryArgs, CategoryListResponse, Category, CategoryResponse } from '../graphql';
+import { QueryName } from '../server/queries';
+
+export const useCategory = (categorySlug?: string) => {
+
+  const loading = ref(false);
+  const categories = useState<Category[]>('categories', () => ([]));
+  const category = useState<Category>(`category-${categorySlug}`, () => ({} as Category));
+
+  const loadCategory = async (params: QueryCategoryArgs) => {
+    loading.value = true;
+    try {
+      const {data} = await useAsyncData(`category-list-${categorySlug}`, async () => {
+        const { data } = await useSdk().odoo.query<QueryCategoryArgs, CategoryResponse >({queryName: QueryName.GetCategory}, params);
+        return data.value;
+      });
+
+      if (data?.value?.category) {
+        category.value = data.value.category;
+      }
+    } finally {
+      loading.value = false;
+    }
+
+  };
+
+  const loadCategoryList = async (params: QueryCategoriesArgs) => {
+    loading.value = true;
+    try {
+      const {data} = await useAsyncData(`category-list-${categorySlug}`, async () => {
+        const { data, error } = await useSdk().odoo.query<QueryCategoriesArgs, CategoryListResponse >({queryName: QueryName.GetCategories}, params);
+
+        // console.log(data.value);
+
+        return data.value;
+      });
+
+      if (data?.value?.categories) {
+        categories.value = data.value.categories?.categories;
+      }
+    } finally {
+      loading.value = false;
+    }
+
+  };
+
+  const buildTree = (categories: any) => {
+    if (!categories) {
+      return [];
+    }
+    return categories.map(
+      (category: { name: string; slug: string; childs: any; id: string }) => ({
+        label: category.name,
+        slug: category.slug,
+        items: buildTree(category.childs),
+        isCurrent: false,
+        id: category.id,
+      })
+    );
+  };
+
+  const getCategoryTree = (searchData: { data: { category: any } }) => {
+    if (!searchData) {
+      return { items: [], label: '', isCurrent: false };
+    }
+
+    const category: any = searchData;
+    if (category) {
+      return {
+        label: category.name,
+        slug: category.slug,
+        items: buildTree(category.childs),
+        isCurrent: false,
+        id: category.id,
+      };
+    }
+    return {};
+  };
+
+  return {
+    loading,
+    categories,
+    category,
+    loadCategoryList,
+    loadCategory,
+    getCategoryTree,
+  };
+};
