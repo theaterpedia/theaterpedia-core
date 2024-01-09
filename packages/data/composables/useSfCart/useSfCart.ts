@@ -1,15 +1,15 @@
 import type { SfCart } from '@vue-storefront/unified-data-model';
 import { toRefs } from '@vueuse/shared';
-import type { UseCartReturn, UseCartState, FetchCart } from '../../composables/useCart/types';
+import type { UseCartReturn, UseCartState, FetchCart } from './types';
 
 /**
  * @description Composable for managing cart.
  * @returns {@link UseCartReturn}
  * @example
- * const { data, loading } = useCart();
+ * const { data, loading } = useSfCart();
  */
-export const useCart: UseCartReturn = () => {
-  const state = useState<UseCartState>('useCart', () => ({
+export const useSfCart: UseCartReturn = () => {
+  const state = useState<UseCartState>('useSfCart', () => ({
     data: null,
     loading: false,
   }));

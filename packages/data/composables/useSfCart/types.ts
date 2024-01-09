@@ -8,10 +8,10 @@ export interface UseCartState {
 
 export type FetchCart = () => Promise<Ref<Maybe<SfCart>>>;
 
-export interface UseCart {
+export interface UseSfCart {
   data: Readonly<Ref<UseCartState['data']>>;
   loading: Readonly<Ref<boolean>>;
   fetchCart: FetchCart;
 }
 
-export type UseCartReturn = () => UseCart;
+export type UseCartReturn = () => UseSfCart;

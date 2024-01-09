@@ -69,7 +69,7 @@ definePageMeta({
   layout: false,
 });
 
-const { data: cart } = useCart();
+const { data: cart } = useSfCart();
 const { data: shippingMethods, getShippingMethods } = useCartShippingMethods();
 
 await getShippingMethods();

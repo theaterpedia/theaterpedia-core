@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import { SfButton } from '@crearis/vue';
 
-const { data: cart } = useCart();
+const { data: cart } = useSfCart();
 
 const NuxtLink = resolveComponent('NuxtLink');
 </script>
