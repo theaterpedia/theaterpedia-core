@@ -70,9 +70,9 @@ definePageMeta({
 });
 
 const { data: cart } = useSfCart();
-const { data: shippingMethods, getShippingMethods } = useCartShippingMethods();
+const { data: shippingMethods, getSfShippingMethods } = useSfCartShippingMethods();
 
-await getShippingMethods();
+await getSfShippingMethods();
 
 const activePayment = ref<PaymentMethod>(PaymentMethod.CreditCard);
 const NuxtLink = resolveComponent('NuxtLink');
