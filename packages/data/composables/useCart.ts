@@ -4,7 +4,6 @@ import { QueryName } from '../server/queries';
 import { useToast } from 'vue-toastification';
 
 export const useCart = () => {
-  const { $sdk } = useNuxtApp();
   const cartCounter = useCookie<number>('cart-counter');
   const toast = useToast();
   const cart = useState<Cart>('cart', () => ({} as Cart));
@@ -13,7 +12,7 @@ export const useCart = () => {
 
   const loadCart = async () => {
     loading.value = true;
-    const { data } = await $sdk().odoo.query<null, CartResponse >({queryName: QueryName.LoadCart});
+    const { data } = await useSdk().odoo.query<null, CartResponse >({queryName: QueryName.LoadCart});
     loading.value = false;    
 
     cart.value = data.value.cart;
@@ -23,7 +22,7 @@ export const useCart = () => {
   const cartAdd = async (productId: number, quantity: number) => {
     loading.value = true;
 
-    const { data, error } = await $sdk().odoo.mutation<MutationCartAddItemArgs, CartResponse >({ mutationName: MutationName.CartAddItem }, { productId, quantity });
+    const { data, error } = await useSdk().odoo.mutation<MutationCartAddItemArgs, CartResponse >({ mutationName: MutationName.CartAddItem }, { productId, quantity });
     loading.value = false;
 
     if (error.value) {
@@ -37,7 +36,7 @@ export const useCart = () => {
 
   const updateItemQuantity = async (lineId: number, quantity: number) => {
     loading.value = true;
-    const { data, error } = await $sdk().odoo.mutation<MutationCartUpdateItemArgs, CartUpdateItemResponse >({ mutationName: MutationName.CartUpdateQuantity }, { lineId, quantity: Number(quantity) });
+    const { data, error } = await useSdk().odoo.mutation<MutationCartUpdateItemArgs, CartUpdateItemResponse >({ mutationName: MutationName.CartUpdateQuantity }, { lineId, quantity: Number(quantity) });
     loading.value = false;
 
     if (error.value) {
@@ -51,7 +50,7 @@ export const useCart = () => {
 
   const removeItemFromCart = async (lineId: number) => {
     loading.value = true;
-    const { data, error } = await $sdk().odoo.mutation<MutationCartRemoveItemArgs, CartRemoveItemResponse >({ mutationName: MutationName.CartRemoveItem }, { lineId });
+    const { data, error } = await useSdk().odoo.mutation<MutationCartRemoveItemArgs, CartRemoveItemResponse >({ mutationName: MutationName.CartRemoveItem }, { lineId });
     loading.value = false;
 
     if (error.value) {
