@@ -36,7 +36,7 @@ import type { ShippingMethodProps } from '../ShippingMethod/types';
 
 defineProps<ShippingMethodProps>();
 
-const { data: cart } = useCart();
+const { data: cart } = useSfCart();
 
 const radioModel = ref(cart.value?.shippingMethod?.id);
 </script>
