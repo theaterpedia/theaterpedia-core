@@ -22,7 +22,7 @@ definePageMeta({
   layout: false,
 });
 
-const { fetchProducts, data: productsCatalog } = useProducts();
+const { fetchProducts, data: productsCatalog } = useSfProducts();
 const { t } = useI18n();
 
 await fetchProducts();

@@ -1,12 +1,12 @@
-import type { FetchProducts, UseProductsReturn, UseProductsState } from '../../composables/useProducts/types';
+import type { FetchProducts, UseProductsReturn, UseProductsState } from './types';
 
 /**
  * @description Composable for managing products.
- * @returns {@link UseProducts}
+ * @returns {@link UseSfProducts}
  * @example
- * const { data, loading, fetchProducts } = useProducts();
+ * const { data, loading, fetchProducts } = useSfProducts();
  */
-export const useProducts: UseProductsReturn = () => {
+export const useSfProducts: UseProductsReturn = () => {
   const state = useState<UseProductsState>('products', () => ({
     data: null,
     loading: false,

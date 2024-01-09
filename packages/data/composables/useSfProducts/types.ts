@@ -8,10 +8,10 @@ export interface UseProductsState {
 }
 
 export type FetchProducts = () => Promise<Ref<Maybe<GetProducts>>>;
-export interface UseProducts {
+export interface UseSfProducts {
   data: Readonly<Ref<UseProductsState['data']>>;
   loading: Readonly<Ref<boolean>>;
   fetchProducts: FetchProducts;
 }
 
-export type UseProductsReturn = () => UseProducts;
+export type UseProductsReturn = () => UseSfProducts;
