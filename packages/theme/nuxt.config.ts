@@ -47,6 +47,17 @@ export default defineNuxtConfig({
       '2xs': 360,
     },
   },
+  runtimeConfig: {
+    // for getImages plugin
+    public: {
+      odooBaseUrl: ''
+    }
+  }, 
+  routeRules: {
+    '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+    '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+    '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+  },    
   i18n: {
     vueI18n: '../../node_modules/@crearis/theme-main/i18n.config.ts' // if you are using custom path, default 
   },  

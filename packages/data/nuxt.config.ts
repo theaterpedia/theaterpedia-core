@@ -23,12 +23,23 @@ export default defineNuxtConfig({
     middleware: {
       apiUrl: 'http://localhost:3000',
     },
-  },  
-  routeRules: {
-    '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
+  vite: {
+    optimizeDeps: {
+      include: ['lodash-es'],
+    },
+  },
+  build: {
+    transpile: [
+      'tslib',
+      '@apollo/client',
+      '@apollo/client/core',
+      '@vue/apollo-composable',
+      '@vue/apollo-option',
+      'ts-invariant',
+      '@erpgap/odoo-sdk-api-client'
+    ]
+  }, 
   pwa: {
     registerType: 'autoUpdate',
     workbox: {
