@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { AttributeValue, Category, Product, ProductTemplateListResponse, QueryProductsArgs } from '../graphql';
 import { QueryName } from '../server/queries';
+import { uniqBy } from 'lodash-es';
 
 export const useProductTemplate = (categoryId: string) => {
 
   const loading = ref(false);
   const totalItems = ref(0);
-  const productTemplateList = useState<Product[]>(`products-category${categoryId}`, () => ([]));
+  const productTemplateList = useState<[]>(`products-category${categoryId}`, () => ([]));
   const attributes = useState<AttributeValue[]>(`attributes${categoryId}`, () => ([]));
   const categories = useState<Category[]>(`categories-from-product-${categoryId}`, () => ([]));
 
@@ -22,7 +23,7 @@ export const useProductTemplate = (categoryId: string) => {
         productTemplateList.value = data.value?.products?.products || [];
         attributes.value = data.value.products?.attributeValues || [];
         totalItems.value = data.value?.products?.totalCount || 0;
-        categories.value = useUniqBy(data.value.products?.products?.map(product => product?.categories || []).flat(), 'id');
+        categories.value = uniqBy(data.value.products?.products?.map(product => product?.categories || []).flat(), 'id');
       }
     } finally {
       loading.value = false;

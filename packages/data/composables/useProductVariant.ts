@@ -5,7 +5,7 @@ import { QueryName } from '../server/queries';
 export const useProductVariant = (combinationId?: number, productTemplateId?: number) => {
 
   const loading = ref(false);
-  const productVariant = useState<ProductVariant>(`product-${combinationId}-${productTemplateId}`, () => ({} as Product));
+  const productVariant = useState<ProductVariant>(`product-${combinationId}-${productTemplateId}`, () => ({}));
 
   const loadProductVariant = async (params: QueryProductVariantArgs) => {
     loading.value = true;

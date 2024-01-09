@@ -7,7 +7,7 @@
       :products="productsCatalog.products"
     >
       <template #sidebar>
-        <CategoryTree :categories="categories" :parent="{ name: $t('allProducts'), href: paths.category }" />
+        <CategoryTree :categories="categories" :parent="{ name: $t('allProducts'), href: paths.allCategories }" />
         <CategorySorting />
         <CategoryFilters :facets="productsCatalog.facets" />
       </template>
@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Breadcrumb } from '../../ui/Breadcrumbs/types';
+import type { Breadcrumb } from '../components/ui/Breadcrumbs/types';
 
 definePageMeta({
   layout: false,
@@ -29,7 +29,7 @@ await fetchProducts();
 
 const breadcrumbs: Breadcrumb[] = [
   { name: t('home'), link: '/' },
-  { name: t('allProducts'), link: '/category' },
+  { name: t('allProducts'), link: paths.allCategories },
 ];
 const subCategories = productsCatalog.value?.subCategories;
 const categories = computed(
@@ -37,7 +37,7 @@ const categories = computed(
     subCategories?.map(({ name, productCount }) => ({
       name,
       count: productCount || undefined,
-      href: paths.category,
+      href: paths.allCategories,
     })) || [],
 );
 </script>

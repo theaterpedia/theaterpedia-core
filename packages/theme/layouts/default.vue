@@ -4,13 +4,24 @@
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       variant="tertiary"
       :tag="NuxtLink"
-      :to="paths.category"
+      :to="paths.allCategories"
     >
       <template #suffix>
         <SfIconExpandMore class="hidden lg:block" />
       </template>
       <span class="hidden lg:flex whitespace-nowrap">{{ $t('allProductsLinkText') }}</span>
     </SfButton>
+    <SfButton
+      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
+      variant="tertiary"
+      :tag="NuxtLink"
+      :to="paths.category + '/14'"
+    >
+      <template #suffix>
+        <SfIconExpandMore class="hidden lg:block" />
+      </template>
+      <span class="hidden lg:flex whitespace-nowrap">Category: Test</span>
+    </SfButton>    
     <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
     </NuxtLazyHydrate>
