@@ -32,6 +32,10 @@
     "dev": {
       "cache": false
     },
+    "test:force": {
+      "outputs": [],
+      "cache": false
+    },    
     "test": {
       "outputs": []
     },
