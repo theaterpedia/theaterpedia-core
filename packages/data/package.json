@@ -5,10 +5,13 @@
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
+    "graphql/",
+    "plugins/",
+    "server/",
     "composables/",
-    "mocks/",
     "utils/",
     "app.vue",
+    "codegen.ts",
     "app.config.ts",
     "nuxt.config.ts"
   ],
@@ -20,7 +23,9 @@
     "lint": "nuxt typecheck",
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
-    "release": "release-it"
+    "release": "release-it",
+    "codegen": "graphql-codegen",
+    "predev": "yarn codegen"
   },
   "dependencies": {
     "@vue-storefront/nuxt": "~3.0.0",

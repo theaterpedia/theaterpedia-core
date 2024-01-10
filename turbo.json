@@ -26,6 +26,9 @@
     "lint:fix": {
       "outputs": []
     },
+    "codegen": {
+      "outputs": []
+    },
     "dev": {
       "cache": false
     },

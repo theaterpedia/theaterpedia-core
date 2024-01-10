@@ -17,9 +17,7 @@
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:cypress": "cypress run",
-    "test:cypress-dev": "cypress open --e2e",
-    "codegen": "graphql-codegen",
-    "predev": "yarn codegen"
+    "test:cypress-dev": "cypress open --e2e"
   },
   "dependencies": {
     "@vue-storefront/nuxt": "~3.0.0",
