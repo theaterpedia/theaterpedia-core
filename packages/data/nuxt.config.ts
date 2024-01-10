@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
@@ -39,7 +40,7 @@ export default defineNuxtConfig({
       'ts-invariant',
       '@erpgap/odoo-sdk-api-client'
     ]
-  }, 
+  },
   pwa: {
     registerType: 'autoUpdate',
     workbox: {

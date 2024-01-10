@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "start": "node apps/tp-template/.output/server/index.mjs",
     "build": "turbo run build",
     "release": "turbo run release --concurrency=1",
     "generate": "turbo run generate",
