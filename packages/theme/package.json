@@ -28,8 +28,8 @@
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "release": "release-it",
     "test:deactivated": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest"    
+    "test:deactivated:coverage": "vitest run --coverage",
+    "test:deactivated:watch": "vitest"    
   },
   "dependencies": {
     "@vue-storefront/nuxt": "~3.0.0",

@@ -31,12 +31,8 @@
     },
     "dev": {
       "cache": false
-    },
-    "test:force": {
-      "outputs": [],
-      "cache": false
-    },    
-    "test": {
+    },   
+    "test:turbo": {
       "outputs": []
     },
     "type-check": {}
