@@ -1,4 +1,4 @@
-import { ProductFilterInput, QueryProductsArgs } from '../graphql';
+import { ProductFilterInput, QueryProductsArgs } from '@crearis/data-main/graphql';
 
 export const useUiHelpers = () => {
   const route: any = useRoute();
