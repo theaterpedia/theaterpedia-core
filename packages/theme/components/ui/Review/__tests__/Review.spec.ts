@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Review from '../../ui/Review/Review.vue';
+import Review from '../Review.vue';
 import { mockProductReviews } from '@crearis/data-main/composables/useSfProductReviews/__tests__/productReviews.mock';
 
 describe('<Review />', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { useCustomer } from '../../../composables/useCustomer/useCustomer';
+import { useCustomer } from '@crearis/data-main/composables/useCustomer';
 
 describe('useCustomer', () => {
   it('should return account data', async () => {

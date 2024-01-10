@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Breadcrumbs from '../../ui/Breadcrumbs/Breadcrumbs.vue';
+import Breadcrumbs from '../Breadcrumbs.vue';
 
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {

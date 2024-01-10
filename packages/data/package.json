@@ -24,6 +24,7 @@
     "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "release": "release-it",
+    "test:deactivated": "vitest run",
     "codegen": "graphql-codegen",
     "predev": "yarn codegen"
   },
