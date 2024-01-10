@@ -15,13 +15,13 @@
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       variant="tertiary"
       :tag="NuxtLink"
-      :to="paths.category + '/14'"
+      :to="paths.category + '/13'"
     >
       <template #suffix>
         <SfIconExpandMore class="hidden lg:block" />
       </template>
-      <span class="hidden lg:flex whitespace-nowrap">Category: Test</span>
-    </SfButton>    
+      <span class="hidden lg:flex whitespace-nowrap">Cat: Women</span>
+    </SfButton>
     <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
     </NuxtLazyHydrate>
