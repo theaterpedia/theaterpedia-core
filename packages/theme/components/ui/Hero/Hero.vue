@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import { SfButton } from '@crearis/vue';
-import type { HeroProps } from '../UiHero/types';
+import type { HeroProps } from './types';
 
 defineProps<HeroProps>();
 

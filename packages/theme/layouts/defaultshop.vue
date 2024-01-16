@@ -1,5 +1,16 @@
 <template>
-  <UiNavbarTop filled>
+  <UiNavbarVsf filled>
+    <SfButton
+      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
+      variant="tertiary"
+      :tag="NuxtLink"
+      :to="paths.allCategories"
+    >
+      <template #suffix>
+        <SfIconExpandMore class="hidden lg:block" />
+      </template>
+      <span class="hidden lg:flex whitespace-nowrap">{{ $t('allProductsLinkText') }}</span>
+    </SfButton>
     <SfButton
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       variant="tertiary"
@@ -14,7 +25,7 @@
     <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
     </NuxtLazyHydrate>
-    <nav class="hidden md:flex md:flex-row md:flex-nowrap" :v-show="cartLineItemsCount>0">
+    <nav class="hidden md:flex md:flex-row md:flex-nowrap">
       <NuxtLazyHydrate when-visible>
         <SfButton
           class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
@@ -83,13 +94,13 @@
     >
       <SfIconSearch />
     </SfButton>
-  </UiNavbarTop>
+  </UiNavbarVsf>
   <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
   </NarrowContainer>
-  <main >
+  <main>
     <slot />
   </main>
   <NuxtLazyHydrate when-idle>

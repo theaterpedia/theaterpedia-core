@@ -1,6 +1,6 @@
 <template>
   <form ref="referenceRef" role="search" class="relative" @submit.prevent="handleSubmit">
-    <SfInput ref="inputReference" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
+    <SfInput ref="inputReference" v-model="inputModel" :aria-label="$t('search')" :placeholder="$t('search')" @focus="open">
       <template #prefix>
         <SfIconSearch />
       </template>

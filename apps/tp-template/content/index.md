@@ -1,5 +1,5 @@
 
-::UiHero{title="Homepage Episodes" subtitle="Live-Editing funktioniert" image="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display.png" alt="Fancy Image" description="description" primaryButtonLink="https://dasei.eu" primaryButtonText="DAS Ei"}
+::UiHero{title="Homepage Episodes" subtitle="Live-Editing funktioniert" image="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display.png" alt="Fancy Image" description="description" primaryButtonLink="https://dasei.eu" primaryButtonText="DAS Ei" }
 
 ## Zweite Überschrift im Hero
 This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.

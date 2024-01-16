@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     head: {
       viewport: 'minimum-scale=1, initial-scale=1, width=device-width',
       htmlAttrs: {
-        lang: 'en',
+        lang: 'de',
       },
       meta: [
         { name: 'description', content: 'CREARIS courses.main (Boilerplate)' },
@@ -83,17 +83,21 @@ export default defineNuxtConfig({
             code: 'en',
             file: 'en.json',
           },
+          {
+            code: 'de',
+            file: 'de.json',
+          },
         ],
         lazy: true,
         langDir: '../../node_modules/@crearis/theme-main/lang',
-        defaultLocale: 'en',
+        defaultLocale: 'de',
       },
     ],
     '@nuxt/image',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
     '@vue-storefront/nuxt',
-  ], 
+  ],
   tailwindcss: {
     exposeConfig: true,
     cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
