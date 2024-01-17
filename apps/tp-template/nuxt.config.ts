@@ -1,8 +1,7 @@
 import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   extends: [
-          '@crearis/theme-main',
-          '@crearis/data-main'
+          '@crearis/theme-main'
         ],
   nitro: {
     prerender: {
