@@ -10,8 +10,6 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-vitest',
-    '@nuxt/content',
-    '@nuxthq/studio',
     '@vue-storefront/nuxt',
   ],
   nitro: {

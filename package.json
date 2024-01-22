@@ -1,6 +1,6 @@
 {
   "name": "theaterpedia-core-turbo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "scripts": {
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
@@ -21,8 +21,7 @@
     "@crearis/eslint-config-custom": "*",
     "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.0.1",
-    "turbo": "latest",
-    "@nuxthq/studio": "^1.0.6"    
+    "turbo": "latest" 
   },
   "workspaces": [
     "packages/**/*",
@@ -30,6 +29,6 @@
   ],
   "packageManager": "yarn@1.22.10",
   "engines": {
-    "node": ">=v18.18.2"
+    "node": ">=v20.0.0"
   }
 }

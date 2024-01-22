@@ -3,7 +3,7 @@
   <!-- div v-for="(component, index) in content" :key="`${component.fields.component}-${index}`">
     <RenderContent :content="component.fields.content" />
   </!-->
-  <ContentDoc />
+  <!-- ContentDoc /-->
 </template>
 
 <script setup lang="ts">
