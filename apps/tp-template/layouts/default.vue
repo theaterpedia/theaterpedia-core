@@ -89,7 +89,7 @@
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
   </NarrowContainer>
-  <main >
+  <main>
     <slot />
   </main>
   <NuxtLazyHydrate when-idle>
