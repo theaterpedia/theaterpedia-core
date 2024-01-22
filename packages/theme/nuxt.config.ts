@@ -113,9 +113,4 @@ export default defineNuxtConfig({
     },
   },
 
-  pruvious: {
-    jwt: {
-      secretKey: process.env.PRUVIOUS_JWT_SECRETKEY,
-    },
-  },
 });

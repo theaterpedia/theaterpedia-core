@@ -138,8 +138,8 @@ import { defineLayout } from '#pruvious'
 
 defineLayout({
   label: 'default',
-  allowedBlocks: ['Container', 'Image', 'Prose', 'Video'],
-  allowedRootBlocks: ['Container'],
+  allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video']
 });
 
 defineProps<DefaultLayoutProps>();

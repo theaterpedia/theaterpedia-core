@@ -6,6 +6,7 @@
       <slot />
     </div>
     <PageFooter />
+    <UiFooter />
   </div>
 </template>
 
@@ -13,9 +14,7 @@
 import { defineLayout } from '#pruvious'
 
 defineLayout({
-  label: 'Blog post',
-  allowedBlocks: ['Container', 'Image', 'Prose', 'Video'],
-  allowedRootBlocks: ['Container'],
+  label: 'Blog post'
 });
 
 </script>

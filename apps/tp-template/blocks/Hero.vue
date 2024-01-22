@@ -3,20 +3,14 @@
     <div class="md:flex md:flex-row-reverse md:justify-center min-h-[600px] max-w-screen-3xl mx-auto">
       <div class="flex flex-col justify-center md:basis-2/4 md:items-stretch md:overflow-hidden">
         <!-- #TODO _06 Re-Enable Images -->
-        <NuxtImg
-          src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display.png"
-          alt="Hero"
-          class="h-auto w-full object-cover object-left"
-          width="764"
-          height="600"
-          fetchpriority="high"
-          format="webp"
-          preload
+        <PruviousPicture
+          :image="image"
+          :lazy="true"
         />
       </div>
       <div class="p-4 md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
         <p class="typography-text-xs md:typography-text-sm font-bold tracking-widest text-neutral-500 uppercase">
-          {{ subtitle }}
+          {{ overline }}
         </p>
         <h1 class="typography-headline-2 md:typography-headline-1 md:leading-[67.5px] font-bold mt-2 mb-4">
           {{ title }}
@@ -26,7 +20,7 @@
         -->
         <div>
           <slot>
-            <p class="typography-text-base md:typography-text-lg" :v-text="description"></p>
+            <p class="typography-text-base md:typography-text-lg" :v-text="teasertext"></p>
           </slot>
         </div>
         <div class="flex flex-col md:flex-row gap-4 mt-6">
@@ -43,10 +37,47 @@
 </template>
 
 <script setup lang="ts">
-import { SfButton } from '@crearis/vue';
-import type { HeroProps } from '../UiHero/types';
+import { defineBlock, linkField, textField, imageField } from '#pruvious'
 
-defineProps<HeroProps>();
+defineBlock({ icon: 'Mouse' });
+
+import { SfButton } from '@crearis/vue';
+
+defineProps({
+  image: imageField({
+    minWidth: 764,
+    minHeight: 600,
+    sources: [
+      { media: '(max-width: 768px)', format: 'webp', width: 764, height: 600, resize: 'cover' },
+      { media: '(max-width: 768px)', format: 'jpeg', width: 764, height: 600, resize: 'cover' },
+      { format: 'webp', width: 764, height: 600, resize: 'cover' },
+      { format: 'jpeg', width: 764, height: 600, resize: 'cover' },
+    ],
+  }),
+  title: textField({
+    placeholder: 'Titel eingeben',
+  }),
+  overline: textField({
+    placeholder: 'Overline eingeben',
+  }),
+  teasertext: textField({
+    placeholder: 'Overline eingeben',
+  }),
+  primaryButtonText: textField({
+    placeholder: '1. Button: Text eingeben',
+  }),
+  primaryButtonLink: linkField({
+    required: true,
+    placeholder: '1. Button Link',
+  }),
+  secondaryButtonText: textField({
+    placeholder: '2. Button: Text eingeben',
+  }),
+  secondaryButtonLink: linkField({
+    required: true,
+    placeholder: '2. Button Link',
+  }),
+});
 
 const NuxtLink = resolveComponent('NuxtLink');
 </script>
