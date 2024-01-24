@@ -3,9 +3,15 @@ export default defineNuxtConfig({
   extends: [
           '@crearis/theme-main'
         ],
+        hooks: {
+          close: (nuxt) => {
+            if (!nuxt.options._prepare) {
+              process.exit()
+            }
+          },
+        },
   nitro: {
     prerender: {
-      routes: ['/'],
       ignore: [
       '/product/',
       '/category',
