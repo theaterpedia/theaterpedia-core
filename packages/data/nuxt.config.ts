@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       ignore: ['/shop'],
     },
     compressPublicAssets: true,
