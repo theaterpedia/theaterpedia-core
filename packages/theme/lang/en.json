@@ -145,14 +145,17 @@
   "category": "Category",
   "imageOfSth": "Image of {name}",
   "categories": {
-    "howToBuy": {
-      "label": "How to buy",
+    "howToOrder": {
+      "label": "Wie funktioniert's?",
       "subcategories": {
-        "paymentMethods": "Payment methods",
-        "orderPickup": "Order pickup",
-        "purchaseStatus": "Purchase status",
-        "trackOrders": "Track orders",
-        "returns": "Returns"
+        "checkoutAndPayment": "buchen & bezahlen",
+        "workshopsDisposition": "Workshops anfragen",
+        "projectSignup": "Kinder & Jugendliche (z.B. Projektanmeldung)",
+        "paymentMethods": "Zahlungsmethoden",
+        "orderPickup": "Anmeldebestätigung",
+        "purchaseStatus": "Zahlungsbestätigung",
+        "trackOrders": "Veranstaltungsmanagement",
+        "returns": "Stornierung & Abmeldung"
       }
     },
     "help": {
