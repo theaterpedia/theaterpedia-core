@@ -3,10 +3,10 @@
 // make tailwind-config, lang, i18n.config, etc. exportable from theme-main
 
 
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-const currentDir = dirname(fileURLToPath(import.meta.url))
+const currentDir = dirname(fileURLToPath(import.meta.url));
 
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     // if you are using custom path, default
-    vueI18n: join(currentDir, './i18n.config.ts')
+    // vueI18n: 'i18n.config.ts'
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -89,7 +89,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: join(currentDir, './lang'),
+        langDir: 'lang',
         defaultLocale: 'de',
       },
     ],

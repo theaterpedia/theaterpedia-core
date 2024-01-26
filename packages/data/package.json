@@ -1,18 +1,20 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.0.16",
+  "version": "0.0.18",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
+    "composables/",
     "graphql/",
+    "lang/",
+    "mocks/",
     "plugins/",
     "server/",
-    "composables/",
     "utils/",
     "app.vue",
     "codegen.ts",
-    "app.config.ts",
+    "i18n.config.ts",    
     "nuxt.config.ts"
   ],
   "publishConfig": {
