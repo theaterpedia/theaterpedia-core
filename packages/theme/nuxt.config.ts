@@ -2,12 +2,12 @@
 // https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
 // make tailwind-config, lang, i18n.config, etc. exportable from theme-main
 
-/*
+
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
-*/
+
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     titleSuffix: 'CREARIS courses.main Boilerplate',
   },
   image: {
-    dir: '../../node_modules/@crearis/theme-main/public',
+    dir: join(currentDir, './public'),
     screens: {
       '4xl': 1920,
       '3xl': 1536,
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     // if you are using custom path, default
-    vueI18n: './i18n.config.ts'
+    vueI18n: join(currentDir, './i18n.config.ts')
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -89,7 +89,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: './lang',
+        langDir: join(currentDir, './lang'),
         defaultLocale: 'de',
       },
     ],
@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     exposeConfig: true,
-    cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
+    cssPath: join(currentDir, './assets/style.scss'),
   },
   vsf: {
     middleware: {
