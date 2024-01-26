@@ -1,7 +1,7 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
-  "version": "0.0.22",
+  "version": "0.0.26",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
@@ -51,7 +51,7 @@
     "@nuxt/devtools": "^1.0.0",
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/google-fonts": "^3.0.1",
-    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/i18n": "^8.0.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18",

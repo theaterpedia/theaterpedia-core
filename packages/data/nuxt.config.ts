@@ -8,10 +8,28 @@ export default defineNuxtConfig({
     dirs: ['composables/**', 'utils/**'],
   },
   modules: [
+    '@nuxtjs/i18n',
     '@vite-pwa/nuxt',
     'nuxt-vitest',
     '@vue-storefront/nuxt',
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'de',
+        file: 'de.json',
+        name: 'Deutsch',
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English',
+      },
+    ],
+    defaultLocale: 'de',
+    langDir: './lang',
+    lazy: true
+  },
   nitro: {
     prerender: {
       crawlLinks: true,

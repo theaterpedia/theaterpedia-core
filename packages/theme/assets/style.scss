@@ -10,3 +10,17 @@
     @apply hidden /* for Chrome, Safari, and Opera */;
   }
 }
+
+@font-face {
+  font-family: Monaspace;
+  src: url('./Monaspace/MonaspaceNeon-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Monaspace;
+  src: url('./Monaspace/MonaspaceNeon-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

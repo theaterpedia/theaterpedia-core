@@ -61,9 +61,23 @@ export default defineNuxtConfig({
     '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
   i18n: {
-    // if you are using custom path, default
-    // vueI18n: 'i18n.config.ts'
+    locales: [
+      {
+        code: 'de',
+        file: 'de.json',
+        name: 'Deutsch',
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English',
+      },
+    ],
+    defaultLocale: 'de',
+    langDir: './lang',
+    lazy: true
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     [
@@ -75,24 +89,7 @@ export default defineNuxtConfig({
         },
       },
     ],
-    [
-      '@nuxtjs/i18n',
-      {
-        locales: [
-          {
-            code: 'en',
-            file: 'en.json',
-          },
-          {
-            code: 'de',
-            file: 'de.json',
-          },
-        ],
-        lazy: true,
-        langDir: 'lang',
-        defaultLocale: 'de',
-      },
-    ],
+    '@nuxtjs/i18n',
     '@nuxt/image',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
