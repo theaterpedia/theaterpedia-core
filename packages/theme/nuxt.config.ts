@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     // if you are using custom path, default
-    vueI18n: '../../node_modules/@crearis/theme-main/i18n.config.ts'
+    vueI18n: './i18n.config.ts'
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -89,7 +89,7 @@ export default defineNuxtConfig({
           },
         ],
         lazy: true,
-        langDir: '../../node_modules/@crearis/theme-main/lang',
+        langDir: './lang',
         defaultLocale: 'de',
       },
     ],
