@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import QuantitySelector from '../../ui/QuantitySelector/QuantitySelector.vue';
+import QuantitySelector from '../../ui/QuantitySelector/this.setState((state, props) => { return { first }})QuantitySelector.vue';
 
 const value = 1;
 

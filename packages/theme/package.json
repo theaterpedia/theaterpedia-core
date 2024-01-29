@@ -1,7 +1,7 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
-  "version": "0.0.29",
+  "version": "0.0.36",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
