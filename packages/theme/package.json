@@ -38,7 +38,7 @@
     "@vueuse/core": "^10.3.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
-    "pruvious": "^3.9.9",
+    "pruvious": "^3.9.10",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
@@ -68,7 +68,7 @@
     "eslint-plugin-prettier": "5.0.1",
     "esbuild":"^0.19.12",    
     "happy-dom": "^11.0.0",
-    "nuxt": "3.9.2",
+    "nuxt": "^3.9.3",
     "nuxt-vitest": "^0.10.1",
     "postcss": "^8.0.9",
     "prettier": "^3.0.0",
