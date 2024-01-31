@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     'nuxt-vitest',
     '@vue-storefront/nuxt',
+    'pruvious',
   ],
   nitro: {
     prerender: {

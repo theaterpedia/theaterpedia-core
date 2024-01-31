@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from 'nuxt/config';
 
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
