@@ -1,7 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   extends: [
-          '@crearis/theme-main'
+          '@crearis/theme-main',
+          '@crearis/data-main'
         ],
         hooks: {
           close: (nuxt) => {
@@ -10,6 +11,7 @@ export default defineNuxtConfig({
             }
           },
         },
+  modules: ['pruvious'],
   nitro: {
     prerender: {
       ignore: [
