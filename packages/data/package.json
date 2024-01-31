@@ -1,18 +1,20 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
+    "composables/",
     "graphql/",
+    "lang/",
+    "mocks/",
     "plugins/",
     "server/",
-    "composables/",
     "utils/",
     "app.vue",
+    "i18n.config.ts",
     "codegen.ts",
-    "app.config.ts",
     "nuxt.config.ts"
   ],
   "publishConfig": {
@@ -58,7 +60,7 @@
     "eslint": "^8.50.0",
     "eslint-plugin-prettier": "5.0.1",
     "happy-dom": "^11.0.0",
-    "nuxt": "3.9.2",
+    "nuxt": "3.9.3",
     "nuxt-vitest": "^0.10.1",
     "sass": "^1.64.1",
     "vitest": "^0.33.0",

@@ -2,12 +2,12 @@
 // https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
 // make tailwind-config, lang, i18n.config, etc. exportable from theme-main
 
-/*
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
 
-const currentDir = dirname(fileURLToPath(import.meta.url))
-*/
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const currentDir = dirname(fileURLToPath(import.meta.url));
+
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    dir: '../../node_modules/@crearis/theme-main/public',
+    dir: join(currentDir, './public'),
     screens: {
       '4xl': 1920,
       '3xl': 1536,
@@ -75,28 +75,29 @@ export default defineNuxtConfig({
         'Red Hat Text': [300, 400, 500, 700],
       },
     },
-  ], [
-    '@nuxtjs/i18n',
-    {
-      locales: [
-        {
-          code: 'en',
-          file: 'en.json',
-        },
-        {
-          code: 'de',
-          file: 'de.json',
-        },
-      ],
-      lazy: true,
-      langDir: '../../node_modules/@crearis/theme-main/lang',
-      defaultLocale: 'de',
-    },
-  ], '@nuxt/image', 'nuxt-vitest', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt'],
+  ], '@nuxt/image', '@nuxtjs/i18n', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt'],
+
+  i18n: {
+    locales: [
+      {
+        code: 'de',
+        file: 'de.json',
+        name: 'Deutsch',
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English',
+      },
+    ],
+    defaultLocale: 'de',
+    langDir: './lang',
+    lazy: true
+  },
 
   tailwindcss: {
     exposeConfig: true,
-    cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
+    cssPath: join(currentDir, './assets/style.scss'),
   },
 
   vsf: {
