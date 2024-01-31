@@ -67,11 +67,6 @@ export default defineNuxtConfig({
     '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
 
-  i18n: {
-    // if you are using custom path, default
-    vueI18n: '../../node_modules/@crearis/theme-main/i18n.config.ts'
-  },
-
   modules: ['@nuxtjs/tailwindcss', [
     '@nuxtjs/google-fonts',
     {
@@ -94,7 +89,7 @@ export default defineNuxtConfig({
         },
       ],
       lazy: true,
-      langDir: '../../node_modules/@crearis/theme-main/lang',
+      langDir: './lang',
       defaultLocale: 'de',
     },
   ], '@nuxt/image', 'nuxt-vitest', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt', 'pruvious'],
