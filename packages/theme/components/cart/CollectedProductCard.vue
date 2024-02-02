@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { SfLink, SfIconSell, SfIconRemove, SfIconRemoveShoppingCart } from '@crearis/vue';
-import { useCart } from '@crearis/data-main/composables/useCart';
 
 // #TODO: 0.5.4 ambiguous indirect export: OrderLine
 /* import { OrderLine } from '@crearis/data-main/graphql'; */
