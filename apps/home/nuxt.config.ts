@@ -3,7 +3,7 @@ import { dirname } from 'node:path'
 import { defineNuxtConfig } from 'nuxt/config'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
-const isRootDir = !(currentDir.endsWith('apps/tp-template'))
+const isRootDir = !(currentDir.endsWith('apps/home'))
 
 export default defineNuxtConfig({
   extends: [

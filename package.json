@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
-    "start": "node apps/tp-template/.output/server/index.mjs",
+    "start": "node apps/home/.output/server/index.mjs",
     "build": "turbo run build",
     "release": "turbo run release --concurrency=1",
     "generate": "turbo run generate",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/tp-template && yarn test",
-    "test:watch": "cd apps/tp-template && yarn test:watch",
+    "test": "cd apps/home && yarn test",
+    "test:watch": "cd apps/home && yarn test:watch",
     "test:turbo": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
