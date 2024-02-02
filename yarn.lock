@@ -25,7 +25,7 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@antfu/eslint-config@^2.6.2":
+"@antfu/eslint-config@^2.6.2", "@antfu/eslint-config@^2.6.3":
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/@antfu/eslint-config/-/eslint-config-2.6.3.tgz#6a75b6dbe93123ac5720a28a84f6b8fca4591305"
   integrity sha512-sfkamrOatMwMZkp14mBerHKIw8FY0SD1iCb5UZ6Y5hgb+FeDpNQPlVA0i2PN95TQ8NSYyPC1QnoM+UA5NSl0Kg==
@@ -2080,6 +2080,14 @@
     "@vue-storefront/sdk" "~1.1.2"
     axios "^1.6.2"
 
+"@crearis/data-main@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@crearis/data-main/-/data-main-0.0.15.tgz#8c3fc29fef062af9950ffe90007462ba53fc7ec7"
+  integrity sha512-l6PpfwhyRs1cn58cR/MLMSa+giUAHlNfSj/pGqwxNsjffrYKUkwzewSLbrUyRduhGqYwUNt0ZZswtglIztvSrQ==
+  dependencies:
+    "@crearis/crearis-boilerplate-sdk" "~0.0.11"
+    "@vue-storefront/sdk" "^1.0.1"
+
 "@crearis/tailwind-config@latest":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@crearis/tailwind-config/-/tailwind-config-0.0.8.tgz#e0d5f5e5e7817756453c3a4ccaba622d0195f723"
@@ -2088,12 +2096,12 @@
     "@mertasan/tailwindcss-variables" "^2.5.2"
     "@storefront-ui/tw-plugin-peer-next" "2.3.1"
 
-"@crearis/typography@^0.0.8", "@crearis/typography@latest":
+"@crearis/typography@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@crearis/typography/-/typography-0.0.8.tgz#22addae28695f331ca862a609448adbf25ec8a03"
   integrity sha512-daqTevraxSwT9yWPkOy9Fw+uDJDnDbIv41+9J/XUzwL5nkEGtgqgYcpyZL17HfFxAZT+J3/vTPKVKhhuYFglRA==
 
-"@crearis/vue@^0.0.8", "@crearis/vue@latest":
+"@crearis/vue@^0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@crearis/vue/-/vue-0.0.8.tgz#9ff9242b33c31587aa85b2127b4f874ba4c52ee4"
   integrity sha512-sWaoBf2gdvQ0ujSQHn8gVC40nHS3csKcbSTXIc0IykDn2iP4+pB6wRsJ7IVe9h9uLdBGPgo4To/xssCZNIZfRQ==
@@ -2165,6 +2173,21 @@
     colorspace "1.1.x"
     enabled "2.0.x"
     kuler "^2.0.0"
+
+"@dprint/formatter@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@dprint/formatter/-/formatter-0.2.1.tgz#36345ed2e7ed15da9ba3a7c575f5864fffcd9794"
+  integrity sha512-GCzgRt2o4mhZLy8L47k2A+q9EMG/jWhzZebE29EqKsxmjDrSfv2VisEj/Q+39OOf04jTkEfB/TRO+IZSyxHdYg==
+
+"@dprint/markdown@^0.16.3":
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/@dprint/markdown/-/markdown-0.16.3.tgz#47ecd73f6a66c7df601630d14fb952cf67b320ad"
+  integrity sha512-KvwUrCdHR1spFk0EcdW33KEGFLfkcdx6hJN8mwipGBw0b40sl5oPtVUTgRiH70eV7VUhPfycDfIsDutWNHb17w==
+
+"@dprint/toml@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@dprint/toml/-/toml-0.5.4.tgz#11bff41e032d5c9f86402cf3ea75cb6387537056"
+  integrity sha512-d+5GwwzztZD0QixmOBhaO6nWVLsAeYsJ1HJYNxDoDRbASFCpza9BBVshG5ctBRXCkkIHhD9BO1SnbOoRQltUQw==
 
 "@emnapi/runtime@^0.45.0":
   version "0.45.0"
@@ -3866,7 +3889,7 @@
     rc9 "^2.1.1"
     semver "^7.5.4"
 
-"@nuxt/devtools@^1.0.0", "@nuxt/devtools@^1.0.8", "@nuxt/devtools@latest":
+"@nuxt/devtools@^1.0.0", "@nuxt/devtools@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@nuxt/devtools/-/devtools-1.0.8.tgz#d8edbb016f5194a7255f90623a205b484df77e26"
   integrity sha512-o6aBFEBxc8OgVHV4OPe2g0q9tFIe9HiTxRiJnlTJ+jHvOQsBLS651ArdVtwLChf9UdMouFlpLLJ1HteZqTbtsQ==
@@ -3906,7 +3929,7 @@
     which "^3.0.1"
     ws "^8.16.0"
 
-"@nuxt/image@^1.0.0-rc.1", "@nuxt/image@^1.1.0":
+"@nuxt/image@^1.1.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.3.0.tgz#2ad1733a2a8fec873805452a7bf71fee4277e6af"
   integrity sha512-HoAvBImqRrAwCLhZe7IsRwUWvV0ZVqUKFE/GsT8Jo01NBEd+PXhhu2XgHKV+aasqPXdeaQjhL43CSIwuNEwG1w==
@@ -3972,31 +3995,7 @@
     unimport "^3.3.0"
     untyped "^1.4.0"
 
-"@nuxt/kit@3.9.2":
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.9.2.tgz#4afec7f83e7bd49ffbfb684adbc78161a827538a"
-  integrity sha512-SmWXnA7z9OJuPXYvrx/8QnnsahRJEfLVciUUxCaVEMOxdRZnr1lUmzoT4wFVcYMQnMJYz1Alo58x4vtty6P73w==
-  dependencies:
-    "@nuxt/schema" "3.9.2"
-    c12 "^1.6.1"
-    consola "^3.2.3"
-    defu "^6.1.4"
-    globby "^14.0.0"
-    hash-sum "^2.0.0"
-    ignore "^5.3.0"
-    jiti "^1.21.0"
-    knitwork "^1.0.0"
-    mlly "^1.5.0"
-    pathe "^1.1.2"
-    pkg-types "^1.0.3"
-    scule "^1.2.0"
-    semver "^7.5.4"
-    ufo "^1.3.2"
-    unctx "^2.3.1"
-    unimport "^3.7.1"
-    untyped "^1.4.0"
-
-"@nuxt/kit@3.9.3", "@nuxt/kit@^3.3.2", "@nuxt/kit@^3.5.3", "@nuxt/kit@^3.6.1", "@nuxt/kit@^3.6.5", "@nuxt/kit@^3.7.0", "@nuxt/kit@^3.7.3", "@nuxt/kit@^3.7.4", "@nuxt/kit@^3.8.0", "@nuxt/kit@^3.8.2", "@nuxt/kit@^3.9.1", "@nuxt/kit@^3.9.2", "@nuxt/kit@^3.9.3":
+"@nuxt/kit@^3.3.2", "@nuxt/kit@^3.5.3", "@nuxt/kit@^3.6.1", "@nuxt/kit@^3.6.5", "@nuxt/kit@^3.7.0", "@nuxt/kit@^3.7.3", "@nuxt/kit@^3.7.4", "@nuxt/kit@^3.8.0", "@nuxt/kit@^3.8.2", "@nuxt/kit@^3.9.1", "@nuxt/kit@^3.9.2", "@nuxt/kit@^3.9.3":
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.9.3.tgz#2f77b6dc446d519a71f1c76ba9c67ba260d40007"
   integrity sha512-bHGXpTB6E+YJCC1L9tTwrP7txgLZzyuFes/tgy1ZM4dlfrCsGqLK/K4mddROMdC3D81scnH84u7yQsN0JRgoTg==
@@ -4052,23 +4051,6 @@
     std-env "^3.4.3"
     ufo "^1.3.0"
     unimport "^3.3.0"
-    untyped "^1.4.0"
-
-"@nuxt/schema@3.9.2":
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.9.2.tgz#e3a0276c2b019c8a3e35b7df43746b3d7cb42aff"
-  integrity sha512-jLShtgQPBMH2ccRTv/l4wAik1L6cW7Y5H7txHDZXKR4nHAbNuhCdVPCKs8NP/8g8rhBulbH+xy8Lar5ff8ahOQ==
-  dependencies:
-    "@nuxt/ui-templates" "^1.3.1"
-    consola "^3.2.3"
-    defu "^6.1.4"
-    hookable "^5.5.3"
-    pathe "^1.1.2"
-    pkg-types "^1.0.3"
-    scule "^1.2.0"
-    std-env "^3.7.0"
-    ufo "^1.3.2"
-    unimport "^3.7.1"
     untyped "^1.4.0"
 
 "@nuxt/schema@3.9.3", "@nuxt/schema@^3.7.3", "@nuxt/schema@^3.9.1":
@@ -4153,84 +4135,6 @@
     unplugin "^1.6.0"
     vite "5.0.12"
     vite-node "^1.2.2"
-    vite-plugin-checker "^0.6.2"
-    vue-bundle-renderer "^2.0.0"
-
-"@nuxt/vite-builder@3.9.2":
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/vite-builder/-/vite-builder-3.9.2.tgz#303aeb67a6807111991ea9e63977bedb6c48860e"
-  integrity sha512-Y8hIn/DlAeQPFKTTDGH8FJrnPCNhgwLXeQC3EroRpeF6/YIfJmTwTr4hWdeBtD2rJllFkWPEYJZfbQTithGtUg==
-  dependencies:
-    "@nuxt/kit" "3.9.2"
-    "@rollup/plugin-replace" "^5.0.5"
-    "@vitejs/plugin-vue" "^5.0.3"
-    "@vitejs/plugin-vue-jsx" "^3.1.0"
-    autoprefixer "^10.4.16"
-    clear "^0.1.0"
-    consola "^3.2.3"
-    cssnano "^6.0.3"
-    defu "^6.1.4"
-    esbuild "^0.19.11"
-    escape-string-regexp "^5.0.0"
-    estree-walker "^3.0.3"
-    externality "^1.0.2"
-    fs-extra "^11.2.0"
-    get-port-please "^3.1.2"
-    h3 "^1.10.0"
-    knitwork "^1.0.0"
-    magic-string "^0.30.5"
-    mlly "^1.5.0"
-    ohash "^1.1.3"
-    pathe "^1.1.2"
-    perfect-debounce "^1.0.0"
-    pkg-types "^1.0.3"
-    postcss "^8.4.33"
-    rollup-plugin-visualizer "^5.12.0"
-    std-env "^3.7.0"
-    strip-literal "^2.0.0"
-    ufo "^1.3.2"
-    unplugin "^1.6.0"
-    vite "5.0.11"
-    vite-node "^1.1.1"
-    vite-plugin-checker "^0.6.2"
-    vue-bundle-renderer "^2.0.0"
-
-"@nuxt/vite-builder@3.9.3":
-  version "3.9.3"
-  resolved "https://registry.yarnpkg.com/@nuxt/vite-builder/-/vite-builder-3.9.3.tgz#e7cea0f4277c5149afd0cba6d98d1df62558658f"
-  integrity sha512-HruOrxn0g6TS31j3jycJvGZ7pt3JNEbcXNByVh7YJwQx6ToFX8kPWRu4LPeMhrLYvZzeUr2w3iELBECFxbDmvw==
-  dependencies:
-    "@nuxt/kit" "3.9.3"
-    "@rollup/plugin-replace" "^5.0.5"
-    "@vitejs/plugin-vue" "^5.0.3"
-    "@vitejs/plugin-vue-jsx" "^3.1.0"
-    autoprefixer "^10.4.16"
-    clear "^0.1.0"
-    consola "^3.2.3"
-    cssnano "^6.0.3"
-    defu "^6.1.4"
-    esbuild "^0.19.11"
-    escape-string-regexp "^5.0.0"
-    estree-walker "^3.0.3"
-    externality "^1.0.2"
-    fs-extra "^11.2.0"
-    get-port-please "^3.1.2"
-    h3 "^1.10.0"
-    knitwork "^1.0.0"
-    magic-string "^0.30.5"
-    mlly "^1.5.0"
-    ohash "^1.1.3"
-    pathe "^1.1.2"
-    perfect-debounce "^1.0.0"
-    pkg-types "^1.0.3"
-    postcss "^8.4.33"
-    rollup-plugin-visualizer "^5.12.0"
-    std-env "^3.7.0"
-    strip-literal "^2.0.0"
-    ufo "^1.3.2"
-    unplugin "^1.6.0"
-    vite "5.0.11"
-    vite-node "^1.1.1"
     vite-plugin-checker "^0.6.2"
     vue-bundle-renderer "^2.0.0"
 
@@ -6607,7 +6511,7 @@
     "@vue/compiler-ssr" "3.4.15"
     "@vue/shared" "3.4.15"
 
-"@vue/shared@3.4.15", "@vue/shared@^3.3.0", "@vue/shared@^3.4.14", "@vue/shared@^3.4.15":
+"@vue/shared@3.4.15", "@vue/shared@^3.3.0", "@vue/shared@^3.4.15":
   version "3.4.15"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.4.15.tgz#e7d2ea050c667480cb5e1a6df2ac13bcd03a8f30"
   integrity sha512-KzfPTxVaWfB+eGcGdbSf4CWdaXcGDqckoeXUh7SB3fZdEtzPCK2Vq9B/lRRL3yutax/LWITz+SwvgyOxz5V75g==
@@ -7256,7 +7160,7 @@ auto-bind@~4.0.0:
   resolved "https://registry.yarnpkg.com/auto-bind/-/auto-bind-4.0.0.tgz#e3589fc6c2da8f7ca43ba9f84fa52a744fc997fb"
   integrity sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==
 
-autoprefixer@^10.0.2, autoprefixer@^10.4.16, autoprefixer@^10.4.17:
+autoprefixer@^10.0.2, autoprefixer@^10.4.17:
   version "10.4.17"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.17.tgz#35cd5695cbbe82f536a50fa025d561b01fdec8be"
   integrity sha512-/cpVNRLSfhOtcGflT13P2794gVSgmPgTR+erw5ifnMLZb0UnSlkK4tquLmkd3BhA+nLo5tX8Cu0upUsGKvKbmg==
@@ -9578,7 +9482,7 @@ esbuild@^0.18.10:
     "@esbuild/win32-ia32" "0.18.20"
     "@esbuild/win32-x64" "0.18.20"
 
-esbuild@^0.19.10, esbuild@^0.19.11, esbuild@^0.19.12, esbuild@^0.19.3, esbuild@^0.19.8:
+esbuild@^0.19.10, esbuild@^0.19.12, esbuild@^0.19.3, esbuild@^0.19.8:
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.19.12.tgz#dc82ee5dc79e82f5a5c3b4323a2a641827db3e04"
   integrity sha512-aARqgq8roFBj054KvQr5f1sFu0D65G+miZRCuJyJ0G13Zwx7vRar5Zhn2tkQNzIXcBrNVsv/8stehpj+GAjgbg==
@@ -9717,6 +9621,13 @@ eslint-etc@^5.1.0:
     tsutils "^3.17.1"
     tsutils-etc "^1.4.1"
 
+eslint-formatting-reporter@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-formatting-reporter/-/eslint-formatting-reporter-0.0.0.tgz#e444c511527900dec3592e9f85876da821ab8ef7"
+  integrity sha512-k9RdyTqxqN/wNYVaTk/ds5B5rA8lgoAmvceYN7bcZMBwU7TuXx5ntewJv81eF3pIL/CiJE+pJZm36llG8yhyyw==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
+
 eslint-import-resolver-node@^0.3.9:
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.9.tgz#d4eaac52b8a2e7c3cd1903eb00f7e053356118ac"
@@ -9737,6 +9648,11 @@ eslint-module-utils@^2.8.0:
   integrity sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==
   dependencies:
     debug "^3.2.7"
+
+eslint-parser-plain@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-parser-plain/-/eslint-parser-plain-0.1.0.tgz#8f7f0ac79fe4e4f47b33cf226b837ccff9d71ad6"
+  integrity sha512-oOeA6FWU0UJT/Rxc3XF5Cq0nbIZbylm7j8+plqq0CZoE6m4u32OXJrR+9iy4srGMmF6v6pmgvP1zPxSRIGh3sg==
 
 eslint-plugin-antfu@^2.1.1:
   version "2.1.2"
@@ -9779,6 +9695,19 @@ eslint-plugin-etc@^2.0.2:
     requireindex "~1.2.0"
     tslib "^2.0.0"
     tsutils "^3.0.0"
+
+eslint-plugin-format@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-format/-/eslint-plugin-format-0.1.0.tgz#9b22be2e1b89c0f0e5d120478dfb37e0c7ed7450"
+  integrity sha512-IgOu+GEH+PdKnpuPrFzY8q8QgnzAUijDZsNLhpp5jx0Lbu9u968/STcmEZGnIMVBw3zeTNN/FsU6d2Rdgcy6Aw==
+  dependencies:
+    "@dprint/formatter" "^0.2.0"
+    "@dprint/markdown" "^0.16.3"
+    "@dprint/toml" "^0.5.4"
+    eslint-formatting-reporter "^0.0.0"
+    eslint-parser-plain "^0.1.0"
+    prettier "^3.1.0"
+    synckit "^0.8.6"
 
 eslint-plugin-i@^2.29.1:
   version "2.29.1"
@@ -10111,7 +10040,7 @@ eslint-visitor-keys@^3.0.0, eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz#0cd72fe8550e3c2eae156a96a4dddcd1c8ac5800"
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
-eslint@^8.50.0, eslint@^8.55.0:
+eslint@^8.50.0, eslint@^8.55.0, eslint@^8.56.0:
   version "8.56.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.56.0.tgz#4957ce8da409dc0809f99ab07a1b94832ab74b15"
   integrity sha512-Go19xM6T9puCOWntie1/P997aXxFsOi37JIHRWI514Hc6ZnaHGKY9xFhrU65RT6CcBEzZoGG1e6Nq+DT04ZtZQ==
@@ -14353,68 +14282,7 @@ nuxt-vitest@^0.11.5:
     std-env "^3.4.3"
     vitest-environment-nuxt "0.11.5"
 
-nuxt@3.9.2:
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.9.2.tgz#d0a68cfd98fcd8318fd44525a17e4980cb18361a"
-  integrity sha512-BGfqqIsvUOm8bmjSORcF7LnsMN7fFQ99JzZ81li2fx9Xw++sEiIC2R1G8PKZ6CwhrRE9X+IVIyrqLkWx3ooHWg==
-  dependencies:
-    "@nuxt/devalue" "^2.0.2"
-    "@nuxt/devtools" "^1.0.8"
-    "@nuxt/kit" "3.9.2"
-    "@nuxt/schema" "3.9.2"
-    "@nuxt/telemetry" "^2.5.3"
-    "@nuxt/ui-templates" "^1.3.1"
-    "@nuxt/vite-builder" "3.9.2"
-    "@unhead/dom" "^1.8.10"
-    "@unhead/ssr" "^1.8.10"
-    "@unhead/vue" "^1.8.10"
-    "@vue/shared" "^3.4.14"
-    acorn "8.11.3"
-    c12 "^1.6.1"
-    chokidar "^3.5.3"
-    cookie-es "^1.0.0"
-    defu "^6.1.4"
-    destr "^2.0.2"
-    devalue "^4.3.2"
-    esbuild "^0.19.11"
-    escape-string-regexp "^5.0.0"
-    estree-walker "^3.0.3"
-    fs-extra "^11.2.0"
-    globby "^14.0.0"
-    h3 "^1.10.0"
-    hookable "^5.5.3"
-    jiti "^1.21.0"
-    klona "^2.0.6"
-    knitwork "^1.0.0"
-    magic-string "^0.30.5"
-    mlly "^1.5.0"
-    nitropack "^2.8.1"
-    nuxi "^3.10.0"
-    nypm "^0.3.4"
-    ofetch "^1.3.3"
-    ohash "^1.1.3"
-    pathe "^1.1.2"
-    perfect-debounce "^1.0.0"
-    pkg-types "^1.0.3"
-    radix3 "^1.1.0"
-    scule "^1.2.0"
-    std-env "^3.7.0"
-    strip-literal "^2.0.0"
-    ufo "^1.3.2"
-    ultrahtml "^1.5.2"
-    uncrypto "^0.1.3"
-    unctx "^2.3.1"
-    unenv "^1.9.0"
-    unimport "^3.7.1"
-    unplugin "^1.6.0"
-    unplugin-vue-router "^0.7.0"
-    untyped "^1.4.0"
-    vue "^3.4.14"
-    vue-bundle-renderer "^2.0.0"
-    vue-devtools-stub "^0.1.0"
-    vue-router "^4.2.5"
-
-nuxt@^3.10.0:
+nuxt@3.10.0, nuxt@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.10.0.tgz#cb1cca6dc3f12664dcf3b4e595f08e007c252d0d"
   integrity sha512-E9GWyrzTvkoHoJOT847EASEl8KcGDF1twcBgUzDMuNIx+llZ14F+q+XbTjHzYM/o2hqHTer0lLt2RUn5wsBLQQ==
@@ -14471,67 +14339,6 @@ nuxt@^3.10.0:
     unplugin-vue-router "^0.7.0"
     untyped "^1.4.2"
     vue "^3.4.15"
-    vue-bundle-renderer "^2.0.0"
-    vue-devtools-stub "^0.1.0"
-    vue-router "^4.2.5"
-
-nuxt@^3.8.0:
-  version "3.9.3"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.9.3.tgz#02b49790c81849112fe8337c47ca6d1842397656"
-  integrity sha512-IzBJAJImqCGfspVZzvznrALnFIJ5rPe+VJvY8OiccwRzWT8sEygVRjh3Mc64yWV6P59rz497wp9RBBBhuV2MVA==
-  dependencies:
-    "@nuxt/devalue" "^2.0.2"
-    "@nuxt/devtools" "^1.0.8"
-    "@nuxt/kit" "3.9.3"
-    "@nuxt/schema" "3.9.3"
-    "@nuxt/telemetry" "^2.5.3"
-    "@nuxt/ui-templates" "^1.3.1"
-    "@nuxt/vite-builder" "3.9.3"
-    "@unhead/dom" "^1.8.10"
-    "@unhead/ssr" "^1.8.10"
-    "@unhead/vue" "^1.8.10"
-    "@vue/shared" "^3.4.14"
-    acorn "8.11.3"
-    c12 "^1.6.1"
-    chokidar "^3.5.3"
-    cookie-es "^1.0.0"
-    defu "^6.1.4"
-    destr "^2.0.2"
-    devalue "^4.3.2"
-    esbuild "^0.19.11"
-    escape-string-regexp "^5.0.0"
-    estree-walker "^3.0.3"
-    fs-extra "^11.2.0"
-    globby "^14.0.0"
-    h3 "^1.10.0"
-    hookable "^5.5.3"
-    jiti "^1.21.0"
-    klona "^2.0.6"
-    knitwork "^1.0.0"
-    magic-string "^0.30.5"
-    mlly "^1.5.0"
-    nitropack "^2.8.1"
-    nuxi "^3.10.0"
-    nypm "^0.3.4"
-    ofetch "^1.3.3"
-    ohash "^1.1.3"
-    pathe "^1.1.2"
-    perfect-debounce "^1.0.0"
-    pkg-types "^1.0.3"
-    radix3 "^1.1.0"
-    scule "^1.2.0"
-    std-env "^3.7.0"
-    strip-literal "^2.0.0"
-    ufo "^1.3.2"
-    ultrahtml "^1.5.2"
-    uncrypto "^0.1.3"
-    unctx "^2.3.1"
-    unenv "^1.9.0"
-    unimport "^3.7.1"
-    unplugin "^1.6.0"
-    unplugin-vue-router "^0.7.0"
-    untyped "^1.4.0"
-    vue "^3.4.14"
     vue-bundle-renderer "^2.0.0"
     vue-devtools-stub "^0.1.0"
     vue-router "^4.2.5"
@@ -15637,7 +15444,7 @@ prettier@^2.7.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
-prettier@^3.0.0:
+prettier@^3.0.0, prettier@^3.1.0:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.4.tgz#4723cadeac2ce7c9227de758e5ff9b14e075f283"
   integrity sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==
@@ -17742,7 +17549,7 @@ synckit@^0.6.0:
   dependencies:
     tslib "^2.3.1"
 
-synckit@^0.8.5:
+synckit@^0.8.5, synckit@^0.8.6:
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/synckit/-/synckit-0.8.8.tgz#fe7fe446518e3d3d49f5e429f443cf08b6edfcd7"
   integrity sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==
@@ -18832,17 +18639,6 @@ vite-node@^0.34.6:
     picocolors "^1.0.0"
     vite "^3.0.0 || ^4.0.0 || ^5.0.0-0"
 
-vite-node@^1.1.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/vite-node/-/vite-node-1.2.1.tgz#bca96ae91b2b1ee9a7aa73685908362d70ce26a8"
-  integrity sha512-fNzHmQUSOY+y30naohBvSW7pPn/xn3Ib/uqm+5wAJQJiqQsU0NBR78XdRJb04l4bOFKjpTWld0XAfkKlrDbySg==
-  dependencies:
-    cac "^6.7.14"
-    debug "^4.3.4"
-    pathe "^1.1.1"
-    picocolors "^1.0.0"
-    vite "^5.0.0"
-
 vite-node@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/vite-node/-/vite-node-1.2.2.tgz#f6d329b06f9032130ae6eac1dc773f3663903c25"
@@ -18929,18 +18725,7 @@ vite@5.0.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
-vite@5.0.11:
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.0.11.tgz#31562e41e004cb68e1d51f5d2c641ab313b289e4"
-  integrity sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==
-  dependencies:
-    esbuild "^0.19.3"
-    postcss "^8.4.32"
-    rollup "^4.2.0"
-  optionalDependencies:
-    fsevents "~2.3.3"
-
-vite@5.0.12, "vite@^3.0.0 || ^4.0.0 || ^5.0.0-0", vite@^5.0.0, vite@latest, vite@~5.0.0:
+vite@5.0.12, "vite@^3.0.0 || ^4.0.0 || ^5.0.0-0", vite@^5.0.0, vite@~5.0.0:
   version "5.0.12"
   resolved "https://registry.yarnpkg.com/vite/-/vite-5.0.12.tgz#8a2ffd4da36c132aec4adafe05d7adde38333c47"
   integrity sha512-4hsnEkG3q0N4Tzf1+t6NdN9dg/L3BM+q8SWgbSPnJvrgH2kgdyzfVJwbR1ic69/4uMJJ/3dqDZZE5/WwqW8U1w==
@@ -19202,7 +18987,7 @@ vue3-lazy-hydration@^1.2.1:
   resolved "https://registry.yarnpkg.com/vue3-lazy-hydration/-/vue3-lazy-hydration-1.2.1.tgz#a1c179f2049c6d0fe796f84ff1d5a56e8c3f1fda"
   integrity sha512-0KEU+t1ZcOFomf2xhpKPMU2XBdZDVyVjvkxcXAJRpZ818Om4MMhKxbrmIK6hZ+NZOyoRAgMHl/N1zFZJuQoSJA==
 
-vue@^3.2.47, vue@^3.4.14, vue@^3.4.15:
+vue@^3.2.47, vue@^3.4.15:
   version "3.4.15"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.15.tgz#91f979844ffca9239dff622ba4c79c5d5524b88c"
   integrity sha512-jC0GH4KkWLWJOEQjOpkqU1bQsBwf4R1rsFtw5GQJbjHVKWDzO6P0nWWBTmjp1xSemAioDFj1jdaK1qa3DnMQoQ==

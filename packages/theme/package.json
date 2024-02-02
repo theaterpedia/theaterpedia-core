@@ -25,9 +25,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "lint": "nuxt typecheck",
-    "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
-    "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
+    "lint": "nuxt typecheck && eslint .",
+    "lint:fix": "nuxt typecheck && eslint . --fix",
+    "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
+    "lint:fix_vsf": "eslint --ext .vue,.js,.ts . --fix",
     "release": "release-it",
     "test:deactivated": "vitest run",
     "test:deactivated:coverage": "vitest run --coverage",

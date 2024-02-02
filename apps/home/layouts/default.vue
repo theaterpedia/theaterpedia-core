@@ -133,8 +133,9 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue';
-import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
 import { defineLayout } from '#pruvious'
+import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
+
 
 defineLayout({
   label: 'default',
