@@ -1,18 +1,18 @@
 {
   "name": "theaterpedia-core-turbo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "scripts": {
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
-    "start": "node apps/tp-template/.output/server/index.mjs",
+    "start": "node apps/home/.output/server/index.mjs",
     "build": "turbo run build",
     "release": "turbo run release --concurrency=1",
     "generate": "turbo run generate",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/tp-template && yarn test",
-    "test:watch": "cd apps/tp-template && yarn test:watch",
+    "test": "cd apps/home && yarn test",
+    "test:watch": "cd apps/home && yarn test:watch",
     "test:turbo": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
@@ -21,15 +21,14 @@
     "@crearis/eslint-config-custom": "*",
     "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.0.1",
-    "turbo": "latest",
-    "@nuxthq/studio": "^1.0.6"    
+    "turbo": "latest" 
   },
   "workspaces": [
     "packages/**/*",
     "apps/**/*"
   ],
-  "packageManager": "yarn@1.22.10",
+  "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=v18.18.2"
+    "node": ">=v20.0.0"
   }
 }

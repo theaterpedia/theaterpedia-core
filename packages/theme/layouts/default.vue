@@ -133,7 +133,14 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue';
-import type { DefaultLayoutProps } from './types';
+import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
+import { defineLayout } from '#pruvious'
+
+defineLayout({
+  label: 'default',
+  allowedBlocks: ['Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['Container'],
+});
 
 defineProps<DefaultLayoutProps>();
 

@@ -10,13 +10,13 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-vitest',
-    '@nuxt/content',
-    '@nuxthq/studio',
     '@vue-storefront/nuxt',
+    'pruvious',
   ],
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
+      ignore: ['/shop'],
     },
     compressPublicAssets: true,
   },

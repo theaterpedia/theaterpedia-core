@@ -23,13 +23,17 @@ export const useSfProductReviews: UseSfProductReviews = (slug) => {
    * @example
    * fetchProductReviews('product-slug');
    */
+  // #TODO _05 reactivate with odoo
   const fetchProductReviews: FetchProductReviews = async (slug) => {
+
+    /*
     state.value.loading = true;
     const { data, error } = await useAsyncData(() => useSdk().commerce.getProductReviews({ slug }));
     useHandleError(error.value);
     state.value.data = data.value;
     state.value.loading = false;
-    return data;
+    return data; */
+    return {};
   };
 
   return {

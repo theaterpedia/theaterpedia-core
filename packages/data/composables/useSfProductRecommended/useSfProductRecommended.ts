@@ -20,13 +20,17 @@ export const useSfProductRecommended: UseProductRecommendedReturn = (slug) => {
    * @example
    * fetchProductRecommended('product-slug');
    */
+  // #TODO _05 reactivate with odoo
   const fetchProductRecommended: FetchProductRecommended = async (slug) => {
-    state.value.loading = true;
+
+    /* state.value.loading = true;
     const { data, error } = await useAsyncData(() => useSdk().commerce.getProductRecommended({ slug }));
     useHandleError(error.value);
     state.value.data = data.value;
     state.value.loading = false;
-    return data;
+    return data; */
+
+    return {};
   };
 
   return {

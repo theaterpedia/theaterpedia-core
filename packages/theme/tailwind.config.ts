@@ -2,14 +2,18 @@
 // hover over @crearis to see the path: import Typography from '@tailwindcss/typography' would import from /src
 
 import sfTypography from '@crearis/typography';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import { tailwindConfig } from '@crearis/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 
 export default {
   presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@crearis/vue/**/*.{js,mjs}'],
+  content: ['./**/*.vue', './node_modules/@crearis/vue/**/*.{js,mjs}', '../../node_modules/@crearis/vue/**/*.{js,mjs}'],
   theme: {
     extend: {
+      fontFamily: {
+        mona: ['Monaspace', ...fontFamily.serif],
+      },
       gridTemplateAreas: {
         'product-page': ['left-top right', 'left-bottom right'],
       },
