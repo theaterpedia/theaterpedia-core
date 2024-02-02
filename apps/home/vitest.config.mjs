@@ -1,4 +1,4 @@
-import { defineVitestConfig } from 'nuxt-vitest/config';
+import { defineVitestConfig } from 'nuxt-vitest/config'
 
 export default defineVitestConfig({
   test: {
@@ -10,8 +10,9 @@ export default defineVitestConfig({
     include: ['./tests/**/?(*.)+(spec|test).[jt]s'],
     onConsoleLog: (log) => {
       // Silence logs coming from vue <Suspense> is experimental, and stdout | unknown component before it
-      if (log.includes('<Suspense')) return false;
-      return log;
+      if (log.includes('<Suspense'))
+        return false
+      return log
     },
   },
-});
+})

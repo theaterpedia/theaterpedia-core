@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import { defineLayout } from '#pruvious'
+
+defineLayout({
+  label: 'Blog post',
+})
+</script>
+
 <template>
   <div>
     <PageHeader />
@@ -9,12 +17,3 @@
     <UiFooter />
   </div>
 </template>
-
-<script lang="ts" setup>
-import { defineLayout } from '#pruvious'
-
-defineLayout({
-  label: 'Blog post'
-});
-
-</script>

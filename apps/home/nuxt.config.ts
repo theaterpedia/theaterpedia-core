@@ -1,10 +1,9 @@
-import { defineNuxtConfig } from 'nuxt/config';
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+import { defineNuxtConfig } from 'nuxt/config'
 
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-const currentDir = dirname(fileURLToPath(import.meta.url));
-const isRootDir = !(currentDir.endsWith('apps/tp-template'));
+const currentDir = dirname(fileURLToPath(import.meta.url))
+const isRootDir = !(currentDir.endsWith('apps/tp-template'))
 
 export default defineNuxtConfig({
   extends: [
@@ -13,9 +12,8 @@ export default defineNuxtConfig({
   ],
   hooks: {
     close: (nuxt) => {
-      if (!nuxt.options._prepare) {
+      if (!nuxt.options._prepare)
         process.exit()
-      }
     },
   },
 
@@ -44,7 +42,8 @@ export default defineNuxtConfig({
         '/reset-password-success',
         '/set-new-password',
         '/login',
-        '/signup'],
+        '/signup',
+      ],
     },
   },
   // #TODO _05 enable-full-nitro-prerender
@@ -55,4 +54,4 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-});
+})

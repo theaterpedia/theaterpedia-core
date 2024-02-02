@@ -1,10 +1,67 @@
+<script setup lang="ts">
+import {
+  SfBadge,
+  SfButton,
+  SfDropdown,
+  SfIconClose,
+  SfIconExpandMore,
+  SfIconPerson,
+  SfIconSearch,
+  SfIconShoppingCart,
+  SfListItem,
+  SfModal,
+  useDisclosure,
+} from '@crearis/vue'
+import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types'
+import { defineLayout } from '#pruvious'
+
+defineLayout({
+  label: 'default',
+  allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
+})
+
+const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
+const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
+const { fetchCart, data: cart } = useSfCart()
+const { fetchCustomer, data: account } = useCustomer()
+
+fetchCart()
+fetchCustomer()
+usePageTitle()
+
+const cartLineItemsCount = computed(
+  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
+)
+
+const accountDropdown = [
+  {
+    label: 'account.heading',
+    link: paths.account,
+  },
+  {
+    label: 'account.ordersAndReturns.section.myOrders',
+    link: paths.accountMyOrders,
+  },
+  {
+    label: 'account.ordersAndReturns.section.returns',
+    link: paths.accountReturns,
+  },
+  {
+    label: 'account.logout',
+    link: '/',
+  },
+]
+const NuxtLink = resolveComponent('NuxtLink')
+</script>
+
 <template>
   <UiNavbarTop filled>
     <SfButton
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       variant="tertiary"
       :tag="NuxtLink"
-      :to="paths.category + '/13'"
+      :to="`${paths.category}/13`"
     >
       <template #suffix>
         <SfIconExpandMore class="hidden lg:block" />
@@ -14,7 +71,7 @@
     <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
     </NuxtLazyHydrate>
-    <nav class="hidden md:flex md:flex-row md:flex-nowrap" :v-show="cartLineItemsCount>0">
+    <nav v-show="cartLineItemsCount > 0" class="hidden md:flex md:flex-row md:flex-nowrap">
       <NuxtLazyHydrate when-visible>
         <SfButton
           class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
@@ -41,10 +98,12 @@
               variant="tertiary"
               class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md"
               :class="{ 'bg-primary-900': isAccountDropdownOpen }"
-              @click="accountDropdownToggle()"
               data-testid="account-dropdown-button"
+              @click="accountDropdownToggle()"
             >
-              <template #prefix><SfIconPerson /></template>
+              <template #prefix>
+                <SfIconPerson />
+              </template>
               {{ account?.firstName }}
             </SfButton>
           </template>
@@ -55,9 +114,10 @@
                 <SfListItem
                   tag="button"
                   class="text-left"
-                  @click="accountDropdownToggle()"
                   data-testid="account-dropdown-list-item"
-                  >{{ $t(label) }}
+                  @click="accountDropdownToggle()"
+                >
+                  {{ $t(label) }}
                 </SfListItem>
               </template>
               <SfListItem
@@ -78,8 +138,8 @@
       variant="tertiary"
       class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md md:hidden"
       square
-      @click="searchModalOpen"
       :aria-label="$t('openSearchModalButtonLabel')"
+      @click="searchModalOpen"
     >
       <SfIconSearch />
     </SfButton>
@@ -118,63 +178,3 @@
     </SfModal>
   </NuxtLazyHydrate>
 </template>
-
-<script setup lang="ts">
-import {
-  SfBadge,
-  SfButton,
-  SfIconExpandMore,
-  SfIconShoppingCart,
-  SfIconClose,
-  SfIconSearch,
-  SfIconPerson,
-  SfDropdown,
-  SfListItem,
-  SfModal,
-  useDisclosure,
-} from '@crearis/vue';
-import { defineLayout } from '#pruvious'
-import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
-
-
-defineLayout({
-  label: 'default',
-  allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
-  allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video']
-});
-
-defineProps<DefaultLayoutProps>();
-
-const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
-const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
-const { fetchCart, data: cart } = useSfCart();
-const { fetchCustomer, data: account } = useCustomer();
-
-fetchCart();
-fetchCustomer();
-usePageTitle();
-
-const cartLineItemsCount = computed(
-  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
-);
-
-const accountDropdown = [
-  {
-    label: 'account.heading',
-    link: paths.account,
-  },
-  {
-    label: 'account.ordersAndReturns.section.myOrders',
-    link: paths.accountMyOrders,
-  },
-  {
-    label: 'account.ordersAndReturns.section.returns',
-    link: paths.accountReturns,
-  },
-  {
-    label: 'account.logout',
-    link: '/',
-  },
-];
-const NuxtLink = resolveComponent('NuxtLink');
-</script>
