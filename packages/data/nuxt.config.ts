@@ -1,12 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
 
-import { fileURLToPath } from 'node:url'
-import { dirname } from 'node:path'
-
-const currentDir = dirname(fileURLToPath(import.meta.url))
-const isDevDir = (currentDir.endsWith('apps/data-dev') || currentDir.endsWith('apps/theme-dev'))
-
+// we want different behaviour if the package name is data-dev or theme-dev
+const pkgName = process.env.npm_package_name
+const isDevDir = (pkgName === 'apps/data-dev' || pkgName === 'apps/theme-dev')
 
 export default defineNuxtConfig({
   typescript: {
