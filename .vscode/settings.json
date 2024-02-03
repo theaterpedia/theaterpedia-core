@@ -1,5 +1,5 @@
 {
-  "vitest.commandLine": "",
+  "vitest.commandLine": "yarn test --",
   "vitest.enable": true,
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,

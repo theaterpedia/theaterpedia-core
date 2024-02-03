@@ -1,6 +1,5 @@
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'node:path'
-import { defineNuxtConfig } from 'nuxt/config'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 const isRootDir = !(currentDir.endsWith('apps/home'))
@@ -10,11 +9,9 @@ export default defineNuxtConfig({
     '@crearis/theme-main',
     '@crearis/data-main',
   ],
-  hooks: {
-    close: (nuxt) => {
-      if (!nuxt.options._prepare)
-        process.exit()
-    },
+
+  typescript: {
+    typeCheck: false,
   },
 
   i18n: {
