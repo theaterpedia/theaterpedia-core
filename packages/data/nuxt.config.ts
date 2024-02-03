@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
 
-// we want different behaviour if the package name is data-dev or theme-dev
+// we want different behaviour if the package name is data-dev or theme-dev or studio-dev
 const pkgName = process.env.npm_package_name
-const isDevDir = (pkgName === 'apps/data-dev' || pkgName === 'apps/theme-dev')
+const isDevDir = (pkgName === 'apps/data-dev' || pkgName === 'apps/theme-dev' || pkgName === 'studio-dev')
 
 export default defineNuxtConfig({
   typescript: {
