@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
+
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
+const isDevDir = (currentDir.endsWith('apps/data-dev') || currentDir.endsWith('apps/theme-dev'))
+
+
 export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
@@ -7,12 +15,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['composables/**', 'utils/**'],
   },
-  modules: [
-    '@vite-pwa/nuxt',
-    'nuxt-vitest',
-    '@vue-storefront/nuxt',
-    'pruvious',
-  ],
+  // we don't want pruvious in dev mode when we are working on the boilerplate from vsf or odoogap
+  modules: isDevDir ? [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt', 'pruvious'  ],
   nitro: {
     prerender: {
       crawlLinks: false,
