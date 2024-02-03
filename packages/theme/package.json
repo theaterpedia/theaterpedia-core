@@ -1,7 +1,7 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
@@ -25,6 +25,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "postinstall": "nuxi prepare",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",
     "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
