@@ -4,17 +4,17 @@
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       variant="tertiary"
       :tag="NuxtLink"
-      :to="paths.category"
+      :to="paths.category + '/13'"
     >
       <template #suffix>
         <SfIconExpandMore class="hidden lg:block" />
       </template>
-      <span class="hidden lg:flex whitespace-nowrap">{{ $t('allProductsLinkText') }}</span>
+      <span class="hidden lg:flex whitespace-nowrap">Cat: Women</span>
     </SfButton>
     <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
     </NuxtLazyHydrate>
-    <nav class="hidden md:flex md:flex-row md:flex-nowrap">
+    <nav class="hidden md:flex md:flex-row md:flex-nowrap" :v-show="cartLineItemsCount>0">
       <NuxtLazyHydrate when-visible>
         <SfButton
           class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
@@ -89,7 +89,7 @@
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
   </NarrowContainer>
-  <main>
+  <main >
     <slot />
   </main>
   <NuxtLazyHydrate when-idle>
@@ -133,13 +133,20 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue';
-import type { DefaultLayoutProps } from './types';
+import type { DefaultLayoutProps } from '@crearis/theme-main/layouts/types';
+import { defineLayout } from '#pruvious'
+
+defineLayout({
+  label: 'default',
+  allowedBlocks: ['Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['Container'],
+});
 
 defineProps<DefaultLayoutProps>();
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
-const { fetchCart, data: cart } = useCart();
+const { fetchCart, data: cart } = useSfCart();
 const { fetchCustomer, data: account } = useCustomer();
 
 fetchCart();

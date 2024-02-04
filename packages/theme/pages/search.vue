@@ -20,7 +20,7 @@ definePageMeta({
 });
 
 const { query } = useRoute();
-const { fetchProducts, data: productsCatalog } = useProducts();
+const { fetchProducts, data: productsCatalog } = useSfProducts();
 
 await fetchProducts();
 </script>

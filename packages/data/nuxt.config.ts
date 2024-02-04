@@ -1,4 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
+
+// we want different behaviour if the package name is data-dev or theme-dev or studio-dev
+const pkgName = process.env.npm_package_name
+const isDevDir = (pkgName === 'apps/data-dev' || pkgName === 'apps/theme-dev' || pkgName === 'studio-dev')
+
 export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
@@ -6,20 +12,35 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['composables/**', 'utils/**'],
   },
-  modules: [
-    '@vite-pwa/nuxt',
-    'nuxt-vitest'
-  ],
+  // we don't want pruvious in dev mode when we are working on the boilerplate from vsf or odoogap
+  modules: isDevDir ? [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt', 'pruvious'  ],
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
+      ignore: ['/shop'],
     },
     compressPublicAssets: true,
   },
-  routeRules: {
-    '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:3000',
+    },
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['lodash-es'],
+    },
+  },
+  build: {
+    transpile: [
+      'tslib',
+      '@apollo/client',
+      '@apollo/client/core',
+      '@vue/apollo-composable',
+      '@vue/apollo-option',
+      'ts-invariant',
+      '@erpgap/odoo-sdk-api-client'
+    ]
   },
   pwa: {
     registerType: 'autoUpdate',

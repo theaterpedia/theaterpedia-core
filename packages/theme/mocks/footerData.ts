@@ -11,8 +11,20 @@ import {
 
 export const categories = [
   {
-    key: 'howToBuy',
+    key: 'howToOrder',
     subcategories: [
+      {
+        key: 'checkoutAndPayment',
+        link: '/',
+      },
+      {
+        key: 'workshopsDisposition',
+        link: '/',
+      },
+      {
+        key: 'projectSignup',
+        link: '/',
+      },
       {
         key: 'paymentMethods',
         link: '/',
@@ -145,7 +157,7 @@ export const socialMedia = [
 export const contactOptions = [
   {
     key: 'helpCenter',
-    link: '/',
+    link: '/admin',
     details: ['description'],
     icon: SfIconHelp,
   },
@@ -172,4 +184,4 @@ export const bottomLinks = [
     link: '/',
   },
 ];
-export const companyName = `© ${new Date().getFullYear()} Vue Storefront`;
+export const companyName = `© ${new Date().getFullYear()} Theaterpedia e.V.`;

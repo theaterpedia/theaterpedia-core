@@ -42,7 +42,7 @@ import type { ProductPropertiesProps } from '../ProductProperties/types';
 
 const props = defineProps<ProductPropertiesProps>();
 
-const { getAttributeList, getAttribute, setAttribute } = useProductAttribute(props.product, ['color', 'size']);
+const { getAttributeList, getAttribute, setAttribute } = useSfProductAttribute(props.product, ['color', 'size']);
 const sizes = getAttributeList('size');
 const colors = getAttributeList('color');
 const selectedSize = computed(() => getAttribute('size'));

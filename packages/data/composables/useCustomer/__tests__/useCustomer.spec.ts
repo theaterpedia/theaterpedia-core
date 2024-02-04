@@ -1,18 +1,5 @@
-import { useCustomer } from '../../composables/useCustomer/useCustomer';
-
-vi.mock('~/sdk', () => ({
-  useSdk: () => ({
-    commerce: {
-      getCustomer: vi.fn(() => ({
-        id: 'SfId',
-        email: 'hieronim.anonim@gmail.com',
-        firstName: 'hieronim',
-        lastName: 'anonim'
-      })),
-    },
-  }),
-}));
-
+import { describe, it, expect } from 'vitest';
+import { useCustomer } from '../../../composables/useCustomer/useCustomer';
 
 describe('useCustomer', () => {
   it('should return account data', async () => {

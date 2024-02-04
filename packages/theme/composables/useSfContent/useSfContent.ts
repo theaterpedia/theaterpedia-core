@@ -1,5 +1,4 @@
 import type { UseContentReturn, UseContentState, GetContent } from './types';
-import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable for managing content from CMS.
@@ -19,13 +18,17 @@ export const useSfContent: UseContentReturn = (url) => {
    * @example
    * getContent();
    */
+  // #TODO _05 reactivate with odoo
   const getContent: GetContent = async () => {
     state.value.loading = true;
     try {
+
+      /*
       const { data, error } = await useAsyncData(() => useSdk().commerce.getContent({ url }));
       useHandleError(error.value);
       state.value.data = data.value;
-      return data;
+      return data; */
+      return {};
     } catch (error) {
       throw new Error(error as string);
     } finally {

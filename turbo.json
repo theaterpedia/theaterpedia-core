@@ -6,8 +6,7 @@
       "outputs": [
         "dist/**",
         ".output/**",
-        ".histoire/**",
-        "**/.vitepress/dist/**"
+        ".histoire/**"
       ]
     },
     "generate" : {
@@ -27,10 +26,13 @@
     "lint:fix": {
       "outputs": []
     },
+    "codegen": {
+      "outputs": []
+    },
     "dev": {
       "cache": false
-    },
-    "test": {
+    },   
+    "test:turbo": {
       "outputs": []
     },
     "type-check": {}

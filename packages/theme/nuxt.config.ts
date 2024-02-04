@@ -1,16 +1,29 @@
+// #TODO _06 Exportable-Layers-Paths
+// https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
+// make tailwind-config, lang, i18n.config, etc. exportable from theme-main
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const currentDir = dirname(fileURLToPath(import.meta.url));
+const isRootDir = !(currentDir.endsWith('packages/theme'));
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
+
   typescript: {
     typeCheck: true,
   },
+
   app: {
     head: {
       viewport: 'minimum-scale=1, initial-scale=1, width=device-width',
       htmlAttrs: {
-        lang: 'en',
+        lang: 'de',
       },
       meta: [
-        { name: 'description', content: 'VSF x Nuxt3 (Boilerplate)' },
+        { name: 'description', content: 'CREARIS courses.main (Boilerplate)' },
         { name: 'theme-color', content: '#018937' },
       ],
       link: [
@@ -19,13 +32,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   appConfig: {
-    titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
+    titleSuffix: 'CREARIS courses.main Boilerplate',
   },
-  imports: {
-    dirs: ['composables/**', 'utils/**', 'assets/**'],
-  },
+
   image: {
+    dir: '../../node_modules/@crearis/theme-main/public',
     screens: {
       '4xl': 1920,
       '3xl': 1536,
@@ -38,42 +51,57 @@ export default defineNuxtConfig({
       '2xs': 360,
     },
   },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          'Red Hat Display': [400, 500, 700],
-          'Red Hat Text': [300, 400, 500, 700],
-        },
-      },
-    ],
-    [
-      '@nuxtjs/i18n',
-      {
-        locales: [
-          {
-            code: 'en',
-            file: 'en.json',
-          },
-        ],
-        lazy: true,
-        langDir: 'lang',
-        defaultLocale: 'en',
-      },
-    ],
-    '@nuxt/image',
-    'nuxt-vitest',
-    'nuxt-lazy-hydrate',
-  ],
-  tailwindcss: {
-    exposeConfig: true,
-    cssPath: '~/assets/style.scss',
+
+  runtimeConfig: {
+    // for getImages plugin
+    public: {
+      odooBaseUrl: ''
+    }
   },
+
   routeRules: {
+    // #TODO _05 try normal singlequotes
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
     '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
   },
+
+  modules: ['@nuxtjs/tailwindcss', [
+    '@nuxtjs/google-fonts',
+    {
+      families: {
+        'Red Hat Display': [400, 500, 700],
+        'Red Hat Text': [300, 400, 500, 700],
+      },
+    },
+  ], [
+    '@nuxtjs/i18n',
+    {
+      locales: [
+        {
+          code: 'en',
+          file: 'en.json',
+        },
+        {
+          code: 'de',
+          file: 'de.json',
+        },
+      ],
+      lazy: true,
+      langDir: isRootDir ? './lang' : '../../node_modules/@crearis/theme-main/lang',
+      defaultLocale: 'de',
+    },
+  ], '@nuxt/image', 'nuxt-vitest', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt'],
+
+  tailwindcss: {
+    exposeConfig: true,
+    cssPath: isRootDir ? './node_modules/@crearis/theme-main/assets/style.scss' : '../../node_modules/@crearis/theme-main/assets/style.scss',
+  },
+
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:3000',
+    },
+  },
+
 });

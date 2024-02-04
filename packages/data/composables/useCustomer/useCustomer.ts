@@ -1,6 +1,6 @@
 import { toRefs } from '@vueuse/shared';
+
 import type { UseCustomerReturn, UseCustomerState, FetchCustomer } from '../../composables/useCustomer/types';
-import { useSdk } from '../../utils/useSdk';
 
 /**
  * @description Composable managing customer data
@@ -18,13 +18,16 @@ export const useCustomer: UseCustomerReturn = () => {
    * @example
    * fetchCustomer();
    */
+
+  // #TODO _05 reactivate with odoo
+
   const fetchCustomer: FetchCustomer = async () => {
-    state.value.loading = true;
-    const { data, error } = await useAsyncData(() => useSdk().commerce.getCustomer());
-    useHandleError(error.value);
-    state.value.data = data.value;
-    state.value.loading = false;
-    return data;
+    // state.value.loading = true;
+    // const { data, error } = await useAsyncData(() => useSdk().commerce.getCustomer());
+    // useHandleError(error.value);
+    // state.value.data = data.value;
+    // state.value.loading = false;
+    return {};
   };
 
   return {

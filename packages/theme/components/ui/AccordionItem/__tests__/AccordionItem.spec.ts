@@ -1,5 +1,6 @@
+import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import AccordionItem from '../../ui/AccordionItem/AccordionItem.vue';
+import AccordionItem from '../AccordionItem.vue';
 
 describe('<AccordionItem />', () => {
   it('should render component', () => {

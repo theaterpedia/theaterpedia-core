@@ -30,9 +30,10 @@
               {{ item.buttonText }}
             </SfButton>
           </div>
+          <!-- #TODO _06 Re-Enable Images -->
           <NuxtImg
-            :src="item.image"
-            :alt="item.title"
+            src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display-3.png"
+            alt="Fresh and Bold"
             class="w-full md:w-1/2 self-end object-contain flex-1"
             width="300"
             height="300"

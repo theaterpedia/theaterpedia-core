@@ -4,13 +4,13 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "@antfu/eslint-config": "^2.4.5",
+    "@antfu/eslint-config": "^2.6.2",
     "eslint": "^8.55.0",
     "eslint-config-turbo": "latest"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "@vue/compiler-sfc":"^3.3.0"
+    "@vue/compiler-sfc": "^3.4.7",
+    "typescript": "^5.3.3"
   },
   "publishConfig": {
     "access": "public"

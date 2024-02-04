@@ -19,3 +19,12 @@ dist
 
 # VSCode
 .vscode/
+
+# Pruvious dev/build outputs
+.autoload.sql
+.pruvious
+.ssh.*
+/.uploads
+/public/uploads
+pruvious.db
+pruvious.db-journal

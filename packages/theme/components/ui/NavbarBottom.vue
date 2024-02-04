@@ -31,7 +31,7 @@
 import { SfButton, SfBadge, SfIconShoppingCart, SfIconHome, SfIconMenu, SfIconPerson } from '@crearis/vue';
 
 const { t } = useI18n();
-const { data: cart } = useCart();
+const { data: cart } = useSfCart();
 
 const items = [
   {

@@ -44,7 +44,7 @@ defineProps<{
   heading: string;
 }>();
 
-const { fetchCart, data: cart, loading: isLoading } = useCart();
+const { fetchCart, data: cart, loading: isLoading } = useSfCart();
 
 fetchCart();
 

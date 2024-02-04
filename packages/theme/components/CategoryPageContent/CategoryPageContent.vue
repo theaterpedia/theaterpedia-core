@@ -25,22 +25,25 @@
             class="grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 mb-10 md:mb-5"
             data-testid="category-grid"
           >
-            <NuxtLazyHydrate
-              when-visible
-              v-for="({ id, name, rating, price, primaryImage, slug }, index) in products"
-              :key="id"
-            >
-              <UiProductCard
-                :name="name ?? ''"
-                :rating-count="rating?.count"
-                :rating="rating?.average"
-                :price="price?.value.amount"
-                :image-url="primaryImage?.url ?? ''"
-                :image-alt="primaryImage?.alt ?? ''"
-                :slug="slug"
-                :priority="index === 0"
-              />
-            </NuxtLazyHydrate>
+            <!-- #TODO _5 enableSSR on CategoryImages-->
+            <ClientOnly fallback-tag="span" fallback="Loading comments...">
+              <NuxtLazyHydrate
+                when-visible
+                v-for="({ id, name, rating, price, primaryImage, slug }, index) in products"
+                :key="id"
+              >
+                <UiProductCard
+                  :name="name ?? ''"
+                  :rating-count="rating?.count"
+                  :rating="rating?.average"
+                  :price="price?.value.amount"
+                  image-url="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/display-2.png"
+                  image-alt="Pack it up"
+                  :slug="slug"
+                  :priority="index === 0"
+                />
+              </NuxtLazyHydrate>
+            </ClientOnly>
           </section>
           <LazyCategoryEmptyState v-else />
           <UiPagination
