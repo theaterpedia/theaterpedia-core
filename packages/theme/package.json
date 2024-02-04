@@ -25,7 +25,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "postinstall": "nuxi prepare",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",
     "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",

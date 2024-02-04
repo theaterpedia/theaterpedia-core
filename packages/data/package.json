@@ -22,7 +22,6 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "nuxi prepare",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",
     "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
@@ -46,7 +45,7 @@
     "graphql-request": "^6.1.0"     
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/i18n": "^8.0.1",
     "nuxt-lodash": "^2.5.3",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18",
