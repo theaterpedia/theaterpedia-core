@@ -28,6 +28,4 @@ logs
 .pruvious
 .ssh.*
 /.uploads
-/public/uploads
-pruvious.db
 pruvious.db-journal
