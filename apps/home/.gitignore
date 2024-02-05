@@ -27,5 +27,10 @@ logs
 .autoload.sql
 .pruvious
 .ssh.*
-/.uploads
+/.uploads/*
+!/.uploads/lehrer_lempel*
+
 pruvious.db-journal
+
+public/uploads/*
+!public/uploads/lehrer_lempel*
