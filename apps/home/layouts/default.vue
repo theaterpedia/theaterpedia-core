@@ -12,11 +12,14 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue'
+import LazyUiBreadcrumbs from '@crearis/theme-main'
 import { defineLayout } from '#pruvious'
 
 defineLayout({
   label: 'default',
+  // TS-expect-error // #TODO adjust pruvious-blocks
   allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  // TS-expect-error // #TODO adjust pruvious-blocks
   allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
 
