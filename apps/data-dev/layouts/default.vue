@@ -12,13 +12,6 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue'
-import { defineLayout } from '#pruvious'
-
-defineLayout({
-  label: 'default',
-  allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
-  allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
-})
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
