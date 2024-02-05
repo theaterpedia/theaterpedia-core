@@ -94,7 +94,7 @@ await loadProductTemplateList(getFacetsFromURL(route.query));
                 :first-variant="(productTemplate.firstVariant as Product)"
                 this err doesn't show up in the odoogap-code, but if merged here it does, see https://vercel.com/crearis/courses-exp2             -->
 
-              <LazyUiProductCardOdoo
+              <LazyUiProductCard
                 v-for="productTemplate in productTemplateList"
                 :key="productTemplate.id"
                 :name="productTemplate?.name || ''"
@@ -110,7 +110,7 @@ await loadProductTemplateList(getFacetsFromURL(route.query));
               />
             </section>
             <CategoryEmptyState v-else />
-            <LazyUiPaginationOdoo
+            <LazyUiPagination
               v-if="pagination.totalPages > 1"
               class="mt-5"
               :current-page="pagination.currentPage"
