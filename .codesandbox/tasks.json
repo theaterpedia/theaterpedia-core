@@ -1,0 +1,73 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "clean": {
+      "name": "clean",
+      "command": "yarn clean"
+    },
+    "start": {
+      "name": "start",
+      "command": "yarn start"
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build"
+    },
+    "release": {
+      "name": "release",
+      "command": "yarn release"
+    },
+    "generate": {
+      "name": "generate",
+      "command": "yarn generate"
+    },
+    "dev": {
+      "name": "dev",
+      "command": "yarn dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "dev:all": {
+      "name": "dev:all",
+      "command": "yarn dev:all"
+    },
+    "lint": {
+      "name": "lint",
+      "command": "yarn lint"
+    },
+    "lint:fix": {
+      "name": "lint:fix",
+      "command": "yarn lint:fix"
+    },
+    "test": {
+      "name": "test",
+      "command": "yarn test"
+    },
+    "test:watch": {
+      "name": "test:watch",
+      "command": "yarn test:watch"
+    },
+    "test:turbo": {
+      "name": "test:turbo",
+      "command": "yarn test:turbo"
+    },
+    "type-check": {
+      "name": "type-check",
+      "command": "yarn type-check"
+    },
+    "codegen": {
+      "name": "codegen",
+      "command": "yarn codegen"
+    }
+  }
+}
