@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 import AddressForm from '@crearis/theme-main/components/AddressForm/AddressForm.vue';
 describe('<AddressForm />', () => {
