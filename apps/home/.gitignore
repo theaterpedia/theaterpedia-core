@@ -31,6 +31,3 @@ logs
 !/.uploads/lehrer_lempel*
 
 pruvious.db-journal
-
-public/uploads/*
-!public/uploads/lehrer_lempel*
