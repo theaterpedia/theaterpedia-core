@@ -6,13 +6,12 @@
 </script>
 
 <template>
-  <NuxtLayout>
+  <NuxtLayout name="default">
     <h1>Index Old</h1>
   <!-- #TODO _7 ReEnable SfContent-Logic></! -->
   <!-- div v-for="(component, index) in content" :key="`${component.fields.component}-${index}`">
     <RenderContent :content="component.fields.content" />
   </! -->
   <!-- ContentDoc / -->
-    
   </NuxtLayout>
 </template>
