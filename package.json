@@ -15,8 +15,8 @@
     "dev:all": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/home && yarn test",
-    "test:watch": "cd apps/home && yarn test:watch",
+    "test": "cd apps/data-dev && yarn test",
+    "test:watch": "cd apps/data-dev && yarn test:watch",
     "test:turbo": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
