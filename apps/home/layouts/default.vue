@@ -16,7 +16,9 @@ import { defineLayout } from '#pruvious'
 
 defineLayout({
   label: 'default',
+  // @ts-expect-error #TODO _05 remove once components are created
   allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  // @ts-expect-error #TODO _05 remove once components are created
   allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
 
@@ -143,11 +145,13 @@ const NuxtLink = resolveComponent('NuxtLink')
       <SfIconSearch />
     </SfButton>
   </UiNavbarTop>
+  <!-- #TODO _05 remove when components are created 
   <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
-  </NarrowContainer>
+  </NarrowContainer>  -->
+
   <main>
     <slot />
   </main>

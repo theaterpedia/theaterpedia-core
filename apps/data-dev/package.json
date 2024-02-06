@@ -9,7 +9,7 @@
   "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxi build --log-level=verbose",
-    "dev": "nuxi dev -p 3000",
+    "dev": "nuxi dev -p 3002",
     "generate": "nuxi generate",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",
@@ -57,7 +57,7 @@
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/html-validator": "1.5.2",
-    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/i18n": "^8.0.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@tailwindcss/typography": "^0.5.10",
