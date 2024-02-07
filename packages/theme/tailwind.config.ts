@@ -8,7 +8,7 @@ import type { Config } from 'tailwindcss';
 
 export default {
   presets: [tailwindConfig],
-  content: ['./**/*.vue', './node_modules/@crearis/vue/**/*.{js,mjs}', '../../node_modules/@crearis/vue/**/*.{js,mjs}'],
+  content: ['./**/*.vue', '../../node_modules/@crearis/vue/**/*.{js,mjs}', './node_modules/@crearis/vue/**/*.{js,mjs}'],
   theme: {
     extend: {
       fontFamily: {
