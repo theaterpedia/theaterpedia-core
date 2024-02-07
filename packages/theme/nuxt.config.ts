@@ -2,12 +2,11 @@
 // https://nuxt.com/docs/guide/going-further/layers#relative-paths-and-aliases
 // make tailwind-config, lang, i18n.config, etc. exportable from theme-main
 
-/*
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-const currentDir = dirname(fileURLToPath(import.meta.url))
-*/
+const currentDir = dirname(fileURLToPath(import.meta.url));
+const isRootDir = !(currentDir.endsWith('packages/theme'));
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
@@ -89,14 +88,14 @@ export default defineNuxtConfig({
         },
       ],
       lazy: true,
-      langDir: './lang',
+      langDir: isRootDir ? './lang' : '../../node_modules/@crearis/theme-main/lang',
       defaultLocale: 'de',
     },
-  ], '@nuxt/image', 'nuxt-vitest', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt', 'pruvious'],
+  ], '@nuxt/image', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt'],
 
   tailwindcss: {
     exposeConfig: true,
-    cssPath: '../../node_modules/@crearis/theme-main/assets/style.scss',
+    cssPath: isRootDir ? './node_modules/@crearis/theme-main/assets/style.scss' : '../../node_modules/@crearis/theme-main/assets/style.scss',
   },
 
   vsf: {

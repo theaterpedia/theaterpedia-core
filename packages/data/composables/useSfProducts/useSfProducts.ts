@@ -17,13 +17,17 @@ export const useSfProducts: UseProductsReturn = () => {
    * @example
    * getProducts();
    */
+  // #TODO _05 reactivate with odoo
   const fetchProducts: FetchProducts = async () => {
+
+    /*
     state.value.loading = true;
     const { data, error } = await useAsyncData(useSdk().commerce.getProducts);
     useHandleError(error.value);
     state.value.data = data.value;
     state.value.loading = false;
-    return data;
+    return data;*/
+    return {};
   };
 
   return {

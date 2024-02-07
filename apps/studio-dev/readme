@@ -1,0 +1,5 @@
+# Theaterpedia-Core: studio-dev
+
+Here we setup the fallback-strategy to use nuxt-content instead of pruvios.
+
+Look at the [Theaterpedia documentation](https://docs.theaterpedia.org/) to learn more.

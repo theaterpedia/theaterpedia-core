@@ -1,18 +1,20 @@
 {
   "name": "@crearis/data-main",
   "type": "module",
-  "version": "0.0.15",
+  "version": "0.1.11",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
+    "composables/",
     "graphql/",
+    "lang/",
+    "mocks/",
     "plugins/",
     "server/",
-    "composables/",
     "utils/",
     "app.vue",
+    "i18n.config.ts",
     "codegen.ts",
-    "app.config.ts",
     "nuxt.config.ts"
   ],
   "publishConfig": {
@@ -20,9 +22,10 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "nuxt typecheck",
-    "lint:deactivated": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
-    "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
+    "lint": "nuxt typecheck && eslint .",
+    "lint:fix": "nuxt typecheck && eslint . --fix",
+    "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
+    "lint:fix_vsf": "eslint --ext .vue,.js,.ts . --fix",
     "release": "release-it",
     "test:deactivated": "vitest run",
     "codegen": "graphql-codegen",
@@ -34,6 +37,7 @@
     "@crearis/crearis-boilerplate-sdk": "~0.0.11",
 
     "vue-toastification": "2.0.0-rc.5",
+    "pruvious": "3.10.1",
 
     "@erpgap/odoo-sdk": "^0.5.0",
     "@erpgap/odoo-sdk-api-client": "^0.5.0",
@@ -42,7 +46,7 @@
     "graphql-request": "^6.1.0"     
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "8.0.0-rc.3",
+    "@nuxtjs/i18n": "^8.0.1",
     "nuxt-lodash": "^2.5.3",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18",
@@ -58,7 +62,7 @@
     "eslint": "^8.50.0",
     "eslint-plugin-prettier": "5.0.1",
     "happy-dom": "^11.0.0",
-    "nuxt": "3.9.2",
+    "nuxt": "3.10.0",
     "nuxt-vitest": "^0.10.1",
     "sass": "^1.64.1",
     "vitest": "^0.33.0",

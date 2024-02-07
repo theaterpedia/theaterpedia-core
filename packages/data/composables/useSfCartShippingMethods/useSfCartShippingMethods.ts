@@ -23,13 +23,14 @@ export const useSfCartShippingMethods: UseSfCartShippingMethodsReturn = () => {
    * getSfShippingMethods();
    */
 
+  // #TODO _05 reactivate with odoo
   const getSfShippingMethods: GetSfShippingMethods = async () => {
-    state.value.loading = true;
-    const { data, error } = await useAsyncData(() => useSdk().commerce.getShippingMethods());
-    useHandleError(error.value);
-    state.value.data = data.value;
-    state.value.loading = false;
-    return data;
+    // state.value.loading = true;
+    // const { data, error } = await useAsyncData(() => useSdk().commerce.getShippingMethods());
+    // useHandleError(error.value);
+    // state.value.data = data.value;
+    // state.value.loading = false;
+    return {};
   };
 
   return {

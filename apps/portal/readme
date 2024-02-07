@@ -1,0 +1,10 @@
+# Theaterpedia-Core: Portal
+
+This will become the default portals-template for usage whilst actively developing on the layers for theaterpedia.
+This template mocks a simple Portal that collects data of several websites and presents them in galleries. It will provide a shopping-cart/checkout-functionality for some of the items.
+
+The data-model, dev-process and logic is documented along the tests in apps/portal/tests
+
+Look at the [Theaterpedia documentation](https://docs.theaterpedia.org/) to learn more.
+
+yarn dev:portal > runs the setup on p 3001
