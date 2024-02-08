@@ -6,7 +6,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - 'main'
+      - 'docs/main'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     defaults:
       run:
-        working-directory: apps/tp-docs
+        working-directory: apps/docs
 
     strategy:
       matrix:
@@ -40,7 +40,7 @@ jobs:
       - name: Identify package manager
         id: pkgman
         run: |
-          cache=`[ -f "apps/tp-docs/pnpm-lock.yaml" ] && echo "pnpm" || ([ -f "apps/tp-docs/package-lock.json" ] && echo "npm" || ([ -f "apps/tp-docs/yarn.lock" ] && echo "yarn" || echo ""))`
+          cache=`[ -f "apps/docs/pnpm-lock.yaml" ] && echo "pnpm" || ([ -f "apps/docs/package-lock.json" ] && echo "npm" || ([ -f "apps/docs/yarn.lock" ] && echo "yarn" || echo ""))`
           package_manager=`[ ! -z "$cache" ] && echo "$cache" || echo "pnpm"`
           echo "cache=$cache" >> $GITHUB_OUTPUT
           echo "package_manager=$package_manager" >> $GITHUB_OUTPUT
@@ -70,11 +70,11 @@ jobs:
         run: npx nuxi build --preset github_pages
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
-          NUXT_PUBLIC_STUDIO_TOKENS: f96f46a26728bc25aff1927f38e8c203312986b576ac70cb01289f4111b8ca97
+          NUXT_PUBLIC_STUDIO_TOKENS: 03d4926b2dfe1014ca5d76beac7459388b470943727ad93597af1a2f10d1e3fc
 
 
       # Deployment job
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: apps/tp-docs/.output/public
+          folder: apps/docs/.output/public
