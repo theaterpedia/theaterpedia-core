@@ -1,11 +1,10 @@
 {
-  "name": "docs",
-  "version": "0.2.0",
+  "name": "nuxt-ui-pro-template-docs",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev -p 3010",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -16,7 +15,6 @@
     "@iconify-json/heroicons": "^1.1.19",
     "@iconify-json/simple-icons": "^1.1.90",
     "@nuxt/content": "^2.12.0",
-    "@nuxt/ui": "^2.13.0",
     "@nuxt/ui-pro": "^0.7.5",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.1.3",
