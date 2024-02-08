@@ -17,9 +17,17 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: ['nuxt-vitest'],
+
   i18n: {
     // if you are using custom path, default
     vueI18n: isRootDir ? './node_modules/@crearis/theme-main/i18n.config.ts' : '../../node_modules/@crearis/theme-main/i18n.config.ts',
+  },
+  
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:3002',
+    },
   },
 
   nitro: {

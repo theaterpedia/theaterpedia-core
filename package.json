@@ -9,11 +9,15 @@
     "release": "turbo run release --concurrency=1",
     "generate": "turbo run generate",
     "dev": "turbo run dev --filter=home",
+    "dev:docs": "turbo run dev --filter=tp-docs",
+    "dev:data": "turbo run dev --filter=data-dev",
+    "dev:theme": "turbo run dev --filter=theme-dev",
+    "dev:portal": "turbo run dev --filter=portal",
     "dev:all": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/home && yarn test",
-    "test:watch": "cd apps/home && yarn test:watch",
+    "test": "cd apps/data-dev && yarn test",
+    "test:watch": "cd apps/data-dev && yarn test:watch",
     "test:turbo": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
@@ -21,8 +25,9 @@
   "devDependencies": {
     "@crearis/eslint-config-custom": "*",
     "@release-it/conventional-changelog": "^8.0.1",
+    "automd": "^0.1.1",
     "release-it": "^17.0.1",
-    "turbo": "latest" 
+    "turbo": "latest"
   },
   "workspaces": [
     "packages/**/*",

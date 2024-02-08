@@ -10,14 +10,11 @@
   "scripts": {
     "build": "nuxi build --log-level=verbose",
     "dev": "pruvious dev",
-    "dev:old": "nuxi dev -p 3000",
-    "generate": "nuxi generate",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",
     "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix_vsf": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxi preview",
-    "postinstall:deactivated": "nuxi prepare",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
@@ -36,7 +33,7 @@
     "graphql-request": "^6.1.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
-    "pruvious": "^3.10.0",
+    "pruvious": "^3.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vue-toastification": "2.0.0-rc.5"
