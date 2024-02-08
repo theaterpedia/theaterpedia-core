@@ -9,7 +9,7 @@
     "release": "turbo run release --concurrency=1",
     "generate": "turbo run generate",
     "dev": "turbo run dev --filter=home",
-    "dev:docs": "turbo run dev --filter=tp-docs",
+    "dev:docs": "turbo run dev --filter=docs",
     "dev:data": "turbo run dev --filter=data-dev",
     "dev:theme": "turbo run dev --filter=theme-dev",
     "dev:portal": "turbo run dev --filter=portal",

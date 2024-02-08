@@ -1,10 +1,11 @@
 {
-  "name": "nuxt-ui-pro-template-docs",
+  "name": "docs",
+  "version": "0.2.0",  
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev -p 3010",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
