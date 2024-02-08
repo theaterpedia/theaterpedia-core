@@ -1,11 +1,24 @@
 export default defineNuxtConfig({
-  // https://github.com/nuxt-themes/docus
-  extends: '@nuxt-themes/docus',
-  devtools: { enabled: true },
-
+  extends: ['@nuxt/ui-pro'],
   modules: [
-    // Remove it if you don't use Plausible analytics
-    // https://github.com/nuxt-modules/plausible
-    '@nuxtjs/plausible'
-  ]
+    '@nuxtjs/fontaine',
+    '@nuxtjs/google-fonts',
+    '@nuxt/ui'
+  ],
+  ui: {
+    icons: ['ph', 'simple-icons']
+  },
+  colorMode: {
+    preference: 'dark'
+  },
+  googleFonts: {
+    display: 'swap',
+    download: true,
+    families: {
+      'DM+Sans': [400, 500, 600, 700]
+    }
+  },
+  fontMetrics: {
+    fonts: ['DM Sans']
+  }
 })
