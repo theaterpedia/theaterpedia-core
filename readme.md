@@ -1,4 +1,4 @@
-# Theaterpedia-Core
+# Theaterpedia-Core: Theme Episodes
 
 This monorepo implements a layered nuxt-architecture as described by Kruti Patel on: https://github.com/Krutie/nuxt-layers-playground/
 - for detailled explanations watch: https://www.youtube.com/watch?v=dWXRiBQw_lE
