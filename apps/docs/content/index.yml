@@ -26,7 +26,7 @@ hero:
     npx nuxi init -t github:nuxt-ui-pro/docs
     ```
 features:
-  title: 'All-in-one docs template'
+  title: 'Was Theaterpedia kann oder können soll'
   links:
     - label: 'Explore Nuxt UI Pro'
       icon: 'i-simple-icons-nuxtdotjs'
