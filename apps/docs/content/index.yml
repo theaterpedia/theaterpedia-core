@@ -2,24 +2,24 @@ title: 'Nuxt UI Pro - Docs template'
 description: 'Welcome to Nuxt UI Pro documentation template.'
 navigation: false
 hero:
-  title: 'Build your docs in seconds'
-  description: 'Create your documentation in seconds with this template!'
+  title: 'Theaterpedia'
+  description: 'Theaterpädagogik-Websites in Null-Komma-Nichts!'
   orientation: horizontal
   headline:
-    label: Made with Nuxt UI Pro
+    label: Vernetzung inklusive
     to: https://ui.nuxt.com/pro
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
-    - label: Get started
+    - label: Wie funktioniert's?'
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: '/getting-started'
       size: lg
-    - label: Use this template
+    - label: Developer-Docs
       icon: i-simple-icons-github
       size: lg
       color: gray
-      to: https://github.com/nuxt-ui-pro/docs
+      to: https://github.com/theaterpedia/theaterpedia-core
       target: _blank
   code: |
     ```bash [Terminal]
