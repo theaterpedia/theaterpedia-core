@@ -16,8 +16,8 @@
     "dev:all": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/data-dev && yarn test",
-    "test:watch": "cd apps/data-dev && yarn test:watch",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "test:turbo": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
@@ -27,7 +27,12 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "automd": "^0.1.1",
     "release-it": "^17.0.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@vitest/coverage-v8": "^0.33.0",
+    "@vitest/expect": "^1.0.4",
+    "vitest": "^1.2.2",
+    "@vue/test-utils": "^2.4.0",
+    "vue-i18n":"^9.9.1"
   },
   "workspaces": [
     "packages/**/*",

@@ -10,14 +10,6 @@ export default defineNuxtConfig({
     '@crearis/theme-main',
     '@crearis/data-main',
   ],
-  hooks: {
-    close: (nuxt) => {
-      if (!nuxt.options._prepare)
-        process.exit()
-    },
-  },
-
-  modules: ['nuxt-vitest'],
 
   i18n: {
     // if you are using custom path, default
