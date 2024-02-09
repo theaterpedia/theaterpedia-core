@@ -19,6 +19,8 @@ export default defineNuxtConfig({
     vueI18n: isRootDir ? './node_modules/@crearis/theme-main/i18n.config.ts' : '../../node_modules/@crearis/theme-main/i18n.config.ts',
   },
 
+  modules: ['@nuxt/test-utils'],
+
   nitro: {
     prerender: {
       ignore: [

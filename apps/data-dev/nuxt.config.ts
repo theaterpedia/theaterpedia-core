@@ -22,6 +22,8 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: ['@nuxt/test-utils'],
+
   nitro: {
     prerender: {
       ignore: [
