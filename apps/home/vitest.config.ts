@@ -3,6 +3,8 @@ import { defineVitestConfig } from '@nuxt/test-utils/config'
 export default defineVitestConfig({
   test: {
     environment: 'nuxt',
+    name: 'home',
+    root: './apps/home',    
     clearMocks: true,
     globals: true,
     setupFiles: './vue-test-utils.extend.js',
