@@ -3493,7 +3493,7 @@ export { type LayoutDefinition }
 import { defineLayout } from '../../../node_modules/pruvious/dist/runtime/layouts/layout.definition'
 export { defineLayout }
 
-export type LayoutName = 'default'
+export type LayoutName = 'account' | 'auth' | 'checkout' | 'default' | 'dev' | 'order'
 
 export type CollectionName = 'pages' | 'presets' | 'previews' | 'redirects' | 'roles' | 'seo' | 'uploads' | 'users'
 export const collectionNames = ['pages', 'presets', 'previews', 'redirects', 'roles', 'seo', 'uploads', 'users']
@@ -4185,7 +4185,7 @@ export interface CastedFieldType {
     /**
      * The layout to use for this page.
      */
-    layout: 'default' | null
+    layout: 'account' | 'auth' | 'checkout' | 'default' | 'dev' | 'order' | null
     
     /**
      * The date and time when the page is published or scheduled for publication.
@@ -4756,7 +4756,7 @@ export interface PopulatedFieldType {
     /**
      * The layout to use for this page.
      */
-    layout: 'default' | null
+    layout: 'account' | 'auth' | 'checkout' | 'default' | 'dev' | 'order' | null
     
     /**
      * The date and time when the page is published or scheduled for publication.
@@ -5322,7 +5322,7 @@ export interface CreateInput {
     /**
      * The layout to use for this page.
      */
-    layout?: 'default' | null
+    layout?: 'account' | 'auth' | 'checkout' | 'default' | 'dev' | 'order' | null
     
     /**
      * The date and time when the page is published or scheduled for publication.
@@ -5889,7 +5889,7 @@ export type PopulatedBlockData = {
 
 export const userCapabilities: UserCapability[] = ['access-dashboard', 'clear-cache', 'update-profile', ...collectionCapabilities]
 
-export const layouts: Pick<LayoutDefinition, 'name' | 'label'>[] = [{ name: 'default', label: 'Default' }]
+export const layouts: Pick<LayoutDefinition, 'name' | 'label'>[] = [{ name: 'default', label: 'Default' }, { name: 'account', label: 'Account' }, { name: 'auth', label: 'Auth' }, { name: 'checkout', label: 'Checkout' }, { name: 'dev', label: 'Dev' }, { name: 'order', label: 'Order' }]
 
 export type PruviousIcon = '24Hours' | '2fa' | '360' | '3dCubeSphere' | 'AB' | 'AB2' | 'Abacus' | 'Abc' | 'AccessPoint' | 'Accessible' | 'AddressBook' | 'Adjustments' | 'AdjustmentsHorizontal' | 'AerialLift' | 'Alarm' | 'Album' | 'AlertTriangle' | 'AlignCenter' | 'AlignJustified' | 'AlignLeft' | 'AlignRight' | 'Analyze' | 'Anchor' | 'Angle' | 'Api' | 'AppWindow' | 'Apple' | 'Apps' | 'Archive' | 'ArrowBack' | 'ArrowBackUp' | 'ArrowBounce' | 'ArrowDown' | 'ArrowForwardUp' | 'ArrowLeft' | 'ArrowRight' | 'ArrowUp' | 'ArrowsHorizontal' | 'ArrowsMaximize' | 'ArrowsSort' | 'Article' | 'AspectRatio' | 'Atom' | 'Award' | 'Axe' | 'Backpack' | 'Badge3d' | 'Badge4k' | 'BadgeAd' | 'BadgeHd' | 'Ballpen' | 'Ban' | 'Basket' | 'Bell' | 'Bluetooth' | 'Bold' | 'Bolt' | 'Book' | 'Bookmark' | 'Box' | 'BoxMultiple' | 'Briefcase' | 'Browser' | 'Brush' | 'Bucket' | 'Bug' | 'Building' | 'BuildingFactory' | 'BuildingStore' | 'Bulb' | 'Bus' | 'Cake' | 'Calculator' | 'Calendar' | 'CalendarEvent' | 'Camera' | 'Capture' | 'Car' | 'Cards' | 'Cash' | 'Cast' | 'Cat' | 'Category' | 'Certificate' | 'ChartBar' | 'ChartDots' | 'ChartPie' | 'Check' | 'Checkbox' | 'Checklist' | 'ChefHat' | 'ChevronDown' | 'ChevronLeft' | 'ChevronRight' | 'ChevronUp' | 'CirclePlus' | 'Circles' | 'ClearAll' | 'ClearFormatting' | 'Click' | 'Clipboard' | 'ClipboardCopy' | 'Clock' | 'Cloud' | 'CloudComputing' | 'Code' | 'CodeCircle' | 'CodeDots' | 'CodePlus' | 'Coffee' | 'Coin' | 'Coins' | 'Command' | 'Compass' | 'Components' | 'Contrast' | 'Cookie' | 'Copy' | 'Copyright' | 'Cpu' | 'CreditCard' | 'Crop' | 'Cup' | 'CurrencyCent' | 'CurrencyDollar' | 'CurrencyEuro' | 'CurrentLocation' | 'Cut' | 'Cylinder' | 'Database' | 'DatabaseExport' | 'DatabaseImport' | 'Delta' | 'DeviceDesktop' | 'DeviceFloppy' | 'DeviceGamepad' | 'DeviceIpad' | 'DeviceMobile' | 'DeviceNintendo' | 'DeviceSdCard' | 'DeviceTablet' | 'DeviceTv' | 'DeviceWatch' | 'Devices' | 'Devices2' | 'Dialpad' | 'Diamond' | 'Dice' | 'Disabled' | 'Disc' | 'Discount' | 'DiscountCheck' | 'Dog' | 'Door' | 'DotsVertical' | 'Download' | 'Droplet' | 'EPassport' | 'Edit' | 'Egg' | 'Eraser' | 'ExclamationCircle' | 'ExternalLink' | 'Eye' | 'EyeOff' | 'Eyeglass' | 'File' | 'FileCertificate' | 'FilePlus' | 'FileSearch' | 'FileSpreadsheet' | 'FileText' | 'FileZip' | 'Files' | 'Filter' | 'FilterOff' | 'Fingerprint' | 'Fish' | 'Flag' | 'Flare' | 'Flask' | 'Focus' | 'FocusCentered' | 'Folder' | 'FolderPlus' | 'Forms' | 'Frame' | 'GasStation' | 'Glass' | 'Globe' | 'Gps' | 'Graph' | 'GridDots' | 'GripVertical' | 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6' | 'Heading' | 'Headphones' | 'Headset' | 'Heart' | 'Help' | 'Highlight' | 'History' | 'Home' | 'Id' | 'Inbox' | 'InputSearch' | 'Italic' | 'Key' | 'Keyboard' | 'Keyframes' | 'Language' | 'LanguageOff' | 'LayersDifference' | 'LayersIntersect' | 'LayersLinked' | 'LayersSubtract' | 'LayersUnion' | 'Layout' | 'LayoutAlignBottom' | 'LayoutAlignCenter' | 'LayoutAlignLeft' | 'LayoutAlignMiddle' | 'LayoutAlignRight' | 'LayoutAlignTop' | 'LayoutBottombar' | 'LayoutCards' | 'LayoutColumns' | 'LayoutDistributeHorizontal' | 'LayoutDistributeVertical' | 'LayoutGridAdd' | 'LayoutList' | 'LayoutRows' | 'LayoutSidebar' | 'LayoutSidebarRight' | 'Leaf' | 'Link' | 'List' | 'ListNumbers' | 'Loader2' | 'Location' | 'Login' | 'Logout' | 'Mail' | 'MailOpened' | 'Map' | 'MapPin' | 'Maximize' | 'Message' | 'MessageCircle' | 'Messages' | 'Microphone' | 'Minimize' | 'Moon' | 'Mountain' | 'Mouse' | 'Movie' | 'Mug' | 'Network' | 'News' | 'Note' | 'Notebook' | 'Notes' | 'Notification' | 'Outlet' | 'Package' | 'Paint' | 'Palette' | 'Paperclip' | 'Parking' | 'Paw' | 'Pencil' | 'Pennant' | 'Perspective' | 'Phone' | 'Photo' | 'PictureInPicture' | 'Pin' | 'Placeholder' | 'Plane' | 'Planet' | 'Plant' | 'PlayCard' | 'PlayerPause' | 'PlayerPlay' | 'Playlist' | 'Plug' | 'Plus' | 'Pointer' | 'Power' | 'Presentation' | 'Printer' | 'Puzzle' | 'Qrcode' | 'Quote' | 'Radio' | 'Rainbow' | 'Receipt' | 'Recycle' | 'Refresh' | 'Registered' | 'Repeat' | 'Report' | 'ReportSearch' | 'Resize' | 'Ripple' | 'Road' | 'RoadSign' | 'Robot' | 'Rocket' | 'Rotate' | 'RulerMeasure' | 'Scale' | 'Screenshot' | 'Script' | 'Search' | 'Section' | 'Seeding' | 'Send' | 'SeparatorHorizontal' | 'Server' | 'Server2' | 'Settings' | 'Settings2' | 'Shape' | 'Share' | 'Shield' | 'ShieldLock' | 'Shirt' | 'Shoe' | 'ShoppingBag' | 'ShoppingCart' | 'Slice' | 'SortAscending' | 'SortAscendingLetters' | 'SortAscendingNumbers' | 'SortDescending' | 'SortDescendingLetters' | 'SortDescendingNumbers' | 'Soup' | 'Spade' | 'Spy' | 'Square' | 'SquareOff' | 'Stack' | 'Stack2' | 'Stack3' | 'Stairs' | 'Star' | 'StarHalf' | 'Sticker' | 'Strikethrough' | 'Subscript' | 'Sun' | 'Superscript' | 'Sword' | 'Swords' | 'Table' | 'TableExport' | 'TableImport' | 'Tag' | 'Tags' | 'Target' | 'Telescope' | 'Terminal' | 'ThumbDown' | 'ThumbUp' | 'Ticket' | 'Timeline' | 'Tool' | 'Tools' | 'Track' | 'TrafficLights' | 'Transform' | 'Trash' | 'Tree' | 'Trees' | 'Typography' | 'Umbrella' | 'Underline' | 'Unlink' | 'Upload' | 'Urgent' | 'User' | 'UserCircle' | 'Users' | 'Versions' | 'Video' | 'Viewfinder' | 'Vocabulary' | 'Volume' | 'Walk' | 'Wallpaper' | 'Wand' | 'Wash' | 'WaveSine' | 'Webhook' | 'Weight' | 'Wifi' | 'Window' | 'World' | 'Writing' | 'X'
 
