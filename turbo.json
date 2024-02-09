@@ -35,6 +35,9 @@
     "test": {
       "outputs": []
     },
+    "test:watch": {
+      "outputs": []
+    },    
     "test:turbo": {
       "outputs": []
     },
