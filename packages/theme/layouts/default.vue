@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// THIS IS NOT RUNNING > pruvious does not support layers
 import {
   SfBadge,
   SfButton,
@@ -13,13 +12,19 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue'
-import { defineLayout } from '#pruvious'
 
+// this has to stand on top of the file, see: https://pruvious.com/docs/layouts
+import { defineLayout } from '#pruvious'
 defineLayout({
   label: 'default',
+  // @ts-expect-error #TODO _05 remove once components are created
   allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  // @ts-expect-error #TODO _05 remove once components are created
   allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
+
+import type { DefaultLayoutProps } from './types';
+defineProps<DefaultLayoutProps>();
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
@@ -149,6 +154,7 @@ const NuxtLink = resolveComponent('NuxtLink')
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
   </NarrowContainer>
+
   <main>
     <slot />
   </main>

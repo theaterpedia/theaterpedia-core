@@ -79,6 +79,7 @@
     "happy-dom": "^11.0.0",
     "nuxt": "^3.10.0",
     "nuxt-hydration": "^0.5.3",
+    "nuxt-module-eslint-config": "^0.1.0",
     "postcss": "^8.0.9",
     "prettier": "^3.2.4",
     "sass": "^1.64.1",
