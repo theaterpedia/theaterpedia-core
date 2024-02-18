@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
-const isRootDir = !(currentDir.endsWith('packages/theme'));
+const isRootDir = !(currentDir.endsWith('packages/theme') || currentDir.endsWith('apps/home'));
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
@@ -95,7 +95,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     exposeConfig: true,
-    cssPath: isRootDir ? './node_modules/@crearis/theme-main/assets/style.scss' : '../../node_modules/@crearis/theme-main/assets/style.scss',
+    cssPath: isRootDir ? './node_modules/@crearis/theme-main/assets/style.scss' : '../../packages/theme/assets/style.scss',
   },
 
   vsf: {
