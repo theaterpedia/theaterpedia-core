@@ -7,7 +7,7 @@ import {
   SfIconPinterest,
   SfIconTwitter,
   SfIconYoutube,
-} from '@crearis/vue';
+} from '@crearis/vue'
 
 export const categories = [
   {
@@ -126,7 +126,7 @@ export const categories = [
       },
     ],
   },
-];
+]
 export const socialMedia = [
   {
     label: 'Facebook',
@@ -153,7 +153,7 @@ export const socialMedia = [
     link: '/',
     icon: SfIconYoutube,
   },
-];
+]
 export const contactOptions = [
   {
     key: 'helpCenter',
@@ -173,7 +173,7 @@ export const contactOptions = [
     details: ['openingHours-1', 'openingHours-2'],
     icon: SfIconCall,
   },
-];
+]
 export const bottomLinks = [
   {
     key: 'terms',
@@ -183,5 +183,5 @@ export const bottomLinks = [
     key: 'privacyPolicy',
     link: '/',
   },
-];
-export const companyName = `© ${new Date().getFullYear()} Theaterpedia e.V.`;
+]
+export const companyName = `© ${new Date().getFullYear()} Theaterpedia e.V.`

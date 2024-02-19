@@ -11,7 +11,7 @@
     "build": "nuxi build --log-level=verbose",
     "dev": "pruvious dev",
     "lint": "nuxt typecheck && eslint .",
-    "lint:fix": "nuxt typecheck && eslint . --fix",
+    "lint:fix": "eslint . --fix",
     "lint:vsf": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix_vsf": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxi preview",

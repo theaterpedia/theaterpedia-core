@@ -1,5 +1,5 @@
-import { mount } from '@vue/test-utils';
-import Breadcrumbs from '../Breadcrumbs.vue';
+import { mount } from '@vue/test-utils'
+import Breadcrumbs from '../Breadcrumbs.vue'
 
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {
@@ -7,8 +7,8 @@ describe('<Breadcrumbs />', () => {
       props: {
         breadcrumbs: [],
       },
-    });
+    })
 
-    expect(getByTestId('breadcrumbs'));
-  });
-});
+    expect(getByTestId('breadcrumbs'))
+  })
+})

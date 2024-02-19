@@ -1,8 +1,8 @@
-export type Breadcrumb = {
-  name: string;
-  link: string;
-};
+export interface Breadcrumb {
+  name: string
+  link: string
+}
 
-export type BreadcrumbsProps = {
-  breadcrumbs: Breadcrumb[];
-};
+export interface BreadcrumbsProps {
+  breadcrumbs: Breadcrumb[]
+}

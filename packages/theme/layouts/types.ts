@@ -1,5 +1,5 @@
-import type { Breadcrumb } from '@crearis/theme-main/components/ui/Breadcrumbs/types';
+import type { Breadcrumb } from '@crearis/theme-main/components/ui/Breadcrumbs/types'
 
-export type DefaultLayoutProps = {
-  breadcrumbs?: Breadcrumb[];
-};
+export interface DefaultLayoutProps {
+  breadcrumbs?: Breadcrumb[]
+}

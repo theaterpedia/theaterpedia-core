@@ -1,16 +1,16 @@
-<template>
-  <Body class="font-body" :class="bodyClass" />
-  <VitePwaManifest />
-    <NuxtPage />
-</template>
-
 <script setup lang="ts">
-usePageTitle();
+usePageTitle()
 
-const bodyClass = ref('');
+const bodyClass = ref('')
 
 onMounted(() => {
   // Need this class for cypress testing
-  bodyClass.value = 'hydrated';
-});
+  bodyClass.value = 'hydrated'
+})
 </script>
+
+<template>
+  <Body class="font-body" :class="bodyClass" />
+  <VitePwaManifest />
+  <NuxtPage />
+</template>

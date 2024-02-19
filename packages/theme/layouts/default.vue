@@ -14,7 +14,9 @@ import {
 } from '@crearis/vue'
 
 // this has to stand on top of the file, see: https://pruvious.com/docs/layouts
+import type { DefaultLayoutProps } from './types'
 import { defineLayout } from '#pruvious'
+
 defineLayout({
   label: 'default',
   // @ts-expect-error #TODO _05 remove once components are created
@@ -23,8 +25,8 @@ defineLayout({
   allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
 
-import type { DefaultLayoutProps } from './types';
-defineProps<DefaultLayoutProps>();
+// eslint-disable-next-line vue/define-macros-order
+defineProps<DefaultLayoutProps>()
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()

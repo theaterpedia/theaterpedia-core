@@ -2,6 +2,8 @@
 import { SfButton } from '@crearis/vue'
 import { defineBlock, imageField, linkField, textField } from '#pruvious'
 
+defineBlock({ icon: 'Mouse' })
+
 defineProps({
   image: imageField({
     minWidth: 764,
@@ -37,8 +39,6 @@ defineProps({
     placeholder: '2. Button Link',
   }),
 })
-
-defineBlock({ icon: 'Mouse' })
 
 const NuxtLink = resolveComponent('NuxtLink')
 </script>

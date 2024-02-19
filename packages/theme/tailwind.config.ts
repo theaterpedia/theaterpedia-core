@@ -1,10 +1,10 @@
 // #TODO _05 Check @crearis-imports (is /dist correct?)
 // hover over @crearis to see the path: import Typography from '@tailwindcss/typography' would import from /src
 
-import sfTypography from '@crearis/typography';
-import { fontFamily } from 'tailwindcss/defaultTheme';
-import { tailwindConfig } from '@crearis/vue/tailwind-config';
-import type { Config } from 'tailwindcss';
+import sfTypography from '@crearis/typography'
+import { fontFamily } from 'tailwindcss/defaultTheme'
+import { tailwindConfig } from '@crearis/vue/tailwind-config'
+import type { Config } from 'tailwindcss'
 
 export default {
   presets: [tailwindConfig],
@@ -27,14 +27,18 @@ export default {
         '4xl': '1920px',
         '3xl': '1536px',
         '2xl': '1366px',
-        xl: '1280px',
-        lg: '1024px',
-        md: '768px',
-        sm: '640px',
-        xs: '376px',
+        'xl': '1280px',
+        'lg': '1024px',
+        'md': '768px',
+        'sm': '640px',
+        'xs': '376px',
         '2xs': '360px',
       },
     },
   },
+  // #TODO _07 why do we need to REQUIRE tailwindcss-grid-areas?
+  // see https://github.com/JaleXHolguin/tailwindcss-grid-areas for a more modern approach
+  // compare this to the odoogap-approach in data-dev
+  // eslint-disable-next-line ts/no-require-imports
   plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas')],
-} as Config;
+} as Config
