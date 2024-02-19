@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     vueI18n: isRootDir ? './node_modules/@crearis/theme-main/i18n.config.ts' : '../../node_modules/@crearis/theme-main/i18n.config.ts',
   },
 
-  modules: ['@nuxt/test-utils', 'nuxt-module-eslint-config'],
+  modules: ['@nuxt/test-utils', 'nuxt-module-eslint-config', 'pruvious'],
 
   eslintConfig: {
     setup: false // <---
