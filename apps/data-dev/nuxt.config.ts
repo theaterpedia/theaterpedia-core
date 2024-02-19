@@ -10,14 +10,6 @@ export default defineNuxtConfig({
     '@crearis/theme-main',
     '@crearis/data-main',
   ],
-  hooks: {
-    close: (nuxt) => {
-      if (!nuxt.options._prepare)
-        process.exit()
-    },
-  },
-
-  modules: ['nuxt-vitest'],
 
   i18n: {
     // if you are using custom path, default
@@ -29,6 +21,8 @@ export default defineNuxtConfig({
       apiUrl: 'http://localhost:3002',
     },
   },
+
+  modules: ['@nuxt/test-utils'],
 
   nitro: {
     prerender: {

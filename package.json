@@ -16,9 +16,12 @@
     "dev:all": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "test": "cd apps/data-dev && yarn test",
-    "test:watch": "cd apps/data-dev && yarn test:watch",
-    "test:turbo": "turbo run test",
+    "vitest": "vitest",
+    "test": "cd apps/home && vitest run",
+    "testw": "cd apps/home && vitest --ui",
+    "testw:data": "cd apps/data-dev && vitest --ui",
+    "test:data": "cd apps/data-dev && vitest run",
+    "test:alle": "turbo run test",
     "type-check": "turbo run type-check",
     "codegen": "cd packages/data && yarn codegen"
   },
@@ -27,7 +30,14 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "automd": "^0.1.1",
     "release-it": "^17.0.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@vitest/coverage-v8": "^1.2.2",
+    "@vitest/expect": "^1.2.2",
+    "@nuxt/test-utils": "^3.11.0",
+    "vitest": "^1.2.2",
+    "@vue/test-utils": "^2.4.0",
+    "vue-i18n":"^9.9.1",
+    "vitest-environment-nuxt": "^1.0.0"
   },
   "workspaces": [
     "packages/**/*",
