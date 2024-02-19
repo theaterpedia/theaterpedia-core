@@ -11,7 +11,7 @@ defineLayout({
   <div>
     <PageHeader />
     <PostTitle />
-    <div class="space-y-12 ph:space-y-8">
+    <div class="space-y-12 ph:space-y-8" >
       <slot />
     </div>
     <PageFooter />

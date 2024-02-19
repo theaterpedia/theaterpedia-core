@@ -4,6 +4,7 @@ import { defineBlock, imageField, linkField, textField } from '#pruvious'
 
 defineBlock({ icon: 'Mouse' })
 
+// eslint-disable-next-line vue/define-macros-order
 defineProps({
   image: imageField({
     minWidth: 764,

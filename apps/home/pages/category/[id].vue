@@ -13,7 +13,9 @@
   <NuxtLayout>
     <div class="prose py-8 px-8">
       <h1>Category</h1>
-      <NuxtLink to="/">Home</NuxtLink>
+      <NuxtLink to="/">
+        Home
+      </NuxtLink>
     </div>
   </NuxtLayout>
   <!-- ContentDoc / -->

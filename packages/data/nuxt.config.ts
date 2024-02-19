@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     dirs: ['composables/**', 'utils/**'],
   },
   // we don't want pruvious in dev mode when we are working on the boilerplate from vsf or odoogap
-  modules: isDevDir ? [ '@vite-pwa/nuxt', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', '@vue-storefront/nuxt'  ],
+  modules: isDevDir ? [ '@vite-pwa/nuxt', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', '@vue-storefront/nuxt', 'pruvious'  ],
   nitro: {
     prerender: {
       crawlLinks: false,

@@ -91,7 +91,7 @@ export default defineNuxtConfig({
       langDir: isRootDir ? './lang' : '../../node_modules/@crearis/theme-main/lang',
       defaultLocale: 'de',
     },
-  ], '@nuxt/image', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt'],
+  ], '@nuxt/image', 'nuxt-lazy-hydrate', '@vue-storefront/nuxt' ],
 
   tailwindcss: {
     exposeConfig: true,
