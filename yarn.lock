@@ -18161,10 +18161,10 @@ prr@~1.0.1:
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
   integrity sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==
 
-pruvious@^3.10.3:
-  version "3.10.3"
-  resolved "https://registry.yarnpkg.com/pruvious/-/pruvious-3.10.3.tgz#ed7feb56e2a17915a49255ff00b328a652b0e21d"
-  integrity sha512-D6ofiA7djDXWmcEGsCakNG1nf+c/TObQlDyqvJAuh8dtyXTNd3KqwQhzFramVCZr3tbos+isP+ZIAemfPbZ2OQ==
+pruvious@^3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/pruvious/-/pruvious-3.10.4.tgz#5f973a371839d56e860a931bbbfe8c293d26cec7"
+  integrity sha512-gdU/F2jH0GiRLxmtDWoeq0nQAo5FjLwc0YEYfsM1QNe99WpcMC9iEbIbguLfdWwyj1LnhYFNnjO+vjapH4NzYA==
   dependencies:
     "@antfu/utils" "^0.7.7"
     "@aws-sdk/client-s3" "^3.478.0"
