@@ -9,13 +9,13 @@ defineBlock({
 defineProps({
   text: editorField({
     required: true,
-    toolbar: ['bold', 'italic', 'link', 'heading2', 'heading3', 'paragraph', 'link', 'bulletList'],
+    toolbar: ['bold', 'italic', 'link', 'heading1', 'heading2', 'heading3', 'paragraph', 'link', 'bulletList'],
   }),
 })
 </script>
 
 <template>
-  <Container class="content-block">
+  <NarrowContainer class="content-block">
     <PruviousHTML :html="text" class="max-w-content prose" />
-  </Container>
+  </NarrowContainer>
 </template>
