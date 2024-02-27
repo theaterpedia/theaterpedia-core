@@ -33,10 +33,7 @@ defineProps({
   text: editorField({
     placeholder: 'formatierten Text eingeben',
   }),
-  primaryButtonText: textField({
-    placeholder: '1. Button: Text eingeben',
-  }),
-  primaryButtonLink: linkField({
+  imageButtonLink: linkField({
     required: false,
     placeholder: '1. Button Link',
   }),
@@ -56,10 +53,12 @@ const NuxtLink = resolveComponent('NuxtLink')
     <div :class="minHeight ? '': 'min-h-[600px]'"   class="md:flex md:justify-center max-w-screen-3xl mx-auto">
       <div :class="fullWidth ? '': 'md:basis-2/4 '" class="flex flex-col justify-center md:items-stretch md:overflow-hidden">
         <!-- #TODO _06 Re-Enable Images -->
-        <PruviousPicture
-          :image="image"
-          :lazy="true"
-        />
+        <NuxtLink :to="imageButtonLink" class="relative">
+          <PruviousPicture
+            :image="image"
+            :lazy="true"
+          />
+        </NuxtLink>
       </div>
       <div v-show="showText" class="p-4 md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
         <p class="typography-text-xs md:typography-text-sm font-bold tracking-widest text-neutral-500 uppercase">
@@ -77,9 +76,6 @@ const NuxtLink = resolveComponent('NuxtLink')
           </slot>
         </div>
         <div class="flex flex-col md:flex-row gap-4 mt-6">
-          <SfButton :v-show="primaryButtonLink !== ''" size="lg" :tag="NuxtLink" :to="primaryButtonLink">
-            {{ primaryButtonText }}
-          </SfButton>
           <SfButton :v-show="secondaryButtonLink !== ''" size="lg" :tag="NuxtLink" :to="secondaryButtonLink" class="bg-white" variant="secondary">
             {{ secondaryButtonText }}
           </SfButton>

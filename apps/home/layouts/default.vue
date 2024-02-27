@@ -64,33 +64,7 @@ const NuxtLink = resolveComponent('NuxtLink')
 
 <template>
   <UiNavbarTop filled extended>
-    <SfButton
-      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
-      variant="tertiary"
-      :tag="NuxtLink"
-      to="/workshops"
-    >
-      <template #suffix>
-        <SfIconExpandMore class="hidden lg:block" />
-      </template>
-      <span class="hidden lg:flex whitespace-nowrap">Workshops</span>
-    </SfButton>
-    <SfButton
-      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
-      variant="tertiary"
-      :tag="NuxtLink"
-      to="/projekte"
-    >
-      <span class="hidden lg:flex whitespace-nowrap">Projekte</span>
-    </SfButton>
-    <SfButton
-      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
-      variant="tertiary"
-      :tag="NuxtLink"
-      to="/supervision"
-    >
-      <span class="hidden lg:flex whitespace-nowrap">Supervision</span>
-    </SfButton>      
+     
     <nav v-show="cartLineItemsCount > 0" class="hidden md:flex md:flex-row md:flex-nowrap">
       <NuxtLazyHydrate when-visible>
         <SfButton
