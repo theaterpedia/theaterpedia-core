@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useDark } from '@vueuse/core'
 usePageTitle()
 
+const isDark = useDark()
 const bodyClass = ref('')
 
 onMounted(() => {
@@ -10,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Body class="font-body" :class="bodyClass" />
+  <Body data-theme="grey" class="font-body" :class="(isDark ? 'dark ' : '') + bodyClass" />
   <VitePwaManifest />
   <NuxtPage />
 </template>
