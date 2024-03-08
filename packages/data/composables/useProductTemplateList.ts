@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import type { AttributeValue, Category, Product, ProductTemplateListResponse, QueryProductsArgs } from '../graphql';
 import { QueryName } from '../server/queries';
+import { useUniqBy } from '../utils/uniqBy';
 
 export const useProductTemplateList = (stateIndex: string) => {
   const { $sdk } = useNuxtApp();
