@@ -20,6 +20,18 @@ export default defineNuxtConfig({
       ignore: ['/shop'],
     },
     compressPublicAssets: true,
+    storage: {
+      cache: {
+        driver: "redis",
+        url: process.env.REDIS_URL,
+      },
+    },
+    devStorage: {
+      cache: {
+        driver: "redis",
+        url: process.env.REDIS_URL,
+      },
+    },    
   },
   vsf: {
     middleware: {
@@ -42,6 +54,31 @@ export default defineNuxtConfig({
       '@erpgap/odoo-sdk-api-client'
     ]
   },
+  runtimeConfig: {
+    redis: {
+      host: "localhost",
+      port: 6379,
+    },
+    // see: ThemeConfig
+    public: {
+      odooBaseImageUrl: "",
+      odooBaseUrl: "",
+    },
+  },
+  routeRules: {
+    "/_ipx/**": {
+      headers: { "cache-control": "public, max-age=31536000, immutable" },
+    },
+    // #TODO: Check whether odoogap-config is working
+    /* 
+    "/": { swr: true },
+    "/icons/**": {
+      headers: { "cache-control": "public, max-age=31536000, immutable" },
+    },
+    "/favicon.ico": {
+      headers: { "cache-control": "public, max-age=31536000, immutable" },
+    }, */
+  },   
   pwa: {
     registerType: 'autoUpdate',
     workbox: {

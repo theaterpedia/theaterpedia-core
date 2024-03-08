@@ -50,6 +50,12 @@ export default defineNuxtConfig({
       'xs': 376,
       '2xs': 360,
     },
+    providers: {
+      odooProvider: {
+        name: "odooProvider",
+        provider: "@crearis/data-main/providers/odoo-provider.ts",
+      },
+    },    
   },
 
   runtimeConfig: {

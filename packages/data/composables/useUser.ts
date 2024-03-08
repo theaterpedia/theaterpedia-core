@@ -1,11 +1,16 @@
-import { LoadUserQueryResponse, MutationLoginArgs, MutationRegisterArgs, Partner, RegisterUserResponse } from '../graphql';
+import { LoadUserQueryResponse, MutationLoginArgs, MutationRegisterArgs, MutationResetPasswordArgs, Partner, RegisterUserResponse, ResetPasswordResponse } from '~/graphql';
 import { MutationName } from '../server/mutations';
 import { QueryName } from '../server/queries';
 
 export const useUser = () => {
+  const { $sdk } = useNuxtApp();  
   const user = useCookie<Partner | null>('odoo-user');
 
   const loading = ref(false);
+  const loginError = ref(false);
+  const signupError = ref(false);
+  const resetPasswordError = ref(false);
+  const resetEmail = useCookie<string>('reset-email');
 
   const loadUser = async () => {
     loading.value = true;
@@ -30,7 +35,8 @@ export const useUser = () => {
     loading.value = false;
 
     if (error.value) {
-      console.log(error);
+      signupError.value = true;
+      return;
     }
 
     user.value = data.value.partner;
@@ -42,15 +48,43 @@ export const useUser = () => {
       {mutationName: MutationName.LoginMutation}, {...params}
     );
     if (error.value) {
-      console.log(error);
+      loginError.value = true;
+      return;
     }
 
     user.value = data.value.partner;
   };
+  
+  const resetPassword = async (params: MutationResetPasswordArgs) => {
+      loading.value = true;
+      const { error } = await $sdk().odoo.mutation<MutationResetPasswordArgs, ResetPasswordResponse>(
+        {mutationName: MutationName.SendResetPasswordMutation}, {...params}
+      );
+      if (error.value) {
+        resetPasswordError.value = true;
+      }
+  
+      resetEmail.value = params.email;
+    };
+  
+  const successResetEmail = () => {
+      const result = resetEmail.value;
+      resetEmail.value = '';
+  
+      return result;
+    };
 
   return {
     signup,
     logout,
-    loadUser
+    login,
+    loadUser,
+    resetPassword,
+    user,
+    loading,
+    loginError,
+    signupError,
+    resetPasswordError,
+    successResetEmail
   };
 };

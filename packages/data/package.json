@@ -12,6 +12,8 @@
     "plugins/",
     "server/",
     "utils/",
+    "types/",
+    "providers/",
     "app.vue",
     "i18n.config.ts",
     "codegen.ts",
