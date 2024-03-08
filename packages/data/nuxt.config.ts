@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       ignore: ['/shop'],
     },
     compressPublicAssets: true,
-    storage: {
+    /* storage: {
       cache: {
         driver: "redis",
         url: process.env.REDIS_URL,
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
         driver: "redis",
         url: process.env.REDIS_URL,
       },
-    },    
+    },    */
   },
   vsf: {
     middleware: {
