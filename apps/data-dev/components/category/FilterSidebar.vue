@@ -10,7 +10,12 @@ import {
   SfSelect,
   SfThumbnail,
 } from '@crearis/vue';
-import { ProductFilterType } from '@crearis/data-main/types/product';
+
+interface ProductFilterType {
+  filterName: string;
+  id: string;
+  label: string;
+}
 
 const emit = defineEmits(['close']);
 const props = defineProps({

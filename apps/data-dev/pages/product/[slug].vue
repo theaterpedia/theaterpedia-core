@@ -267,9 +267,9 @@ import {
   SfRating,
   SfThumbnail,
 } from '@crearis/vue';
-import { LocationQueryRaw } from 'vue-router';
-
-import { OrderLine, Product } from '@crearis/data-main/graphql';
+import type { LocationQueryRaw } from 'vue-router';
+import type { OrderLine } from '@crearis/data-main/graphql';
+import type { Product } from '@crearis/data-main/graphql';
 
 const route = useRoute();
 const router = useRouter();

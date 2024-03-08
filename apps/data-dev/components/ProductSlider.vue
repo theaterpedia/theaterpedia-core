@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SfScrollable } from '@crearis/vue';
-import { Product } from '@crearis/data-main/graphql';
+import type { Product } from '@crearis/data-main/graphql';
 
 defineProps({
   heading: String,
@@ -11,6 +11,7 @@ const { loadProductTemplateList, loading, productTemplateList } = useProductTemp
 const { getRegularPrice, getSpecialPrice } = useProductAttributes();
 
 const numOfProducts = 10;
+// #TODO _05 reenable loadProductTemplateList
 await loadProductTemplateList({ pageSize: numOfProducts });
 </script>
 
