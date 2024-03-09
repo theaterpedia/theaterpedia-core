@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SfLink, SfButton, SfIconClose } from '@crearis/vue';
 import { PropType } from 'nuxt/dist/app/compat/capi';
-import { Product } from '@crearis/data-main/graphql';
+import type { Product } from '@crearis/data-main/graphql';
 
 const NuxtLink = resolveComponent('NuxtLink');
 

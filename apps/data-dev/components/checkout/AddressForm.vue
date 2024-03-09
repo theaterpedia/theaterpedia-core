@@ -9,7 +9,7 @@ import {
   SfLoaderCircular,
   SfSelect,
 } from '@crearis/vue';
-import { AddressEnum } from '@crearis/data-main/graphql';
+import type { AddressEnum } from '@crearis/data-main/graphql';
 
 const props = defineProps({
   heading: String,

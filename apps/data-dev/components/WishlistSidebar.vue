@@ -2,7 +2,7 @@
 import { SfDrawer, SfButton, SfIconClose } from '@crearis/vue';
 import { onClickOutside } from '@vueuse/core';
 import { useToast } from 'vue-toastification';
-import { Product, WishlistItem } from '@crearis/data-main/graphql';
+import type { Product, WishlistItem } from '@crearis/data-main/graphql';
 
 const { wishlist, wishlistRemoveItem, wishlistTotalItems, loading } = useWishlist();
 const { wishlistSidebarIsOpen, toggleWishlistSideBar } = useUiState();

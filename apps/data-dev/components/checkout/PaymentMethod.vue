@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { SfIconCreditCard } from '@crearis/vue';
-import { PaymentAcquirer } from '@crearis/data-main/graphql';
+import type { PaymentAcquirer } from '@crearis/data-main/graphql';
 
 type CheckoutPaymentProps = {
   activePayment: number;

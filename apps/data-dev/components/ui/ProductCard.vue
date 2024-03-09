@@ -7,7 +7,7 @@ import {
   SfIconFavorite,
   SfIconFavoriteFilled,
 } from '@crearis/vue';
-import { Product } from '@crearis/data-main/graphql';
+import type { Product } from '@crearis/data-main/graphql';
 
 defineProps({
   imageUrl: {

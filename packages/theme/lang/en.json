@@ -12,6 +12,7 @@
   "form": {
     "firstNameLabel": "First Name",
     "lastNameLabel": "Last Name",
+    "NameLabel": "Name",
     "phoneLabel": "Phone",
     "countryLabel": "Country",
     "streetNameLabel": "Street",

@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import { SfButton, SfIconClose, SfModal, useDisclosure } from '@crearis/vue';
-import { AddressEnum } from '@crearis/data-main/graphql';
+import type { AddressEnum } from '@crearis/data-main/graphql';
 
 definePageMeta({
   layout: 'account',
