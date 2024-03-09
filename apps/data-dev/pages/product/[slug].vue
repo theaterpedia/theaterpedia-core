@@ -319,6 +319,9 @@ const productsInCart = computed(() => {
   );
 });
 
+// #TODO _07 clear Nuxt-Warning [useFetch] Component is already mounted
+// nuxt tells us: please use $fetch instead. See https://nuxt.com/docs/getting-started/data-fetching
+// seems something within @erpgap_odoo-sdk, hard-setting ofetch to $fetch doesn't work
 const handleCartAdd = async () => {
   await cartAdd(productVariant?.value.id, quantitySelectorValue.value);
 };
