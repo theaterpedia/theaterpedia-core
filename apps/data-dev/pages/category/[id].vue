@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SfButton, SfIconTune, useDisclosure, SfLoaderCircular } from '@crearis/vue';
+import type { Product } from '@crearis/data-main/graphql';
 
 const route = useRoute();
 
@@ -81,14 +82,14 @@ onMounted(() => {
               :key="productTemplate.id"
               :name="productTemplate?.name || ''"
               loading="eager"
+              :first-variant="productTemplate.firstVariant as Product"              
               :slug="mountUrlSlugForProductVariant((productTemplate.firstVariant || productTemplate) as Product)"
               :image-url="$getImage(String(productTemplate.image), 370, 370, String(productTemplate.imageFilename))"
               :image-alt="productTemplate?.name || ''"
               :regular-price="getRegularPrice(productTemplate.firstVariant as Product) || 250"
               :special-price="getSpecialPrice(productTemplate.firstVariant as Product)"
               :rating-count="123"
-              :rating="Number(4)"
-              :first-variant="productTemplate.firstVariant as Product"
+              :rating="Number(4)"           
             />
           </section>
           <CategoryEmptyState v-else />
