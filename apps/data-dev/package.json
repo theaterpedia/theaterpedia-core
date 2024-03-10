@@ -10,6 +10,7 @@
   "scripts": {
     "build": "nuxi build --log-level=verbose",
     "dev": "nuxi dev -p 3002",
+    "postinstall": "nuxt prepare",
     "generate": "nuxi generate",
     "lint": "nuxt typecheck && eslint .",
     "lint:fix": "nuxt typecheck && eslint . --fix",

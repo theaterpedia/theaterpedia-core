@@ -2,6 +2,7 @@
   <div class="relative min-h-[600px] mb-10">
     <div class="md:flex md:flex-row-reverse md:justify-center min-h-[600px] max-w-screen-3xl mx-auto">
       <div class="flex flex-col justify-center md:basis-2/4 md:items-stretch md:overflow-hidden">
+        <!-- #TODO Fix NuxtImg / Sharp issue (via pruvious?)
         <NuxtImg
           src="/images/main-banner.webp"
           alt="Hero"
@@ -11,6 +12,7 @@
           format="webp"
           preload
         />
+        -->
       </div>
       <div class="md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
         <p class="typography-text-xs md:typography-text-sm font-bold tracking-widest text-neutral-500 uppercase">

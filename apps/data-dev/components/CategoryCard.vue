@@ -36,6 +36,7 @@ const items = ref([
         <div
           class="relative h-[240px] w-[240px] rounded-full bg-neutral-100 group-hover:shadow-xl group-active:shadow-none"
         >
+          <!-- #TODO Fix NuxtImg / Sharp issue (via pruvious?)
           <NuxtImg
             v-if="name == 'WOMEN'"
             :src="items[0].image"
@@ -54,6 +55,7 @@ const items = ref([
             loading="lazy"
             format="webp"
           />
+          -->
         </div>
         <div class="flex justify-center">
           <p

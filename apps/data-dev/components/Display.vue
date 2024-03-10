@@ -61,6 +61,7 @@ const items = ref([
             {{ item.buttonText }}
           </SfButton>
         </div>
+        <!-- #TODO Fix NuxtImg / Sharp issue (via pruvious?)
         <NuxtImg
           :src="item.image"
           :alt="item.title"
@@ -70,6 +71,7 @@ const items = ref([
           loading="lazy"
           format="webp"
         />
+        -->
       </div>
     </div>
   </div>

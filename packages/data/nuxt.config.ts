@@ -66,9 +66,6 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/_ipx/**": {
-      headers: { "cache-control": "public, max-age=31536000, immutable" },
-    },
     // #TODO: Check whether odoogap-config is working
     /* 
     "/": { swr: true },
