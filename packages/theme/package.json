@@ -9,6 +9,7 @@
     "app.vue",
     "assets/",
     "blocks/",
+    "collections/",
     "components/",
     "composables/",
     "i18n.config.ts",

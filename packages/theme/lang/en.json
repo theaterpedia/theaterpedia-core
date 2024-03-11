@@ -165,7 +165,10 @@
         "orderPickup": "Order pickup",
         "purchaseStatus": "Purchase status",
         "trackOrders": "Track orders",
-        "returns": "Returns"
+        "returns": "Returns",
+        "myCart": "My Cart",
+        "checkout": "Checkout",
+        "login": "Login & Signup"
       }
     },
     "help": {

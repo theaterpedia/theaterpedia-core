@@ -14,6 +14,18 @@ export const categories = [
     key: 'howToOrder',
     subcategories: [
       {
+        key: 'myCart',
+        link: '/cart',
+      },
+      {
+        key: 'checkout',
+        link: '/checkout',
+      },
+      {
+        key: 'login',
+        link: '/login',
+      },                  
+      {
         key: 'checkoutAndPayment',
         link: '/',
       },

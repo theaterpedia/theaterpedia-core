@@ -168,7 +168,10 @@
         "orderPickup": "Anmeldebestätigung",
         "purchaseStatus": "Zahlungsbestätigung",
         "trackOrders": "Veranstaltungsmanagement",
-        "returns": "Stornierung & Abmeldung"
+        "returns": "Stornierung & Abmeldung",
+        "myCart": "Mein Warenkorb",
+        "checkout": "Bezahlen",
+        "login": "Login & Registrierung"        
       }
     },
     "help": {
