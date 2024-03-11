@@ -30,15 +30,15 @@ defineProps<DefaultLayoutProps>()
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
-const { fetchCart, data: cart } = useSfCart()
+const { loadCart, cartItemCount } = useCart()
 const { fetchCustomer, data: account } = useCustomer()
 
-fetchCart()
+loadCart()
 fetchCustomer()
 usePageTitle()
 
 const cartLineItemsCount = computed(
-  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
+  cartItemCount,
 )
 
 const accountDropdown = [
@@ -65,10 +65,11 @@ const NuxtLink = resolveComponent('NuxtLink')
 <template>
   <UiNavbarTop filled extended>
      
-    <nav v-show="cartLineItemsCount > 0" class="hidden md:flex md:flex-row md:flex-nowrap">
+    <nav class="hidden md:flex md:flex-row md:flex-nowrap">
       <NuxtLazyHydrate when-visible>
         <SfButton
-          class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
+          v-show="cartLineItemsCount > 0" 
+          class="group relative text-black dark:text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
           :tag="NuxtLink"
           :to="paths.cart"
           :aria-label="$t('numberInCart', cartLineItemsCount)"
@@ -90,7 +91,7 @@ const NuxtLink = resolveComponent('NuxtLink')
           <template #trigger>
             <SfButton
               variant="tertiary"
-              class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md"
+              class="relative text-black dark:text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md"
               :class="{ 'bg-primary-900': isAccountDropdownOpen }"
               data-testid="account-dropdown-button"
               @click="accountDropdownToggle()"

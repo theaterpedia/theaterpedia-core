@@ -66,6 +66,10 @@ export const useCart = () => {
     toast.success('Product updated successfully');
   };
 
+  const cartItemCount = () => {
+    return cartCounter.value
+  };
+
   const removeItemFromCart = async (lineId: number) => {
     loading.value = true;
     const { data, error } = await $sdk().odoo.mutation<MutationCartRemoveItemArgs, CartRemoveItemResponse>(
@@ -85,6 +89,7 @@ export const useCart = () => {
 
   return {
     loading,
+    cartItemCount,
     loadCart,
     cartAdd,
     updateItemQuantity,
