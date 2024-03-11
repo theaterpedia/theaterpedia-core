@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@crearis/vue'
-import { defineLayout, textField, linkField  } from '#pruvious'
+import { defineLayout } from '#pruvious'
 
 defineLayout({
   label: 'checkout',

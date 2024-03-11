@@ -170,8 +170,7 @@
         "trackOrders": "Veranstaltungsmanagement",
         "returns": "Stornierung & Abmeldung",
         "myCart": "Mein Warenkorb",
-        "checkout": "Bezahlen",
-        "login": "Login & Registrierung"        
+        "checkout": "Bezahlen"     
       }
     },
     "help": {
@@ -180,7 +179,9 @@
         "helpCenter": "Docs & Anleitungen",
         "securityFraud": "Datenschutz & Betrug",
         "feedback": "Feedback",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "login": "Login & Registrierung",
+        "resetPassword": "Reset password"        
       }
     },
     "services": {

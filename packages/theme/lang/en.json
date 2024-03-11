@@ -167,8 +167,7 @@
         "trackOrders": "Track orders",
         "returns": "Returns",
         "myCart": "My Cart",
-        "checkout": "Checkout",
-        "login": "Login & Signup"
+        "checkout": "Checkout"
       }
     },
     "help": {
@@ -177,7 +176,9 @@
         "helpCenter": "Help center",
         "securityFraud": "Security & fraud",
         "feedback": "Feedback",
-        "contact": "Contact"
+        "contact": "Contact",
+        "login": "Login & Signup",
+        "resetPassword": "Reset password"
       }
     },
     "services": {

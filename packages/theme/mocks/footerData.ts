@@ -20,11 +20,7 @@ export const categories = [
       {
         key: 'checkout',
         link: '/checkout',
-      },
-      {
-        key: 'login',
-        link: '/login',
-      },                  
+      },               
       {
         key: 'checkoutAndPayment',
         link: '/',
@@ -78,6 +74,14 @@ export const categories = [
         key: 'contact',
         link: '/',
       },
+      {
+        key: 'resetPassword',
+        link: paths.authResetPassword,
+      }, 
+      {
+        key: 'login',
+        link: paths.authLogin,
+      },              
     ],
   },
   {
