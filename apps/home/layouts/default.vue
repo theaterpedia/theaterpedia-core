@@ -20,9 +20,9 @@ import { defineLayout } from '#pruvious'
 defineLayout({
   label: 'default',
   // @ts-expect-error #TODO _05 remove once components are created
-  allowedBlocks: ['MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  allowedBlocks: ['ProductSlider', 'Display', 'MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
   // @ts-expect-error #TODO _05 remove once components are created
-  allowedRootBlocks: ['MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['ProductSlider', 'Display', 'MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
 
 // eslint-disable-next-line vue/define-macros-order
