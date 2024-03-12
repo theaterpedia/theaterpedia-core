@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import type { AttributeValue, Category, Product, ProductTemplateListResponse, QueryProductsArgs } from '../graphql';
 import { QueryName } from '../server/queries';
-import { useUniqBy } from '../utils/uniqBy';
 
 export const useProductTemplateList = (stateIndex: string) => {
   const { $sdk } = useNuxtApp();
@@ -25,10 +24,13 @@ export const useProductTemplateList = (stateIndex: string) => {
     productTemplateList.value = data.value?.products?.products || [];
     attributes.value = data.value?.products?.attributeValues || [];
     totalItems.value = data.value?.products?.totalCount || 0;
+    // #TODO _07 fix useUniqBy
+    // look here? https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/64944
+    /*
     categories.value = useUniqBy(
       data.value?.products?.products?.map((product) => product?.categories || []).flat(),
       'id',
-    );
+    ); */
   };
 
   const organizedAttributes = computed(() => {
