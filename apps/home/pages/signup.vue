@@ -18,7 +18,7 @@
     <form
       data-testid="signup-form"
       class="flex flex-col md:border md:border-neutral-200 rounded-md gap-4 md:p-6"
-      @submit.prevent="open"
+      @submit.prevent="handleSignup"
     >
       <label>
         <FormLabel>{{ $t('form.firstNameLabel') }} *</FormLabel>
