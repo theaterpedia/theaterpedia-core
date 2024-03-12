@@ -1,4 +1,4 @@
-import { LoadUserQueryResponse, MutationLoginArgs, MutationRegisterArgs, MutationResetPasswordArgs, Partner, RegisterUserResponse, ResetPasswordResponse } from '~/graphql';
+import { LoadUserQueryResponse, MutationLoginArgs, MutationRegisterArgs, MutationResetPasswordArgs, Partner, RegisterUserResponse, ResetPasswordResponse } from '../graphql';
 import { MutationName } from '../server/mutations';
 import { QueryName } from '../server/queries';
 
