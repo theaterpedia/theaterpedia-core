@@ -247,6 +247,7 @@
       </NuxtErrorBoundary>      
     </NarrowContainer>
   </NuxtLayout>
+  <!-- ContentDoc / -->
 </template>
 
 <script setup lang="ts">
