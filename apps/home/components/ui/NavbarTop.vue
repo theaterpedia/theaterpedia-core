@@ -16,7 +16,7 @@ const props = defineProps<{
 
 const navigation = [
   { title: 'home', _path: "/" },
-  { title: 'Workshops', _path: "/workshops" },
+  { title: 'Workshops', _path: "/category/13" },
   { title: 'Projekte', _path: "/projekte/p-1" },
   { title: 'Supervision', _path: "/kurse/k-1" },
 ]
