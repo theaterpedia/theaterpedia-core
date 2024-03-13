@@ -1,7 +1,12 @@
+<script setup lang="ts">
+defineProps<{
+  filled?: boolean
+}>()
+</script>
+
 <template>
   <header
-    :class="[
-      'h-14 md:h-20 flex z-50 md:sticky md:-top-5 md:pt-2.5 md:shadow-md',
+    class="h-14 md:h-20 flex z-50 md:sticky md:-top-5 md:pt-2.5 md:shadow-md" :class="[
       { 'bg-primary-700 text-white': filled },
       { 'bg-white text-[#02C652] border-b border-neutral-200': !filled },
     ]"
@@ -17,9 +22,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-defineProps<{
-  filled?: boolean;
-}>();
-</script>

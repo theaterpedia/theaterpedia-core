@@ -7,12 +7,20 @@ import {
   SfIconPinterest,
   SfIconTwitter,
   SfIconYoutube,
-} from '@crearis/vue';
+} from '@crearis/vue'
 
 export const categories = [
   {
     key: 'howToOrder',
     subcategories: [
+      {
+        key: 'myCart',
+        link: '/cart',
+      },
+      {
+        key: 'checkout',
+        link: '/checkout',
+      },               
       {
         key: 'checkoutAndPayment',
         link: '/',
@@ -66,6 +74,14 @@ export const categories = [
         key: 'contact',
         link: '/',
       },
+      {
+        key: 'resetPassword',
+        link: paths.authResetPassword,
+      }, 
+      {
+        key: 'login',
+        link: paths.authLogin,
+      },              
     ],
   },
   {
@@ -126,7 +142,7 @@ export const categories = [
       },
     ],
   },
-];
+]
 export const socialMedia = [
   {
     label: 'Facebook',
@@ -153,7 +169,7 @@ export const socialMedia = [
     link: '/',
     icon: SfIconYoutube,
   },
-];
+]
 export const contactOptions = [
   {
     key: 'helpCenter',
@@ -173,7 +189,7 @@ export const contactOptions = [
     details: ['openingHours-1', 'openingHours-2'],
     icon: SfIconCall,
   },
-];
+]
 export const bottomLinks = [
   {
     key: 'terms',
@@ -183,5 +199,5 @@ export const bottomLinks = [
     key: 'privacyPolicy',
     link: '/',
   },
-];
-export const companyName = `© ${new Date().getFullYear()} Theaterpedia e.V.`;
+]
+export const companyName = `© ${new Date().getFullYear()} Theaterpedia e.V.`

@@ -8,6 +8,10 @@
 usePageTitle();
 
 const bodyClass = ref('');
+const nuxtApp = useNuxtApp();
+nuxtApp.hook('page:finish', () => {
+  window.scrollTo(0, 0);
+});
 
 onMounted(() => {
   // Need this class for cypress testing

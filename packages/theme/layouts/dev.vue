@@ -1,6 +1,25 @@
+<script setup lang="ts">
+import {
+  SfButton,
+  SfIconClose,
+  SfModal,
+  useDisclosure,
+} from '@crearis/vue'
+import type { DefaultLayoutProps } from './types'
+
+defineProps<DefaultLayoutProps>()
+
+const { isOpen: isSearchModalOpen, close: searchModalClose } = useDisclosure()
+const { fetchCart } = useSfCart()
+const { fetchCustomer } = useCustomer()
+
+fetchCart()
+fetchCustomer()
+usePageTitle()
+</script>
+
 <template>
-  <DevNavbar filled>
-  </DevNavbar>
+  <DevNavbar filled />
   <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
@@ -29,55 +48,3 @@
     </SfModal>
   </NuxtLazyHydrate>
 </template>
-
-<script setup lang="ts">
-import {
-  SfBadge,
-  SfButton,
-  SfIconExpandMore,
-  SfIconShoppingCart,
-  SfIconClose,
-  SfIconSearch,
-  SfIconPerson,
-  SfDropdown,
-  SfListItem,
-  SfModal,
-  useDisclosure,
-} from '@crearis/vue';
-import type { DefaultLayoutProps } from './types';
-
-defineProps<DefaultLayoutProps>();
-
-const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
-const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
-const { fetchCart, data: cart } = useSfCart();
-const { fetchCustomer, data: account } = useCustomer();
-
-fetchCart();
-fetchCustomer();
-usePageTitle();
-
-const cartLineItemsCount = computed(
-  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
-);
-
-const accountDropdown = [
-  {
-    label: 'account.heading',
-    link: paths.account,
-  },
-  {
-    label: 'account.ordersAndReturns.section.myOrders',
-    link: paths.accountMyOrders,
-  },
-  {
-    label: 'account.ordersAndReturns.section.returns',
-    link: paths.accountReturns,
-  },
-  {
-    label: 'account.logout',
-    link: '/',
-  },
-];
-const NuxtLink = resolveComponent('NuxtLink');
-</script>

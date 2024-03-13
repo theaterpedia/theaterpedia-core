@@ -2,25 +2,25 @@
 // THIS IS FROM ODOOGAP
 
 import {
-  SfDropdown,
   SfButton,
-  SfLink,
+  SfDropdown,
   SfIconMoreHoriz,
-} from '@crearis/vue';
+  SfLink,
+} from '@crearis/vue'
 
 defineProps({
   breadcrumbs: Array,
-});
+})
 
-const dropdownOpened = ref(false);
-const close = () => {
-  dropdownOpened.value = false;
-};
-const toggle = () => {
-  dropdownOpened.value = !dropdownOpened.value;
-};
+const dropdownOpened = ref(false)
+function close() {
+  dropdownOpened.value = false
+}
+function toggle() {
+  dropdownOpened.value = !dropdownOpened.value
+}
 
-const NuxtLink = resolveComponent('NuxtLink');
+const NuxtLink = resolveComponent('NuxtLink')
 </script>
 
 <template>
@@ -43,8 +43,8 @@ const NuxtLink = resolveComponent('NuxtLink');
               type="button"
               variant="tertiary"
               square
-              @click="toggle"
               data-testid="breadcrumbs-dropdown-button"
+              @click="toggle"
             >
               <template #prefix>
                 <SfIconMoreHoriz

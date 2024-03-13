@@ -13,7 +13,7 @@
 import Heading from '../Heading/Heading.vue';
 import type { RenderContentProps } from '../RenderContent/types';
 import RenderContentProductSlider from '../RenderContentProductSlider/RenderContentProductSlider.vue';
-import CategoryCard from '../ui/CategoryCard/CategoryCard.vue';
+import CategoryCard from '../CategoryCard.vue';
 import Display from '../ui/Display/Display.vue';
 import Hero from '../ui/Hero/Hero.vue';
 

@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { SfButton, SfDropdown, SfIconMoreHoriz, SfLink } from '@crearis/vue'
+import type { BreadcrumbsProps } from '../../ui/Breadcrumbs/types'
+
+defineProps<BreadcrumbsProps>()
+
+const dropdownOpened = ref(false)
+function close() {
+  dropdownOpened.value = false
+}
+function toggle() {
+  dropdownOpened.value = !dropdownOpened.value
+}
+
+const NuxtLink = resolveComponent('NuxtLink')
+</script>
+
 <template>
   <nav data-testid="breadcrumbs" class="inline-flex items-center text-sm font-normal font-body">
     <ol class="flex w-auto leading-none group md:flex-wrap">
@@ -10,8 +27,8 @@
                 :aria-label="$t('breadcrumbsDropdownText')"
                 variant="tertiary"
                 square
-                @click="toggle"
                 data-testid="breadcrumbs-dropdown-button"
+                @click="toggle"
               >
                 <template #prefix>
                   <SfIconMoreHoriz
@@ -57,20 +74,3 @@
     </ol>
   </nav>
 </template>
-
-<script setup lang="ts">
-import { SfDropdown, SfButton, SfLink, SfIconMoreHoriz } from '@crearis/vue';
-import type { BreadcrumbsProps } from '../../ui/Breadcrumbs/types';
-
-defineProps<BreadcrumbsProps>();
-
-const dropdownOpened = ref(false);
-const close = () => {
-  dropdownOpened.value = false;
-};
-const toggle = () => {
-  dropdownOpened.value = !dropdownOpened.value;
-};
-
-const NuxtLink = resolveComponent('NuxtLink');
-</script>

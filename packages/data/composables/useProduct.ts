@@ -26,7 +26,7 @@ export const useProduct = (slug?: string) => {
     ];
   });
 
-  const withBase = (filepath: string | null) => `https://vsfdemo15.labs.odoogap.com${filepath}`;
+  const withBase = (filepath: string | null) => `https://dev.dasei.eu/${filepath}`;
 
   const images = computed(() => {
     return [

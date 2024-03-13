@@ -1,36 +1,51 @@
-import LoadUserQuery from './LoadUserQuery';
-import ProductVariantQuery from './ProductVariantQuery';
-import StockLotsQuery from './StockLotsQuery';
-import GetCategories from './GetCategories';
-import GetCategory from './GetCategory';
-import GetProductTemplateList from './GetProductTemplateList';
-import GetProduct from './GetProduct';
-import GetWishlist from './GetWishlist';
-import LoadCart from './LoadCart';
 import { DocumentNode } from 'graphql/language';
+import LoadUserQuery from './LoadUserQuery';
+import GetProductVariantQuery from './GetProductVariantQuery';
+import StockLotsQuery from './StockLotsQuery';
+import GetCategoriesQuery from './GetCategoriesQuery';
+import GetCategoryQuery from './GetCategoryQuery';
+import GetProductTemplateListQuery from './GetProductTemplateListQuery';
+import GetProductTemplateQuery from './GetProductTemplateQuery';
+import WishlistLoadQuery from './WishlistLoadQuery';
+import LoadCartQuery from './LoadCartQuery';
+import GetAddressesQuery from './GetAddressesQuery';
+import GetCountriesQuery from './GetCountriesQuery';
+import GetDeliveryMethodsQuery from './GetDeliveryMethodsQuery';
+import GetPaymentMethodsQuery from './GetPaymentMethodsQuery';
 
 enum QueryName {
-  ProductVariantQuery = 'ProductVariantQuery',
+  GetProductVariantQuery = 'GetProductVariantQuery',
   LoadUserQuery = 'LoadUserQuery',
   StockLotsQuery = 'StockLotsQuery',
-  GetCategories = 'GetCategories',
-  GetCategory = 'GetCategory',
-  GetProductTemplateList = 'GetProductTemplateList',
-  GetProduct = 'GetProduct',
+  GetCategoriesQuery = 'GetCategoriesQuery',
+  GetCategoryQuery = 'GetCategoryQuery',
+  GetProductTemplateListQuery = 'GetProductTemplateListQuery',
+  GetProductTemplateQuery = 'GetProductTemplateQuery',
   GetWishlist = 'GetWishlist',
-  LoadCart = 'LoadCart'
+  LoadCartQuery = 'LoadCartQuery',
+  GetAddressesQuery = 'GetAddressesQuery',
+  WishlistLoadQuery = 'WishlistLoadQuery',
+  GetCountriesQuery = 'GetCountriesQuery',
+  GetDeliveryMethodsQuery = 'GetDeliveryMethodsQuery',
+  GetPaymentMethodsQuery = 'GetPaymentMethodsQuery',
 }
 
 const Queries: Record<QueryName, DocumentNode> = {
-  ProductVariantQuery,
+  GetProductVariantQuery,
   LoadUserQuery,
   StockLotsQuery,
-  GetCategories,
-  GetCategory,
-  GetProductTemplateList,
-  GetProduct,
-  GetWishlist,
-  LoadCart
+  GetCategoriesQuery,
+  GetCategoryQuery,
+  GetProductTemplateListQuery,
+  GetProductTemplateQuery,
+  WishlistLoadQuery,
+  LoadCartQuery,
+  GetAddressesQuery,
+  GetCountriesQuery,
+  GetDeliveryMethodsQuery,
+  GetPaymentMethodsQuery,
 };
 
-export { Queries, QueryName };
+const QueriesToByPassCache: string[] = [QueryName.LoadUserQuery, QueryName.WishlistLoadQuery, QueryName.LoadCartQuery];
+
+export { Queries, QueryName, QueriesToByPassCache };

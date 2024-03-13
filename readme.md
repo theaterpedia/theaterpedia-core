@@ -1,4 +1,4 @@
-# Theaterpedia-Core
+# Theaterpedia-Core: Theme Episodes
 
 ## What's inside?
 

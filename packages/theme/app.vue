@@ -1,16 +1,18 @@
-<template>
-  <Body class="font-body" :class="bodyClass" />
-  <VitePwaManifest />
-    <NuxtPage />
-</template>
-
 <script setup lang="ts">
-usePageTitle();
+import { useDark } from '@vueuse/core'
+usePageTitle()
 
-const bodyClass = ref('');
+const isDark = useDark()
+const bodyClass = ref('')
 
 onMounted(() => {
   // Need this class for cypress testing
-  bodyClass.value = 'hydrated';
-});
+  bodyClass.value = 'hydrated'
+})
 </script>
+
+<template>
+  <Body data-theme="grey" class="font-body" :class="(isDark ? 'dark ' : '') + bodyClass" />
+  <VitePwaManifest />
+  <NuxtPage />
+</template>
