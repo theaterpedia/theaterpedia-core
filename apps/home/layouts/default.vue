@@ -31,15 +31,16 @@ defineProps<DefaultLayoutProps>()
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
 const { loadCart, cartItemCount } = useCart()
-const { fetchCustomer, data: account } = useCustomer()
-
-loadCart()
-fetchCustomer()
-usePageTitle()
+const { user, loadUser, logout } = useUser()
 
 const cartLineItemsCount = computed(
   cartItemCount,
 )
+
+const logoutAndToggle = async () => {
+  await logout()
+  accountDropdownToggle()
+}
 
 const accountDropdown = [
   {
@@ -60,6 +61,11 @@ const accountDropdown = [
   },
 ]
 const NuxtLink = resolveComponent('NuxtLink')
+
+loadUser()
+loadCart()
+usePageTitle()
+
 </script>
 
 <template>
@@ -99,7 +105,7 @@ const NuxtLink = resolveComponent('NuxtLink')
               <template #prefix>
                 <SfIconPerson />
               </template>
-              {{ account?.firstName }}
+              {{ user?.name }}
             </SfButton>
           </template>
           <ul class="rounded bg-white shadow-md border border-neutral-100 text-neutral-900 min-w-[152px] py-2">
@@ -110,7 +116,7 @@ const NuxtLink = resolveComponent('NuxtLink')
                   tag="button"
                   class="text-left"
                   data-testid="account-dropdown-list-item"
-                  @click="accountDropdownToggle()"
+                  @click="logoutAndToggle()"
                 >
                   {{ $t(label) }}
                 </SfListItem>
