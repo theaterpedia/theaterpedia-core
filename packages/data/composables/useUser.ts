@@ -29,7 +29,7 @@ export const useUser = () => {
   const loadUser = async () => {
     loading.value = true;
 
-    const { data } = await $sdk().odoo.query<null, LoadUserQueryResponse>({ queryName: QueryName.LoadUserQuery });
+    const { data } = await $sdk().odoo.queryNoCache<null, LoadUserQueryResponse>({ queryName: QueryName.LoadUserQuery });
 
     userCookie.value = data.value.partner;
     user.value = data.value.partner;
