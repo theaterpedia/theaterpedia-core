@@ -44,7 +44,7 @@
     "@vueuse/core": "^10.9.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
-    "pruvious": "^3.10.4",
+    "pruvious": "^3.10.7",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
