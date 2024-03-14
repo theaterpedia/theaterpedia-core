@@ -4,7 +4,7 @@ import { Mutations } from '../../server/mutations';
 
 export default defineEventHandler((event) => {
   const config: MiddlewareConfig = {
-    odooGraphqlUrl: `${process.env.NUXT_PUBLIC_ODOO_BASE_URL}graphql/vsf`,
+    odooGraphqlUrl: 'https://dev.dasei.eu/graphql/vsf',
     queries: { ...Queries, ...Mutations },
     headers: {
       'REAL-IP': getRequestIP(event) || '',

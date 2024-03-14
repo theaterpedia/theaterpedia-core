@@ -14,6 +14,17 @@ export default defineNuxtConfig({
     typeCheck: false,
   },
 
+  runtimeConfig: {
+      // doesn't work on codesandbox > hardcodee
+      public: {
+        odooBaseUrl: 'https://dev.dasei.eu/', //hard-coded in packages/data/server/middleware/apolloClient.ts
+        odooBaseImageUrl: 'https://dev.dasei.eu/', //hard-coded in 2-3 locations (composables)
+        middlewareUrl: 'http://localhost:3000/', //hard-coded in apps/home/sdk.config
+        middlewarePort: '8443',
+        vsfPort: '3000'
+      },
+    },
+
   i18n: {
     // if you are using custom path, default
     vueI18n: isRootDir ? './node_modules/@crearis/theme-main/i18n.config.ts' : '../../node_modules/@crearis/theme-main/i18n.config.ts',
