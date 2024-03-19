@@ -127,4 +127,23 @@ export default defineNuxtConfig({
     },
     registerWebManifestInRouteRules: true,
   },
+  pruvious: {
+    api: {
+      routes: {
+        'login.post': false,
+        'logout.post': false,
+        'logout-all.post': false,
+        'logout-others.post': false,
+        'renew-token.post': false,
+      },
+    },
+    standardMiddleware: {
+      client: {
+        auth: false,
+      },
+      server: {
+        auth: false,
+      },
+    },
+  },
 });
