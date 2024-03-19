@@ -31,8 +31,8 @@ export const useUser = () => {
 
     const { data } = await $sdk().odoo.queryNoCache<null, LoadUserQueryResponse>({ queryName: QueryName.LoadUserQuery });
 
-    userCookie.value = data.value.partner;
-    user.value = data.value.partner;
+    userCookie.value = data.value?.partner;
+    user.value = data.value?.partner;
 
     loading.value = false;
   };
@@ -58,7 +58,7 @@ export const useUser = () => {
       return;
     }
 
-    user.value = data.value.partner;
+    user.value = data.value?.partner;
   };
 
   const login = async (params: MutationLoginArgs) => {
@@ -72,7 +72,7 @@ export const useUser = () => {
       return;
     }
 
-    user.value = data.value.partner;
+    user.value = data.value?.partner;
     router.push('/my-account');
   };
 
@@ -108,7 +108,7 @@ export const useUser = () => {
       return;
     }
 
-    user.value = data.value.updateMyAccount;
+    user.value = data.value?.updateMyAccount;
   };
 
   const updatePassword = async (params: MutationUpdatePasswordArgs) => {

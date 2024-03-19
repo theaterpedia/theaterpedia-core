@@ -16,6 +16,7 @@ import {
 } from '#pruvious/server'
 import { Endpoints } from '@erpgap/odoo-sdk-api-client'
 import { appendResponseHeader, defineEventHandler, setResponseStatus } from 'h3'
+import { $fetch } from 'ofetch'
 
 export default defineEventHandler(async (event) => {
   const api: Endpoints = event.context.apolloClient.api
@@ -43,14 +44,30 @@ export default defineEventHandler(async (event) => {
   }
 
   const response = await api.mutation({ mutationName: 'LoginMutation' } as any, { email, password } as any)
-
-  if ((response.data as any)?.cookie) {
-    appendResponseHeader(event, 'Set-cookie', (response.data as any)?.cookie)
-  }
-
+ 
   if (response.errors?.length) {
     setResponseStatus(event, 400)
     return response.errors[0].message
+  }
+  
+  // @todo resolve PORT in production
+  const userData = await $fetch(`http://localhost:${3000}/api/odoo/query-no-cache`, {
+    method: 'post',
+    body: [{ queryName: 'LoadUserQuery' }, null],
+    headers: { Cookie: (response.data as any)?.cookie },
+  }).catch(() => null)
+  
+  if (!userData?.partner) {
+    setResponseStatus(event, 400)
+    return 'Error while fetching user data'
+  }
+
+  if ((response.data as any)?.cookie) {
+    appendResponseHeader(event, 'Set-cookie', (response.data as any)?.cookie + '; odoo-user=' + encodeURIComponent(JSON.stringify(userData.partner)))
+    appendResponseHeader(event, 'Set-cookie', 'odoo-user=' + encodeURIComponent(JSON.stringify(userData.partner)) + '; Path=/')
+  } else {
+    setResponseStatus(event, 400)
+    return 'Unable to set cookie'
   }
 
   let user = await query('users', event.context.language).select(['id']).where('email', email).first()
@@ -65,6 +82,8 @@ export default defineEventHandler(async (event) => {
       return createResult.message ?? createResult.errors
     }
   }
+
+  // @todo check diff between user (Pruvious) and userData
 
   // Dummy token
   const token = generateToken(
