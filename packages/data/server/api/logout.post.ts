@@ -1,5 +1,6 @@
 // @ts-ignore
 import { __ } from '#pruvious/server'
+import { Endpoints } from '@erpgap/odoo-sdk-api-client'
 import { defineEventHandler, deleteCookie, setResponseStatus } from 'h3'
 
 export default defineEventHandler(async (event) => {
@@ -7,6 +8,9 @@ export default defineEventHandler(async (event) => {
     setResponseStatus(event, 401)
     return __(event, 'pruvious-server', 'Unauthorized due to either invalid credentials or missing authentication')
   }
+
+  const api: Endpoints = event.context.apolloClient.api;
+  await api.mutation({ mutationName: 'LogoutMutation' } as any, null);
 
   deleteCookie(event, 'session_id')
   deleteCookie(event, 'odoo-user')
