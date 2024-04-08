@@ -1,5 +1,13 @@
 import { defineEventHandler } from 'h3'
 import { Endpoints } from '@erpgap/odoo-sdk-api-client'
+
+import type {
+  UpdatePostSyncIdResponse,
+  UpdateSyncIdInput,
+} from '../../graphql';
+
+import { MutationName } from '../../server/mutations';
+
 // @ts-ignore
 import { query } from '#pruvious/server'
 // @ts-ignore
@@ -45,9 +53,9 @@ export default defineEventHandler(async (event) => {
     }
 
     if (!odooPost.syncId) {
-      await api.mutation(
-        { mutationName: 'UpdatePostSyncId' } as any,
-        { post: { id: 4, syncId: post.id, }, } as any
+      await api.mutation<UpdateSyncIdInput,UpdatePostSyncIdResponse>(
+        { mutationName: MutationName.UpdatePostSyncId } as any,
+        { post: { id: 4, syncId: post.id, }, }
       ).catch(e => console.log(e.networkError.result.errors))
     }
   }
