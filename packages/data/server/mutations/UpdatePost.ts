@@ -9,7 +9,7 @@ export default gql`
             metaTitle
             subtitle
             syncId
-            teaserText
+            teasertext
         }
     }
 `;
