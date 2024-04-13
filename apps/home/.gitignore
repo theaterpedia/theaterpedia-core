@@ -30,4 +30,5 @@ logs
 /.uploads
 /public/uploads
 pruvious.db
+pruvious-clone.db
 pruvious.db-journal
