@@ -12,6 +12,8 @@ import GetAddressesQuery from './GetAddressesQuery';
 import GetCountriesQuery from './GetCountriesQuery';
 import GetDeliveryMethodsQuery from './GetDeliveryMethodsQuery';
 import GetPaymentMethodsQuery from './GetPaymentMethodsQuery';
+import GetEventsQuery from './GetEventsQuery';
+import GetPostsQuery from './GetPostsQuery';
 
 enum QueryName {
   GetProductVariantQuery = 'GetProductVariantQuery',
@@ -28,6 +30,8 @@ enum QueryName {
   GetCountriesQuery = 'GetCountriesQuery',
   GetDeliveryMethodsQuery = 'GetDeliveryMethodsQuery',
   GetPaymentMethodsQuery = 'GetPaymentMethodsQuery',
+  GetEventsQuery = 'GetEventsQuery',
+  GetPostsQuery = 'GetPostsQuery',
 }
 
 const Queries: Record<QueryName, DocumentNode> = {
@@ -44,6 +48,8 @@ const Queries: Record<QueryName, DocumentNode> = {
   GetCountriesQuery,
   GetDeliveryMethodsQuery,
   GetPaymentMethodsQuery,
+  GetEventsQuery,
+  GetPostsQuery,
 };
 
 const QueriesToByPassCache: string[] = [QueryName.LoadUserQuery, QueryName.WishlistLoadQuery, QueryName.LoadCartQuery];

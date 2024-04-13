@@ -7,8 +7,8 @@ import type {
   ProductVariant,
   WishlistData,
   Country,
+  Post,
   ShippingMethod,
-  PaymentAcquirer,
 } from './gql/graphql';
 import { H3Error } from 'h3';
 import { _AsyncData } from 'nuxt/dist/app/composables/asyncData';
@@ -149,6 +149,27 @@ export type AddressesResponse = _AsyncData<
 export type AddAddressResponse = _AsyncData<
   {
     addAddress: Partner;
+  },
+  H3Error
+>;
+
+export type UpdatePostResponse = _AsyncData<
+  {
+    updatePost: Post;
+  },
+  H3Error
+>;
+
+export type AddPostResponse = _AsyncData<
+  {
+    addPost: Post;
+  },
+  H3Error
+>;
+
+export type UpdatePostSyncIdResponse = _AsyncData<
+  {
+    updateSyncId: Post;
   },
   H3Error
 >;
