@@ -25,6 +25,7 @@ query(
       id
       blocks
       syncId
+      homesite { domain }
       author { name }
       blog {name}
       metaTitle

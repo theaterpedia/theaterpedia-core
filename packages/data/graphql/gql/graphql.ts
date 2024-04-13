@@ -965,6 +965,7 @@ export type Post = {
   blocks: Maybe<Scalars['String']['output']>;
   blog: Maybe<Blog>;
   content: Maybe<Scalars['String']['output']>;
+  homesite: Maybe<Website>;
   id: Scalars['Int']['output'];
   isPublished: Maybe<Scalars['Boolean']['output']>;
   metaDescription: Maybe<Scalars['String']['output']>;
@@ -1440,6 +1441,7 @@ export enum VariantCreateMode {
 export type Website = {
   __typename?: 'Website';
   company: Maybe<Company>;
+  domain: Maybe<Scalars['String']['output']>;
   id: Maybe<Scalars['Int']['output']>;
   name: Maybe<Scalars['String']['output']>;
   publicUser: Maybe<User>;
