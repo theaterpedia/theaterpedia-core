@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client/core';
+import postFragment from '../fragments/postFragment';
 
 export default gql`
 query(
@@ -17,20 +18,7 @@ query(
   ) {
     totalCount 
     posts {
-      name
-      seoName
-      subtitle
-      isPublished
-      writeDate
-      id
-      blocks
-      syncId
-      homesite { domain }
-      author { name }
-      blog {name}
-      metaTitle
-      metaKeywords
-      metaDescription
+      ${postFragment}
     }
   }
 }
