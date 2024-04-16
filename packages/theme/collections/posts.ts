@@ -6,12 +6,12 @@ export default defineCollection(
   pageLikeCollection({
     name: 'posts',
     pathPrefix: 'posts',
+    icon: 'Pin',
     additionalFields: {
       syncId: {
-        type: 'number',
+        type: 'text',
         options: {
           required: true,
-          min: 1,
         },
         additional: {
           immutable: true,
@@ -19,6 +19,35 @@ export default defineCollection(
           validators: [uniqueValidator],
           index: true,
           nullable: false,
+        },
+      },
+      version: {
+        type: 'number',
+        options: {
+          min: 1,
+          required: true
+        },
+        additional: {
+          protected: true,
+          nullable: false,
+        }
+      },
+      headline: {
+        type: 'text',
+        options: {},
+      },
+      overline: {
+        type: 'text',
+        options: {},
+      },
+      teaserText: {
+        type: 'text',
+        options: {},
+      },
+      author: {
+        type: 'record',
+        options: {
+          collection: 'users',
         },
       },
     },
