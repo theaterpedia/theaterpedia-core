@@ -21,6 +21,7 @@ import { appendResponseHeader, defineEventHandler, getRequestHost, getRequestIP,
 import { Partner } from '../../graphql'
 import { Queries } from '../../server/queries';
 import { Mutations } from '../../server/mutations';
+import { ensureUser } from '../../utils/sync';
 
 export default defineEventHandler(async (event) => {
   const api: Endpoints = event.context.apolloClient.api
@@ -65,8 +66,6 @@ export default defineEventHandler(async (event) => {
   })
 
   const userData = await newClient.api.query<any, { partner: Partner }>({ queryName: 'LoadUserQuery' } as any, null)
-
-  console.log(userData)
   
   if (!userData?.data?.partner) {
     setResponseStatus(event, 400)
@@ -81,30 +80,7 @@ export default defineEventHandler(async (event) => {
     return 'Unable to set cookie'
   }
 
-  let user = await query('users', event.context.language)
-    .select(['id', 'capabilities', 'role'])
-    .where('email', email)
-    .populate()
-    .first()
-
-  if (!user) {
-    const createResult = await query('users')
-      .select(['id', 'capabilities', 'role'])
-      .populate()
-      .create({ email, password, isActive: true })
-
-    if (createResult.success) {
-      user = createResult.record
-    } else {
-      setResponseStatus(event, 500)
-      return createResult.message ?? createResult.errors
-    }
-  }
-
-  // @todo resolve capabilities
-  // @see https://www.mindomo.com/mindmap/7379ca4f82216d606f843655be7ad166?t=8e9071a55a6c8ea26cf6e2d0eac28c64
-  const capabilities = await getCapabilities(user)
-  console.log('capabilities for user', user.id, capabilities)
+  const user = await ensureUser(email)
 
   // Dummy token
   const token = generateToken(
