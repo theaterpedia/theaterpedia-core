@@ -1,5 +1,5 @@
 // @ts-ignore
-import { catchFirstErrorMessage, isKeyOf, isObject } from '#pruvious'
+import { catchFirstErrorMessage, getCapabilities, isKeyOf, isObject } from '#pruvious'
 import {
   __,
   booleanValidator,
@@ -15,8 +15,12 @@ import {
   // @ts-ignore
 } from '#pruvious/server'
 import { Endpoints } from '@erpgap/odoo-sdk-api-client'
-import { appendResponseHeader, defineEventHandler, setResponseStatus } from 'h3'
-import { $fetch } from 'ofetch'
+// @ts-ignore
+import { createApiClient } from '@erpgap/odoo-sdk-api-client/server';
+import { appendResponseHeader, defineEventHandler, getRequestHost, getRequestIP, parseCookies, setCookie, setResponseStatus } from 'h3'
+import { Partner } from '../../graphql'
+import { Queries } from '../../server/queries';
+import { Mutations } from '../../server/mutations';
 
 export default defineEventHandler(async (event) => {
   const api: Endpoints = event.context.apolloClient.api
@@ -43,37 +47,51 @@ export default defineEventHandler(async (event) => {
     return errors
   }
 
-  const response = await api.mutation({ mutationName: 'LoginMutation' } as any, { email, password } as any)
+  const response = await api.mutation<any, any>({ mutationName: 'LoginMutation' } as any, { email, password } as any)
  
-  if (response.errors?.length) {
+  if (response.errors?.length || !response.data?.cookie) {
     setResponseStatus(event, 400)
     return response.errors[0].message
   }
+
+  const newClient = createApiClient({
+    odooGraphqlUrl: `${process.env.NUXT_PUBLIC_ODOO_BASE_URL}graphql/vsf`,
+    queries: { ...Queries, ...Mutations },
+    headers: {
+      'REAL-IP': getRequestIP(event) || '',
+      Cookie: response.data.cookie,
+      'resquest-host': getRequestHost(event),
+    },
+  })
+
+  const userData = await newClient.api.query<any, { partner: Partner }>({ queryName: 'LoadUserQuery' } as any, null)
+
+  console.log(userData)
   
-  // @todo resolve PORT in production
-  const userData = await $fetch(`http://localhost:${3000}/api/odoo/query-no-cache`, {
-    method: 'post',
-    body: [{ queryName: 'LoadUserQuery' }, null],
-    headers: { Cookie: (response.data as any)?.cookie },
-  }).catch(() => null)
-  
-  if (!userData?.partner) {
+  if (!userData?.data?.partner) {
     setResponseStatus(event, 400)
     return 'Error while fetching user data'
   }
 
-  if ((response.data as any)?.cookie) {
-    appendResponseHeader(event, 'Set-cookie', (response.data as any)?.cookie + '; odoo-user=' + encodeURIComponent(JSON.stringify(userData.partner)))
-    appendResponseHeader(event, 'Set-cookie', 'odoo-user=' + encodeURIComponent(JSON.stringify(userData.partner)) + '; Path=/')
+  if (response.data?.cookie) {
+    appendResponseHeader(event, 'Set-cookie', response.data?.cookie + '; odoo-user=' + encodeURIComponent(JSON.stringify(userData.data.partner)))
+    appendResponseHeader(event, 'Set-cookie', 'odoo-user=' + encodeURIComponent(JSON.stringify(userData.data.partner)) + '; Path=/')
   } else {
     setResponseStatus(event, 400)
     return 'Unable to set cookie'
   }
 
-  let user = await query('users', event.context.language).select(['id']).where('email', email).first()
+  let user = await query('users', event.context.language)
+    .select(['id', 'capabilities', 'role'])
+    .where('email', email)
+    .populate()
+    .first()
 
   if (!user) {
-    const createResult = await query('users').select(['id']).create({ email, password, isActive: true })
+    const createResult = await query('users')
+      .select(['id', 'capabilities', 'role'])
+      .populate()
+      .create({ email, password, isActive: true })
 
     if (createResult.success) {
       user = createResult.record
@@ -83,7 +101,10 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  // @todo check diff between user (Pruvious) and userData
+  // @todo resolve capabilities
+  // @see https://www.mindomo.com/mindmap/7379ca4f82216d606f843655be7ad166?t=8e9071a55a6c8ea26cf6e2d0eac28c64
+  const capabilities = await getCapabilities(user)
+  console.log('capabilities for user', user.id, capabilities)
 
   // Dummy token
   const token = generateToken(
