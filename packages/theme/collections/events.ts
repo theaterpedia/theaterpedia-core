@@ -1,12 +1,13 @@
 import { defineCollection } from '#pruvious'
 import { pageLikeCollection } from '#pruvious/standard'
 import { uniqueValidator } from '#pruvious/server'
+import { EventEditMode } from '@crearis/data-main/graphql'
 
 export default defineCollection(
   pageLikeCollection({
-    name: 'posts',
-    pathPrefix: 'posts',
-    icon: 'Pin',
+    name: 'events',
+    pathPrefix: 'events',
+    icon: 'CalendarEvent',
     additionalFields: {
       syncId: {
         type: 'text',
@@ -30,7 +31,14 @@ export default defineCollection(
         additional: {
           protected: true,
           nullable: false,
-        }
+        },
+      },
+      editMode: {
+        type: 'button-group',
+        options: {
+          choices: Object.fromEntries(Object.entries(EventEditMode).map(([key, value]) => [value, key])),
+          required: true,
+        },
       },
       headline: {
         type: 'text',
@@ -44,7 +52,15 @@ export default defineCollection(
         type: 'text',
         options: {},
       },
-      author: {
+      dateBegin: {
+        type: 'date-time',
+        options: {}
+      },
+      dateEnd: {
+        type: 'date-time',
+        options: {},
+      },
+      organizer: {
         type: 'record',
         options: {
           collection: 'users',
