@@ -1,5 +1,5 @@
 // @ts-ignore
-import { catchFirstErrorMessage, getCapabilities, isKeyOf, isObject } from '#pruvious'
+import { catchFirstErrorMessage, isKeyOf, isObject } from '#pruvious'
 import {
   __,
   booleanValidator,
@@ -8,7 +8,6 @@ import {
   generateToken,
   getModuleOption,
   pruviousReadBody,
-  query,
   requiredValidator,
   stringSanitizer,
   stringValidator,
@@ -21,7 +20,7 @@ import { appendResponseHeader, defineEventHandler, getRequestHost, getRequestIP,
 import { Partner } from '../../graphql'
 import { Queries } from '../../server/queries';
 import { Mutations } from '../../server/mutations';
-import { ensureUser } from '../../utils/sync';
+import { ensureUser } from '../../utils/user';
 
 export default defineEventHandler(async (event) => {
   const api: Endpoints = event.context.apolloClient.api

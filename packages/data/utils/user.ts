@@ -34,11 +34,3 @@ export async function ensureUser(email: string) {
 
   return user
 }
-
-/**
- * Filter Odoo records for the current site by checking the `syncId` prefix against the `siteId`.
- */
-export async function filterRecordsForThisSite<T extends { syncId: string }>(records: T[]): Promise<T[]> {
-  const { siteId } = await query('settings').read()
-  return records.filter((record) => record.syncId.startsWith(`${siteId}.`))
-}
