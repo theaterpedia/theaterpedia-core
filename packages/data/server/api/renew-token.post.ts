@@ -10,8 +10,13 @@ export default defineEventHandler(async (event) => {
   }
 
   const currentToken = getBearerToken(event)
-  const { iat, exp } = jwt.decode(currentToken)
-  const newToken = generateToken(event.context.auth.user.id, exp - iat)
 
-  return newToken
+  try {
+    const { iat, exp } = jwt.decode(currentToken)
+    const newToken = generateToken(event.context.auth.user.id, exp - iat)
+
+    return newToken
+  } catch {
+    return currentToken
+  }
 })
