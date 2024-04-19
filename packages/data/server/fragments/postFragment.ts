@@ -1,6 +1,8 @@
 export default `
   syncId
   id
+  slugPost
+  slugBlog
   writeDate
   version
   isPublished

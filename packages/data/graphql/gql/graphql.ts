@@ -295,6 +295,7 @@ export type Event = {
   overline: Maybe<Scalars['String']['output']>;
   publicUser: Maybe<User>;
   seatsLimited: Maybe<Scalars['Boolean']['output']>;
+  slug: Maybe<Scalars['String']['output']>;
   stage: Maybe<EventStage>;
   syncId: Maybe<Scalars['String']['output']>;
   teasertext: Maybe<Scalars['String']['output']>;
@@ -964,6 +965,8 @@ export type Post = {
   postDate: Maybe<Scalars['String']['output']>;
   publishedDate: Maybe<Scalars['String']['output']>;
   seoName: Maybe<Scalars['String']['output']>;
+  slugBlog: Maybe<Scalars['String']['output']>;
+  slugPost: Maybe<Scalars['String']['output']>;
   syncId: Maybe<Scalars['String']['output']>;
   teasertext: Maybe<Scalars['String']['output']>;
   version: Maybe<Scalars['Int']['output']>;

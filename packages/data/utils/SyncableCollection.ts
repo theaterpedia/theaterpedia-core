@@ -92,7 +92,7 @@ export class SyncableOdooCollection {
     if (this.collection === 'posts') {
       return {
         ...base,
-        path: odooRecord.seoName || nanoid(),
+        path: odooRecord.slugBlog + odooRecord.slugPost, // @todo catch noslug-error via nanoid,
         title: odooRecord.metaTitle || '',
         metaTags: odooRecord.metaKeywords ? [{ name: 'keywords', content: odooRecord.metaKeywords }] : [],
         blocks: [], // @todo must be an array in Odoo (cannot sync yet)
@@ -103,7 +103,7 @@ export class SyncableOdooCollection {
       return {
         ...base,
         editMode: odooRecord.editMode,
-        path: nanoid(), // @todo must be a unique path (missing in Odoo)
+        path: odooRecord.slug || nanoid(),
         title: odooRecord.metaTitle || '',
         metaTags: odooRecord.metaKeywords ? [{ name: 'keywords', content: odooRecord.metaKeywords }] : [],
         blocks: [], // @todo must be an array in Odoo (cannot sync yet)

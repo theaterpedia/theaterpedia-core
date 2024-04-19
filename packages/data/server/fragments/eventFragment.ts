@@ -1,6 +1,7 @@
 export default `
     syncId
     id
+    slug
     writeDate	      
     version
     editMode

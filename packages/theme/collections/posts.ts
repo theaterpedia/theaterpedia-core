@@ -5,7 +5,7 @@ import { uniqueValidator } from '#pruvious/server'
 export default defineCollection(
   pageLikeCollection({
     name: 'posts',
-    pathPrefix: 'posts',
+    pathPrefix: 'blog',
     icon: 'Pin',
     additionalFields: {
       syncId: {
