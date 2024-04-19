@@ -32,10 +32,6 @@ export default defineCollection(
           nullable: false,
         }
       },
-      headline: {
-        type: 'text',
-        options: {},
-      },
       overline: {
         type: 'text',
         options: {},

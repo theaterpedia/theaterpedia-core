@@ -40,10 +40,6 @@ export default defineCollection(
           required: true,
         },
       },
-      headline: {
-        type: 'text',
-        options: {},
-      },
       overline: {
         type: 'text',
         options: {},

@@ -35,7 +35,7 @@ export type AddAddressInput = {
 
 export type AddBlogPostInput = {
   authorId: Scalars['Int']['input'];
-  blocks: InputMaybe<Scalars['String']['input']>;
+  blocks: InputMaybe<Scalars['GenericScalar']['input']>;
   blogId: InputMaybe<Scalars['Int']['input']>;
   metaDescription: InputMaybe<Scalars['String']['input']>;
   metaKeywords: InputMaybe<Scalars['String']['input']>;
@@ -274,7 +274,7 @@ export type DeleteAddressInput = {
 export type Event = {
   __typename?: 'Event';
   barcode: Maybe<Scalars['String']['output']>;
-  blocks: Maybe<Scalars['String']['output']>;
+  blocks: Maybe<Scalars['GenericScalar']['output']>;
   company: Maybe<Partner>;
   currency: Maybe<Currency>;
   dateBegin: Maybe<Scalars['String']['output']>;
@@ -950,7 +950,7 @@ export enum PaymentTransactionState {
 export type Post = {
   __typename?: 'Post';
   author: Maybe<Partner>;
-  blocks: Maybe<Scalars['String']['output']>;
+  blocks: Maybe<Scalars['GenericScalar']['output']>;
   blog: Maybe<Blog>;
   content: Maybe<Scalars['String']['output']>;
   domainCode: Maybe<Scalars['String']['output']>;
@@ -1400,7 +1400,7 @@ export type UpdateMyAccountParams = {
 
 export type UpdatePostInput = {
   authorId: InputMaybe<Scalars['Int']['input']>;
-  blocks: InputMaybe<Scalars['String']['input']>;
+  blocks: InputMaybe<Scalars['GenericScalar']['input']>;
   headline: InputMaybe<Scalars['String']['input']>;
   id: Scalars['Int']['input'];
   metaDescription: InputMaybe<Scalars['String']['input']>;

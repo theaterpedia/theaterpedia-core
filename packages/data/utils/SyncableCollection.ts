@@ -7,6 +7,7 @@ import { createApiClient, type Endpoints } from "@erpgap/odoo-sdk-api-client/ser
 import { nanoid } from 'nanoid'
 import { Queries } from "../server/queries";
 import { Mutations } from "../server/mutations";
+import { json } from "stream/consumers";
 
 export interface CollectionSyncResult {
   created: any[]
@@ -93,9 +94,10 @@ export class SyncableOdooCollection {
       return {
         ...base,
         path: odooRecord.slugBlog + odooRecord.slugPost, // @todo catch noslug-error via nanoid,
-        title: odooRecord.metaTitle || '',
+        title: odooRecord.headline || '',
+        overline: odooRecord.overline || '',
         metaTags: odooRecord.metaKeywords ? [{ name: 'keywords', content: odooRecord.metaKeywords }] : [],
-        blocks: [], // @todo must be an array in Odoo (cannot sync yet)
+        blocks: odooRecord.blocks ? odooRecord.blocks : [], 
         publishDate: odooRecord.postDate ? new Date(odooRecord.postDate).getTime() : null,
         author: odooRecord.author ? (await ensureUser(odooRecord.author.email))?.id : null,
       }
@@ -104,9 +106,10 @@ export class SyncableOdooCollection {
         ...base,
         editMode: odooRecord.editMode,
         path: odooRecord.slug || nanoid(),
-        title: odooRecord.metaTitle || '',
+        title: odooRecord.headline || '',
+        overline: odooRecord.overline || '',
         metaTags: odooRecord.metaKeywords ? [{ name: 'keywords', content: odooRecord.metaKeywords }] : [],
-        blocks: [], // @todo must be an array in Odoo (cannot sync yet)
+        blocks: odooRecord.blocks ? odooRecord.blocks : [], 
         dateBegin: odooRecord.dateBegin ? new Date(odooRecord.dateBegin).getTime() : null,
         dateEnd: odooRecord.dateEnd ? new Date(odooRecord.dateEnd).getTime() : null,
         organizer: odooRecord.organizer ? (await ensureUser(odooRecord.organizer.email))?.id : null,
