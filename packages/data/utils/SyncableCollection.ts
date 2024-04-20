@@ -8,6 +8,7 @@ import { type Endpoints } from "@erpgap/odoo-sdk-api-client/server";
 import { nanoid } from 'nanoid'
 import { Queries } from "../server/queries";
 import { Mutations } from "../server/mutations";
+import { logError, logInfo } from "./logger";
 
 export interface CollectionSyncResult {
   created: any[]
@@ -29,56 +30,74 @@ export class SyncableOdooCollection {
    * - Delete records that do not exist in `odooRecords` by comparing the `syncId`.
    */
   async syncFromOdoo() {
-    await this.ensureApolloClient()
-
-    const queryName = `Get${capitalize(this.collection)}Query`
-    const odooRecordsResponse = await this.apolloClientApi.query<any, any>({ queryName } as any, {} as any)
-    const odooRecords = await this.filterRecordsForThisSite(odooRecordsResponse.data[this.collection][this.collection])
-    const result: CollectionSyncResult = { created: [], updated: [], errors: {} }
-
-    // Delete Pruvious records that are not in Odoo
-    await (query as any)(this.collection)
-      .whereNotIn('syncId', odooRecords.map((odooRecord) => odooRecord.syncId))
-      .delete()
-
-    for (const odooRecord of odooRecords) {  
-      // Find matching record in Pruvious
-      let record = await (query as any)(this.collection)
-        .selectAll()
-        .where('syncId', odooRecord.syncId)
-        .first()
+    try {
+      await this.ensureApolloClient()
   
-      // Update Pruvious record if it is outdated
-      if (record && record.updatedAt < new Date(record.writeDate).getTime()) {
-        const qr = await (query as any)(this.collection)
+      const queryName = `Get${capitalize(this.collection)}Query`
+      const odooRecordsResponse = await this.apolloClientApi.query<any, any>({ queryName } as any, {} as any)
+      const odooRecords = await this.filterRecordsForThisSite(odooRecordsResponse.data[this.collection][this.collection])
+      const result: CollectionSyncResult = { created: [], updated: [], errors: {} }
+  
+      // Delete Pruvious records that are not in Odoo
+      await (query as any)(this.collection)
+        .whereNotIn('syncId', odooRecords.map((odooRecord) => odooRecord.syncId))
+        .delete()
+  
+      for (const odooRecord of odooRecords) {  
+        // Find matching record in Pruvious
+        let record = await (query as any)(this.collection)
           .selectAll()
-          .where('id', record.id)
-          .update(await this.mapOdooToPruviousFields(odooRecord))
-  
-        if (qr.success) {
-          result.updated.push(qr.records[0])
-        } else {
-          result.errors[`create:${odooRecord.syncId}`] = qr.message ?? qr.errors
+          .where('syncId', odooRecord.syncId)
+          .first()
+    
+        // Update Pruvious record if it is outdated
+        if (record && record.updatedAt < new Date(record.writeDate).getTime()) {
+          const qr = await (query as any)(this.collection)
+            .selectAll()
+            .where('id', record.id)
+            .update(await this.mapOdooToPruviousFields(odooRecord))
+    
+          if (qr.success) {
+            result.updated.push(qr.records[0])
+          } else {
+            result.errors[`create:${odooRecord.syncId}`] = qr.message ?? qr.errors
+          }
+        }
+        
+        // Create record if it does not exist in Pruvious
+        if (!record) {
+          const qr = await (query as any)(this.collection)
+            .select(['id'])
+            .create(await this.mapOdooToPruviousFields(odooRecord))
+    
+          if (qr.success) {
+            result.created.push(qr.record)
+          } else {
+            result.errors[`create:${odooRecord.syncId}`] = qr.message ?? qr.errors
+          }
         }
       }
-      
-      // Create record if it does not exist in Pruvious
-      if (!record) {
-        const qr = await (query as any)(this.collection)
-          .select(['id'])
-          .create(await this.mapOdooToPruviousFields(odooRecord))
+
+      const logMessage = [
+        `Synced collection '${this.collection}' from Odoo to Pruvious.`,
+        '',
+        JSON.stringify(result, null, 2)
+      ]
   
-        if (qr.success) {
-          result.created.push(qr.record)
-        } else {
-          result.errors[`create:${odooRecord.syncId}`] = qr.message ?? qr.errors
-        }
+      if (Object.keys(result.errors).length) {
+        await logError('odoo-sync', logMessage.join('\n'))
+      } else {
+        await logInfo('odoo-sync', logMessage.join('\n'))
       }
+  
+      return result
+    } catch (e: any) {
+      await logError(
+        'odoo-sync',
+        `Unexpected error syncing collection '${this.collection}' from Odoo to Pruvious: ${e.message}`
+      )
+      throw e
     }
-
-    // @todo log result
-
-    return result
   }
 
   /**
@@ -145,7 +164,6 @@ export class SyncableOdooCollection {
     )
  
     if (loginResponse.errors?.length || !loginResponse.data?.cookie) {
-      // @todo log error
       throw new Error(loginResponse.errors[0].message)
     }    
     

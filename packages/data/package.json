@@ -40,6 +40,7 @@
 
     "vue-toastification": "2.0.0-rc.5",
     "pruvious": "^3.11.4",
+    "redis": "^4.6.12",
 
     "@erpgap/odoo-sdk": "^0.6.1",
     "@erpgap/odoo-sdk-api-client": "^0.6.1",

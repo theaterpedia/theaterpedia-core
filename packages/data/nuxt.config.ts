@@ -59,6 +59,7 @@ export default defineNuxtConfig({
       host: "localhost",
       port: 6379,
     },
+    redisLogUrl: 'redis://127.0.0.1:6379/2',
     // see: ThemeConfig
     public: {
       odooBaseImageUrl: "",
