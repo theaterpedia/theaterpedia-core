@@ -1,4 +1,3 @@
-// @ts-ignore
 import { catchFirstErrorMessage, isKeyOf, isObject } from '#pruvious'
 import {
   __,
@@ -11,13 +10,12 @@ import {
   requiredValidator,
   stringSanitizer,
   stringValidator,
-  // @ts-ignore
 } from '#pruvious/server'
-import { Endpoints } from '@erpgap/odoo-sdk-api-client'
+import { type Endpoints } from '@erpgap/odoo-sdk-api-client'
 // @ts-ignore
 import { createApiClient } from '@erpgap/odoo-sdk-api-client/server';
 import { appendResponseHeader, defineEventHandler, getRequestHost, getRequestIP, parseCookies, setCookie, setResponseStatus } from 'h3'
-import { Partner } from '../../graphql'
+import { type Partner } from '../../graphql'
 import { Queries } from '../../server/queries';
 import { Mutations } from '../../server/mutations';
 import { ensureUser } from '../../utils/user';
@@ -51,7 +49,7 @@ export default defineEventHandler(async (event) => {
  
   if (response.errors?.length || !response.data?.cookie) {
     setResponseStatus(event, 400)
-    return response.errors[0].message
+    return response?.errors?.[0].message || 'Error while logging in'
   }
 
   const newClient = createApiClient({

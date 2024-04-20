@@ -3,11 +3,11 @@ import { query } from "#pruvious/server";
 import { ensureUser } from "./user";
 import type { MiddlewareConfig } from "@erpgap/odoo-sdk-api-client";
 // @ts-ignore
-import { createApiClient, type Endpoints } from "@erpgap/odoo-sdk-api-client/server";
+import { createApiClient } from "@erpgap/odoo-sdk-api-client/server";
+import { type Endpoints } from "@erpgap/odoo-sdk-api-client/server";
 import { nanoid } from 'nanoid'
 import { Queries } from "../server/queries";
 import { Mutations } from "../server/mutations";
-import { json } from "stream/consumers";
 
 export interface CollectionSyncResult {
   created: any[]

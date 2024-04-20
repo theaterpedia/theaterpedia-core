@@ -1,7 +1,6 @@
-// @ts-ignore
 import { __, generateToken, getBearerToken } from '#pruvious/server'
 import { defineEventHandler, setResponseStatus } from 'h3'
-import jwt from 'jsonwebtoken'
+import jwt, { type JwtPayload } from 'jsonwebtoken'
 
 export default defineEventHandler(async (event) => {
   if (!event.context.auth.isLoggedIn) {
@@ -12,8 +11,8 @@ export default defineEventHandler(async (event) => {
   const currentToken = getBearerToken(event)
 
   try {
-    const { iat, exp } = jwt.decode(currentToken)
-    const newToken = generateToken(event.context.auth.user.id, exp - iat)
+    const { iat, exp } = jwt.decode(currentToken) as JwtPayload
+    const newToken = generateToken(event.context.auth.user.id, exp! - iat!)
 
     return newToken
   } catch {
