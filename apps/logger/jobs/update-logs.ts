@@ -4,7 +4,7 @@ import { redisLogClient } from "../utils/redis-log-client";
 
 export default defineJob({
   name: 'update-logs',
-  interval: 60,
+  interval: 3,
   callback: async () => {
     const client = await redisLogClient()
     const logs = await client.lRange('logs', 0, -1)
