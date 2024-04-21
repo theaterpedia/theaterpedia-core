@@ -37,7 +37,7 @@ export class SyncableOdooCollection {
       const odooRecordsResponse = await this.apolloClientApi.query<any, any>({ queryName } as any, {} as any)
       const odooRecords = await this.filterRecordsForThisSite(odooRecordsResponse.data[this.collection][this.collection])
       const result: CollectionSyncResult = { created: [], updated: [], errors: {} }
-  
+
       // Delete Pruvious records that are not in Odoo
       await (query as any)(this.collection)
         .whereNotIn('syncId', odooRecords.map((odooRecord) => odooRecord.syncId))
@@ -101,6 +101,32 @@ export class SyncableOdooCollection {
   }
 
   /**
+   * Sync a single record from Pruvious to Odoo.
+   */
+  async syncRecordToOdoo(recordId: number) {
+    try {
+      await this.ensureApolloClient()
+
+      const record = await (query as any)(this.collection)
+        .where('id', recordId)
+        .populate()
+        .first()
+  
+      const mutationName = `Add${capitalize(this.collection)}Mutation`
+      const odooRecord = await this.mapPruviousToOdooFields(record)
+      const odooResponse = await this.apolloClientApi.mutation<any, any>({ mutationName } as any, odooRecord as any)
+  
+      return odooResponse // @todo handle result
+    } catch (e: any) {
+      await logError(
+        'odoo-sync',
+        `Unexpected error creating '${this.collection}' record from Pruvious to Odoo: ${e.message}`
+      )
+      throw e
+    }
+  }
+
+  /**
    * Map Odoo fields to Pruvious fields.
    */
   async mapOdooToPruviousFields(odooRecord: Record<string, any>) {
@@ -132,6 +158,35 @@ export class SyncableOdooCollection {
         dateBegin: odooRecord.dateBegin ? new Date(odooRecord.dateBegin).getTime() : null,
         dateEnd: odooRecord.dateEnd ? new Date(odooRecord.dateEnd).getTime() : null,
         organizer: odooRecord.organizer ? (await ensureUser(odooRecord.organizer.email))?.id : null,
+      }
+    }
+  }
+
+  /**
+   * Map Pruvious fields to Odoo fields.
+   */
+  async mapPruviousToOdooFields(record: Record<string, any>) {
+    const base: Record<string, any> = {
+      version: record.version,
+    }
+
+    if (this.collection === 'posts') {
+      const secondPathSlash = record.path.slice(1).indexOf('/')
+
+      return {
+        ...base,
+        slugBlog: secondPathSlash > -1 ? record.path.slice(0, secondPathSlash) : '',
+        slugPost: secondPathSlash > -1 ? record.path.slice(secondPathSlash + 1) : record.path,
+        headline: record.title,
+        overline: record.overline,
+        metaKeywords: record.metaTags.find((tag: any) => tag.name === 'keywords')?.content ?? '',
+        blocks: record.blocks, 
+        publishDate: record.publishDate ? new Date(record.publishDate).toISOString() : null,
+        author: record.author.email,
+      }
+    } else if (this.collection === 'events') {
+      return {
+        ...base,
       }
     }
   }
