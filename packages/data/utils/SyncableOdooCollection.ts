@@ -51,7 +51,7 @@ export class SyncableOdooCollection {
           .first()
     
         // Update Pruvious record if it is outdated
-        if (record && record.updatedAt < new Date(record.writeDate).getTime()) {
+        if (record && record.updatedAt < new Date((odooRecord as any).writeDate).getTime()) {
           const qr = await (query as any)(this.collection)
             .selectAll()
             .where('id', record.id)
@@ -60,7 +60,7 @@ export class SyncableOdooCollection {
           if (qr.success) {
             result.updated.push(qr.records[0])
           } else {
-            result.errors[`create:${odooRecord.syncId}`] = qr.message ?? qr.errors
+            result.errors[`update:${odooRecord.syncId}`] = qr.message ?? qr.errors
           }
         }
         
