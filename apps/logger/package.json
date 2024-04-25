@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^3.10.2",
-    "pruvious": "^3.11.4",
+    "pruvious": "^3.11.6",
     "vue": "^3.4.0",
     "vue-router": "^4.2.0"
   }
