@@ -43,6 +43,7 @@ export default defineCollection({
       type: 'select',
       options: {
         choices: {
+          'ms-sync': 'Microsoft Sync',
           'odoo-sync': 'Odoo Sync',
         },
         required: true,

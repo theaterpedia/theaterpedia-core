@@ -138,6 +138,13 @@ export default defineNuxtConfig({
         'renew-token.post': false,
       },
     },
+    dashboard: {
+      baseComponents: {
+        misc: {
+          QuickActions: './components/DashboardSyncMicrosoftCollections.vue',
+        },
+      },
+    },
     standardMiddleware: {
       client: {
         auth: false,

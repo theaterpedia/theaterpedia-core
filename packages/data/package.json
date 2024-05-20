@@ -39,8 +39,9 @@
     "@crearis/crearis-boilerplate-sdk": "~0.0.11",
 
     "vue-toastification": "2.0.0-rc.5",
-    "pruvious": "^3.11.4",
+    "pruvious": "^3.11.6",
     "redis": "^4.6.12",
+    "@azure/msal-node": "^2.7.0",
 
     "@erpgap/odoo-sdk": "^0.6.1",
     "@erpgap/odoo-sdk-api-client": "^0.6.1",

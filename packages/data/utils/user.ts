@@ -19,7 +19,7 @@ export async function ensureUser(email: string) {
     const createResult = await query('users')
       .selectAll()
       .populate()
-      .create({ email, password: nanoid(), isActive: true } as any) // @todo make fields with default values optional
+      .create({ email, password: nanoid(), isActive: true } as any)
 
     if (createResult.success) {
       user = createResult.record
