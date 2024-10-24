@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client/core';
+import eventFragment from '../fragments/eventFragment';
 
 export default gql`
 query(
@@ -19,17 +20,7 @@ query(
     minDate
     maxDate    
     events {
-      overline
-      headline
-      teasertext
-      writeDate
-      stage { name, description }
-      id
-      dateBegin
-      dateEnd
-      eventType { name, seatsMax }
-      blocks
-      syncId
+      ${eventFragment}
     }
   }
 }

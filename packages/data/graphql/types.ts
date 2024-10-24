@@ -167,13 +167,6 @@ export type AddPostResponse = _AsyncData<
   H3Error
 >;
 
-export type UpdatePostSyncIdResponse = _AsyncData<
-  {
-    updateSyncId: Post;
-  },
-  H3Error
->;
-
 export type UpdatePasswordResponse = _AsyncData<
   {
     updatePassword: {

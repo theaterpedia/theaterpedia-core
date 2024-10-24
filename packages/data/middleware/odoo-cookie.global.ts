@@ -1,11 +1,9 @@
-// @ts-ignore
 import { defineNuxtRouteMiddleware, useCookie } from '#imports'
 
 export default defineNuxtRouteMiddleware(async () => {
   if (process.client) {
-    // @ts-ignore
     const { getRawToken, removeToken, setToken, useAuth } = await import('#pruvious/client')
-    const cookie = useCookie('odoo-user')
+    const cookie = useCookie('odoo-user') as Ref<{ id: number }>
     const auth = useAuth()
     
     if (!cookie.value?.id) {
@@ -64,7 +62,7 @@ async function sign(data: string) {
     })
     .then((token) => {
       const u8 = new Uint8Array(token)
-      const b64encoded = btoa(String.fromCharCode.apply(null, u8))
+      const b64encoded = btoa(String.fromCharCode.apply(null, u8 as any))
 
       return b64encoded
     })

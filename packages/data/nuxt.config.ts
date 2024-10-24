@@ -59,6 +59,7 @@ export default defineNuxtConfig({
       host: "localhost",
       port: 6379,
     },
+    redisLogUrl: 'redis://127.0.0.1:6379/2',
     // see: ThemeConfig
     public: {
       odooBaseImageUrl: "",
@@ -135,6 +136,13 @@ export default defineNuxtConfig({
         'logout-all.post': false,
         'logout-others.post': false,
         'renew-token.post': false,
+      },
+    },
+    dashboard: {
+      baseComponents: {
+        misc: {
+          QuickActions: './components/DashboardSyncMicrosoftCollections.vue',
+        },
       },
     },
     standardMiddleware: {

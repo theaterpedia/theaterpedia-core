@@ -1,4 +1,3 @@
-// @ts-ignore
 import { getModuleOption } from '#pruvious/server'
 import parser from 'accept-language-parser'
 import { defineEventHandler, getHeader } from 'h3'

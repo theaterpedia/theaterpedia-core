@@ -1,8 +1,3 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "types": ["vitest/globals", "@vite-pwa/nuxt", "@vue-storefront/sdk"]
-  },
-  "exclude": ["node_modules", "mocks", "__tests__", "cypress.config.ts"],
-  "include": ["../../node_modules/@vitest/expect/index.d.ts"]
+  "extends": "../../apps/home/tsconfig.json"
 }
