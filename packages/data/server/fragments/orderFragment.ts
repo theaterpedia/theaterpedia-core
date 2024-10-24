@@ -27,7 +27,7 @@ order {
         attribute{
           name
         }
-      }      
+      }
     }
     quantity
     priceTotal
@@ -50,7 +50,7 @@ order {
         attribute{
           name
         }
-      }      
+      }
     }
     quantity
     priceTotal
@@ -87,6 +87,11 @@ order {
     id
     name
     price
+  }
+  partner {
+    id
+    email
+    name
   }
 }
 `;

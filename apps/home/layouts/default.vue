@@ -12,28 +12,35 @@ import {
   SfModal,
   useDisclosure,
 } from '@crearis/vue'
+
+// this has to stand on top of the file, see: https://pruvious.com/docs/layouts
+import type { DefaultLayoutProps } from './types'
 import { defineLayout } from '#pruvious'
 
 defineLayout({
   label: 'default',
   // @ts-expect-error #TODO _05 remove once components are created
-  allowedBlocks: ['Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
+  allowedBlocks: ['ProductSlider', 'Display', 'MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Link', 'Container', 'Image', 'Prose', 'Video'],
   // @ts-expect-error #TODO _05 remove once components are created
-  allowedRootBlocks: ['Hero', 'Container', 'Image', 'Prose', 'Video'],
+  allowedRootBlocks: ['ProductSlider', 'Display', 'MockImageSection', 'MockBreadcrumbs', 'MockLogo', 'Hero', 'Container', 'Image', 'Prose', 'Video'],
 })
+
+// eslint-disable-next-line vue/define-macros-order
+defineProps<DefaultLayoutProps>()
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
-const { fetchCart, data: cart } = useSfCart()
-const { fetchCustomer, data: account } = useCustomer()
-
-fetchCart()
-fetchCustomer()
-usePageTitle()
+const { loadCart, cartItemCount } = useCart()
+const { user, loadUser, logout } = useUser()
 
 const cartLineItemsCount = computed(
-  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
+  cartItemCount,
 )
+
+const logoutAndToggle = async () => {
+  await logout()
+  accountDropdownToggle()
+}
 
 const accountDropdown = [
   {
@@ -54,28 +61,21 @@ const accountDropdown = [
   },
 ]
 const NuxtLink = resolveComponent('NuxtLink')
+
+loadUser()
+loadCart()
+usePageTitle()
+
 </script>
 
 <template>
-  <UiNavbarTop filled>
-    <SfButton
-      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
-      variant="tertiary"
-      :tag="NuxtLink"
-      :to="`${paths.category}/13`"
-    >
-      <template #suffix>
-        <SfIconExpandMore class="hidden lg:block" />
-      </template>
-      <span class="hidden lg:flex whitespace-nowrap">Cat: Women</span>
-    </SfButton>
-    <NuxtLazyHydrate when-visible>
-      <UiSearch class="hidden md:block flex-1" />
-    </NuxtLazyHydrate>
-    <nav v-show="cartLineItemsCount > 0" class="hidden md:flex md:flex-row md:flex-nowrap">
+  <UiNavbarTop filled extended>
+     
+    <nav class="hidden md:flex md:flex-row md:flex-nowrap">
       <NuxtLazyHydrate when-visible>
         <SfButton
-          class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
+          v-show="cartLineItemsCount > 0" 
+          class="group relative text-black dark:text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
           :tag="NuxtLink"
           :to="paths.cart"
           :aria-label="$t('numberInCart', cartLineItemsCount)"
@@ -97,7 +97,7 @@ const NuxtLink = resolveComponent('NuxtLink')
           <template #trigger>
             <SfButton
               variant="tertiary"
-              class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md"
+              class="relative text-black dark:text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md"
               :class="{ 'bg-primary-900': isAccountDropdownOpen }"
               data-testid="account-dropdown-button"
               @click="accountDropdownToggle()"
@@ -105,7 +105,7 @@ const NuxtLink = resolveComponent('NuxtLink')
               <template #prefix>
                 <SfIconPerson />
               </template>
-              {{ account?.firstName }}
+              {{ user?.name }}
             </SfButton>
           </template>
           <ul class="rounded bg-white shadow-md border border-neutral-100 text-neutral-900 min-w-[152px] py-2">
@@ -116,7 +116,7 @@ const NuxtLink = resolveComponent('NuxtLink')
                   tag="button"
                   class="text-left"
                   data-testid="account-dropdown-list-item"
-                  @click="accountDropdownToggle()"
+                  @click="logoutAndToggle()"
                 >
                   {{ $t(label) }}
                 </SfListItem>
@@ -145,12 +145,11 @@ const NuxtLink = resolveComponent('NuxtLink')
       <SfIconSearch />
     </SfButton>
   </UiNavbarTop>
-  <!-- #TODO _05 remove when components are created 
   <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
-  </NarrowContainer>  -->
+  </NarrowContainer>
 
   <main>
     <slot />

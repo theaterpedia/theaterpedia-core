@@ -13,6 +13,11 @@ import {
   useDisclosure,
 } from '@crearis/vue'
 
+import type { DefaultLayoutProps } from './types'
+
+// eslint-disable-next-line vue/define-macros-order
+defineProps<DefaultLayoutProps>()
+
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure()
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure()
 const { fetchCart, data: cart } = useSfCart()

@@ -1,3 +1,7 @@
 node_modules
 
 .turbo
+apps/home/pruvious.db
+apps/home/pruvious_clone.db
+
+meta/.obsidian

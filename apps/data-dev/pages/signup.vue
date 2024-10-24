@@ -22,20 +22,20 @@
     >
       <label>
         <UiFormLabel>{{ $t('form.firstNameLabel') }} *</UiFormLabel>
-        <SfInput name="firstName" autocomplete="given-name" v-model="firstNameModel" required />
+        <SfInput v-model="firstNameModel" name="firstName" autocomplete="given-name" required />
       </label>
       <label>
         <UiFormLabel>{{ $t('form.lastNameLabel') }} *</UiFormLabel>
-        <SfInput name="lastName" autocomplete="family-name" v-model="lastNameModel" required />
+        <SfInput v-model="lastNameModel" name="lastName" autocomplete="family-name" required />
       </label>
       <label>
         <UiFormLabel>{{ $t('form.emailLabel') }} *</UiFormLabel>
-        <SfInput name="email" type="email" autocomplete="email" v-model="emailModel" required />
+        <SfInput v-model="emailModel" name="email" type="email" autocomplete="email" required />
       </label>
       <div>
         <label>
           <UiFormLabel>{{ $t('form.passwordLabel') }} *</UiFormLabel>
-          <UiFormPasswordInput name="password" autocomplete="current-password" v-model="passwordModel" required />
+          <UiFormPasswordInput v-model="passwordModel" name="password" autocomplete="current-password" required />
           <UiFormHelperText class="mb-2">{{ $t('form.passwordHint') }}</UiFormHelperText>
         </label>
       </div>
@@ -99,7 +99,7 @@
         </h2>
       </header>
       <UiAlert class="w-full p-4 mb-6 !justify-start typography-text-base" variant="neutral">
-        <i18n-t keypath="auth.signup.modal.description" tag="p" id="signUpModalDesc">
+        <i18n-t id="signUpModalDesc" keypath="auth.signup.modal.description" tag="p">
           <template #information>
             <SfLink
               :tag="NuxtLink"
@@ -128,13 +128,26 @@ definePageMeta({
   layout: false,
 });
 
-const { isOpen, open } = useDisclosure();
-
 const firstNameModel = ref('');
 const lastNameModel = ref('');
 const emailModel = ref('');
 const passwordModel = ref('');
 const termsAndConditionsModel = ref<boolean>();
 const subscriptionsModel = ref<boolean>();
+
 const NuxtLink = resolveComponent('NuxtLink');
+const { isOpen, open } = useDisclosure();
+const { signup, loading } = useUser();
+const router = useRouter();
+
+const fullName = computed(() => `${firstNameModel.value} ${lastNameModel.value}`);
+
+const handleSignup = async () => {
+  await signup({
+    email: emailModel.value,
+    name: fullName.value,
+    password: passwordModel.value,
+    subscribeNewsletter: subscriptionsModel.value === true,
+  });
+};
 </script>

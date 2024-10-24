@@ -6,6 +6,8 @@ describe('useCustomer', () => {
 
     await fetchCustomer()
 
+    // changed the test
+
     expect(data.value).not.toBeUndefined()
   })
 })

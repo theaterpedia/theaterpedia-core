@@ -1,5 +1,5 @@
 {
-  "vitest.commandLine": "yarn test --",
+  "vitest.commandLine": "npx vitest",
   "vitest.enable": true,
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,

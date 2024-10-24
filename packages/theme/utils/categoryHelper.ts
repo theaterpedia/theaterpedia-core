@@ -18,4 +18,4 @@ export const sortOptions = [
     attrName: 'Name: Z to A',
     type: '',
   },
-];
+]

@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "pruvious dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.10.2",
+    "pruvious": "^3.11.6",
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.0"
+  }
+}

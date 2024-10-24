@@ -1,10 +1,29 @@
+<script setup lang="ts">
+import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@crearis/vue'
+
+defineProps<{
+  backLabelDesktop: string
+  backLabelMobile: string
+  backHref: string
+  heading: string
+}>()
+
+const { fetchCart, data: cart, loading: isLoading } = useSfCart()
+
+fetchCart()
+
+const NuxtLink = resolveComponent('NuxtLink')
+</script>
+
 <template>
   <UiNavbarTop />
   <main data-testid="checkout-layout">
     <NarrowContainer>
       <div class="px-4 md:px-0 mb-20">
         <div class="flex justify-between mt-8 mb-10 px-4 md:px-0">
-          <h1 class="font-bold typography-headline-3 md:typography-headline-2">{{ heading }}</h1>
+          <h1 class="font-bold typography-headline-3 md:typography-headline-2">
+            {{ heading }}
+          </h1>
           <SfButton
             :tag="NuxtLink"
             :to="backHref"
@@ -24,7 +43,7 @@
             {{ backLabelDesktop }}
           </SfButton>
         </div>
-        <span class="!flex justify-center my-40 h-24" v-if="isLoading && !cart">
+        <span v-if="isLoading && !cart" class="!flex justify-center my-40 h-24">
           <SfLoaderCircular size="3xl" />
         </span>
         <slot v-else />
@@ -33,20 +52,3 @@
   </main>
   <UiFooter />
 </template>
-
-<script setup lang="ts">
-import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@crearis/vue';
-
-defineProps<{
-  backLabelDesktop: string;
-  backLabelMobile: string;
-  backHref: string;
-  heading: string;
-}>();
-
-const { fetchCart, data: cart, loading: isLoading } = useSfCart();
-
-fetchCart();
-
-const NuxtLink = resolveComponent('NuxtLink');
-</script>

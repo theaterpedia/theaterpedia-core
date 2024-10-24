@@ -32,6 +32,12 @@
     "dev": {
       "cache": false
     },   
+    "test": {
+      "outputs": []
+    },
+    "test:watch": {
+      "outputs": []
+    },    
     "test:turbo": {
       "outputs": []
     },

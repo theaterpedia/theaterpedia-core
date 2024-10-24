@@ -8,10 +8,12 @@ partner{
     state
     {
       id
+      name
     }
     country
     {
       id
+      name
     }
     email
     phone

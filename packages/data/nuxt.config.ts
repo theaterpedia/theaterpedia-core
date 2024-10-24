@@ -13,13 +13,25 @@ export default defineNuxtConfig({
     dirs: ['composables/**', 'utils/**'],
   },
   // we don't want pruvious in dev mode when we are working on the boilerplate from vsf or odoogap
-  modules: isDevDir ? [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', 'nuxt-vitest', '@vue-storefront/nuxt', 'pruvious'  ],
+  modules: isDevDir ? [ '@vite-pwa/nuxt', '@vue-storefront/nuxt' ] : [ '@vite-pwa/nuxt', '@vue-storefront/nuxt', 'pruvious'  ],
   nitro: {
     prerender: {
       crawlLinks: false,
       ignore: ['/shop'],
     },
     compressPublicAssets: true,
+    /* storage: {
+      cache: {
+        driver: "redis",
+        url: process.env.REDIS_URL,
+      },
+    },
+    devStorage: {
+      cache: {
+        driver: "redis",
+        url: process.env.REDIS_URL,
+      },
+    },    */
   },
   vsf: {
     middleware: {
@@ -42,6 +54,29 @@ export default defineNuxtConfig({
       '@erpgap/odoo-sdk-api-client'
     ]
   },
+  runtimeConfig: {
+    redis: {
+      host: "localhost",
+      port: 6379,
+    },
+    redisLogUrl: 'redis://127.0.0.1:6379/2',
+    // see: ThemeConfig
+    public: {
+      odooBaseImageUrl: "",
+      odooBaseUrl: "",
+    },
+  },
+  routeRules: {
+    // #TODO: Check whether odoogap-config is working
+    /* 
+    "/": { swr: true },
+    "/icons/**": {
+      headers: { "cache-control": "public, max-age=31536000, immutable" },
+    },
+    "/favicon.ico": {
+      headers: { "cache-control": "public, max-age=31536000, immutable" },
+    }, */
+  },   
   pwa: {
     registerType: 'autoUpdate',
     workbox: {
@@ -92,5 +127,31 @@ export default defineNuxtConfig({
       ],
     },
     registerWebManifestInRouteRules: true,
+  },
+  pruvious: {
+    api: {
+      routes: {
+        'login.post': false,
+        'logout.post': false,
+        'logout-all.post': false,
+        'logout-others.post': false,
+        'renew-token.post': false,
+      },
+    },
+    dashboard: {
+      baseComponents: {
+        misc: {
+          QuickActions: './components/DashboardSyncMicrosoftCollections.vue',
+        },
+      },
+    },
+    standardMiddleware: {
+      client: {
+        auth: false,
+      },
+      server: {
+        auth: false,
+      },
+    },
   },
 });

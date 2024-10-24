@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { SfButton, SfLink, SfListItem } from '@crearis/vue'
+import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '../../mocks'
+
+const NuxtLink = resolveComponent('NuxtLink')
+</script>
+
 <template>
   <footer class="pt-10 bg-neutral-100 mb-[58px] md:mb-0" data-testid="footer">
     <div
@@ -26,7 +33,7 @@
         </ul>
       </div>
     </div>
-    <hr />
+    <hr>
     <div class="py-10 md:flex md:mx-auto max-w-screen-3xl" data-testid="section-middle">
       <div v-for="{ key, icon, link, details } in contactOptions" :key="key" class="mx-auto my-4 text-center">
         <component :is="icon" size="lg" />
@@ -83,10 +90,3 @@
     </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-import { SfButton, SfLink, SfListItem } from '@crearis/vue';
-import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '../../mocks';
-
-const NuxtLink = resolveComponent('NuxtLink');
-</script>
