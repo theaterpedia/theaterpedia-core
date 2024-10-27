@@ -23,7 +23,7 @@ export const useCart = () => {
 
   const loadCart = async () => {
     loading.value = true;
-    const { data } = await $sdk().odoo.queryNoCache<null, CartResponse>({ queryName: QueryName.LoadCartQuery });
+    const { data } = await useSdk().odoo.queryNoCache<null, CartResponse>({ queryName: QueryName.LoadCartQuery });
     loading.value = false;
 
     cart.value = data.value.cart;
@@ -33,7 +33,7 @@ export const useCart = () => {
   const cartAdd = async (productId: number, quantity: number) => {
     loading.value = true;
 
-    const { data, error } = await $sdk().odoo.mutation<MutationCartAddItemArgs, CartAddItemResponse>(
+    const { data, error } = await useSdk().odoo.mutation<MutationCartAddItemArgs, CartAddItemResponse>(
       { mutationName: MutationName.CartAddItem },
       { productId, quantity },
     );
@@ -51,7 +51,7 @@ export const useCart = () => {
 
   const updateItemQuantity = async (lineId: number, quantity: number) => {
     loading.value = true;
-    const { data, error } = await $sdk().odoo.mutation<MutationCartUpdateItemArgs, CartUpdateItemResponse>(
+    const { data, error } = await useSdk().odoo.mutation<MutationCartUpdateItemArgs, CartUpdateItemResponse>(
       { mutationName: MutationName.CartUpdateQuantity },
       { lineId, quantity: Number(quantity) },
     );
@@ -72,7 +72,7 @@ export const useCart = () => {
 
   const removeItemFromCart = async (lineId: number) => {
     loading.value = true;
-    const { data, error } = await $sdk().odoo.mutation<MutationCartRemoveItemArgs, CartRemoveItemResponse>(
+    const { data, error } = await useSdk().odoo.mutation<MutationCartRemoveItemArgs, CartRemoveItemResponse>(
       { mutationName: MutationName.CartRemoveItem },
       { lineId },
     );

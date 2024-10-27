@@ -28,7 +28,7 @@ export const useAddresses = () => {
     loading.value = true;
     try {
       const { data } = await useAsyncData(`fetch-${type}-addresses`, async () => {
-        const { data } = await $sdk().odoo.query<QueryAddressesArgs, AddressesResponse>(
+        const { data } = await useSdk().odoo.query<QueryAddressesArgs, AddressesResponse>(
           { queryName: QueryName.GetAddressesQuery },
           { filter: { addressType: [type] } },
         );
@@ -50,7 +50,7 @@ export const useAddresses = () => {
   const addAddress = async (address: AddAddressInput, type: AddressEnum) => {
     loading.value = true;
     try {
-      const { data } = await $sdk().odoo.mutation<MutationAddAddressArgs, AddAddressResponse>(
+      const { data } = await useSdk().odoo.mutation<MutationAddAddressArgs, AddAddressResponse>(
         { mutationName: MutationName.AddAddress },
         { address, type },
       );
@@ -69,7 +69,7 @@ export const useAddresses = () => {
   const updateAddress = async (address: UpdateAddressInput, type: AddressEnum) => {
     loading.value = true;
     try {
-      const { data } = await $sdk().odoo.mutation<MutationUpdateAddressArgs, UpdateAddressResponse>(
+      const { data } = await useSdk().odoo.mutation<MutationUpdateAddressArgs, UpdateAddressResponse>(
         { mutationName: MutationName.UpdateAddress },
         { address },
       );

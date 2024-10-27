@@ -36,12 +36,11 @@ export type AddAddressInput = {
 export type AddBlogPostInput = {
   authorId: Scalars['Int']['input'];
   blocks: InputMaybe<Scalars['GenericScalar']['input']>;
-  blogId: InputMaybe<Scalars['Int']['input']>;
+  blogId: Scalars['Int']['input'];
+  headline: Scalars['String']['input'];
   metaDescription: InputMaybe<Scalars['String']['input']>;
   metaKeywords: InputMaybe<Scalars['String']['input']>;
-  metaTitle: InputMaybe<Scalars['String']['input']>;
-  name: Scalars['String']['input'];
-  subtitle: InputMaybe<Scalars['String']['input']>;
+  overline: InputMaybe<Scalars['String']['input']>;
   teasertext: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1379,7 +1378,7 @@ export type UpdateAddressInput = {
 };
 
 export type UpdateEventInput = {
-  blocks: InputMaybe<Scalars['String']['input']>;
+  blocks: InputMaybe<Scalars['GenericScalar']['input']>;
   description: InputMaybe<Scalars['String']['input']>;
   id: Scalars['Int']['input'];
   metaDescription: InputMaybe<Scalars['String']['input']>;
@@ -1405,7 +1404,6 @@ export type UpdatePostInput = {
   id: Scalars['Int']['input'];
   metaDescription: InputMaybe<Scalars['String']['input']>;
   metaKeywords: InputMaybe<Scalars['String']['input']>;
-  metaTitle: InputMaybe<Scalars['String']['input']>;
   overline: InputMaybe<Scalars['String']['input']>;
   teasertext: InputMaybe<Scalars['String']['input']>;
 };

@@ -1,7 +1,7 @@
 {
   "name": "@crearis/theme-main",
   "type": "module",
-  "version": "0.1.11",
+  "version": "0.1.17",
   "license": "MIT",
   "main": "./nuxt.config.ts",
   "files": [
@@ -9,7 +9,6 @@
     "app.vue",
     "assets/",
     "blocks/",
-    "collections/",
     "components/",
     "composables/",
     "i18n.config.ts",
@@ -18,7 +17,6 @@
     "mocks/",
     "nuxt.config.ts",
     "pages/",
-    "plugins/",
     "public/",
     "tailwind.config.ts",
     "utils/"
@@ -44,7 +42,7 @@
     "@vueuse/core": "^10.9.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
-    "pruvious": "^3.11.6",
+    "pruvious": "3.11.6",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {
@@ -76,7 +74,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-prettier": "5.0.1",
     "happy-dom": "^11.0.0",
-    "nuxt": "^3.10.2",
+    "nuxt": "^3.11.2",
     "postcss": "^8.0.9",
     "prettier": "^3.0.0",
     "release-it": "^17.0.0",

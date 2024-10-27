@@ -11,7 +11,7 @@ export const usePartner = () => {
     loading.value = true;
     try {
       const { data } = await useAsyncData('update-partner', async () => {
-        const { data } = await $sdk().odoo.query<MutationCreateUpdatePartnerArgs, PartnerResponse>(
+        const { data } = await useSdk().odoo.query<MutationCreateUpdatePartnerArgs, PartnerResponse>(
           { queryName: MutationName.CreateUpdatePartner },
           params,
         );

@@ -41,7 +41,7 @@ export const useProductTemplate = (slug: string) => {
       return;
     }
     loadingProductTemplate.value = true;
-    const { data } = await $sdk().odoo.query<QueryProductArgs, ProductResponse>(
+    const { data } = await useSdk().odoo.query<QueryProductArgs, ProductResponse>(
       { queryName: QueryName.GetProductTemplateQuery },
       params,
     );

@@ -13,7 +13,7 @@ export const useCategory = (categorySlug?: string) => {
     loading.value = true;
     try {
       const { data } = await useAsyncData(`category-list-${categorySlug}`, async () => {
-        const { data } = await $sdk().odoo.query<QueryCategoryArgs, CategoryResponse>(
+        const { data } = await useSdk().odoo.query<QueryCategoryArgs, CategoryResponse>(
           { queryName: QueryName.GetCategoryQuery },
           params,
         );
@@ -32,7 +32,7 @@ export const useCategory = (categorySlug?: string) => {
     loading.value = true;
     try {
       const { data } = await useAsyncData(`category-list-${categorySlug}`, async () => {
-        const { data, error } = await $sdk().odoo.query<QueryCategoriesArgs, CategoryListResponse>(
+        const { data, error } = await useSdk().odoo.query<QueryCategoriesArgs, CategoryListResponse>(
           { queryName: QueryName.GetCategoriesQuery },
           params,
         );

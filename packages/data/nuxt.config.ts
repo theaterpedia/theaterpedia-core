@@ -51,6 +51,7 @@ export default defineNuxtConfig({
       '@vue/apollo-composable',
       '@vue/apollo-option',
       'ts-invariant',
+      "vue-toastification",
       '@erpgap/odoo-sdk-api-client'
     ]
   },
