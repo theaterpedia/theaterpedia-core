@@ -34,7 +34,7 @@
     "graphql-request": "^6.1.0",
     "lodash-es": "^4.17.21",
     "nuxt-lazy-hydrate": "^1.0.0",
-    "pruvious": "^3.11.6",
+    "pruvious": "^3.13.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vue-toastification": "2.0.0-rc.5"
@@ -78,7 +78,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-format": "^0.1.0",
     "happy-dom": "^11.0.0",
-    "nuxt": "^3.10.2",
+    "nuxt": "^3.13.2",
     "nuxt-hydration": "^0.5.3",
     "nuxt-module-eslint-config": "^0.1.0",
     "postcss": "^8.0.9",
